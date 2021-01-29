@@ -1,0 +1,7 @@
+<!--components/wx-search-box/wx-search-box.wxml-->
+<view class="list" style="background-color:{{color}}">
+        <view class="input">
+            <input class="input-text" type="view" auto-focus placeholder="{{search}}" bindinput="bindKeyInput"></input>
+            <icon type='search' class='icons' size="15"></icon>
+        </view>
+</view>

@@ -54,8 +54,8 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/recruit/recruitStudent/recruitStudent",
-          "pathName": "pages/recruit/recruitStudent/recruitStudent",
+          "name": "pages/recruit/classPackage/classPackage",
+          "pathName": "pages/recruit/classPackage/classPackage",
           "query": "",
           "scene": null
         }

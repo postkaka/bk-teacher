@@ -1,0 +1,16 @@
+<!--components/bk-line-class/bk-line-class.wxml-->
+<view class="line-class" style="border-bottom:{{borderBottom}}">
+  <view class="align-b">
+    <view class="line-class-text">
+      <view>{{lineText}}</view>
+      <view class="line-class-text-border" style="display:{{lineture}}">{{lineBox}}</view>
+    </view>
+    <view class="line-class-nub">{{lineTextSec}}</view>
+  </view>
+  <view class="align-a">
+    <view class="align-a-text">{{lineTextTh}}</view>
+    <view class="align-a-src">
+      <image src="{{lineSrc}}" style="height:28rpx;width:28rpx;align-self: center;"></image>
+    </view>
+  </view>
+</view>

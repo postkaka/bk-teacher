@@ -44,9 +44,3 @@
   left: 85%;
   bottom: 70rpx;
 }
-.btn {
-  position: absolute;
-  left: 0;
-  bottom: 32rpx;
-  width: 100%;
-}

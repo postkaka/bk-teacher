@@ -1,0 +1,43 @@
+/* components/bk-line-class/bk-line-class.wxss */
+.line-class {
+  height: 136rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 32rpx 0 32rpx;
+}
+.line-class-text {
+  display: flex;
+  font-size: 28rpx;
+}
+.line-class-text-border {
+  width: 97rpx;
+  height: 40rpx;
+  border: 1rpx solid #539BCB;
+  border-radius: 20rpx;
+  font-size: 24rpx;
+  color: #539BCB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 16rpx ;
+}
+.line-class-nub {
+  font-size: 20rpx;
+  margin-top: 8rpx ;
+}
+.align-a {
+  display: flex;
+  align-self: center;
+}
+.align-b {
+  align-self: center;
+}
+.align-a-text {
+  align-self: center;
+  font-size: 28rpx;
+  margin-right: 8rpx;
+}
+.align-a-src {
+  align-self: center;
+}

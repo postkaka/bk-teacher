@@ -69,3 +69,10 @@ page {
   text-align: center;
   margin-top: 16rpx;
 }
+/* 按钮定位 */
+.btn {
+  position: absolute;
+  left: 0;
+  bottom: 32rpx;
+  width: 100%;
+}

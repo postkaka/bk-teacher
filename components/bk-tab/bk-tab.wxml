@@ -3,7 +3,9 @@
   <block  wx:for="{{tab}}" wx:key="*this">
     <view data-index="{{index}}"bind:tap="itemClick" >
       <view class="{{index == currentIndex?'tab-text':'common-tab-text'}}">{{item}}</view>
-      <view class="{{index == currentIndex?'line':''}}"></view>
+      <view class="center">
+        <view class="{{index == currentIndex?'line':''}}"></view>
+      </view>
   </view>
   </block>
 </view>

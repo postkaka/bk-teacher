@@ -5,9 +5,37 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    header:{
+      title: '学员信息',
+      fontColor: "#333333",
+      headerbg: '#FFFFFF',
+      hiddenBlock: false,
+      slot: false,
+      src:'../../assets/image/fback.png'
+    },
+    tab:["课程课时包","共享课时包"],
+    btn:["返回"],
+    package:[
+      {name:"能力风暴大颗粒",type:"1对1",class:"4"},
+      {name:"实验123",type:"班组课",class:"0",nub:"4个套餐"},
+      {name:"测试3",type:"班组课",class:"1"},
+      {name:"测试",type:"班组课",class:"2"}
+    ],
+    share:[
+      {name:"12",type:"班组课",class:"测试、测试3"}
+    ],
+    nub: 0
   },
-
+  itemClick(e){
+    this.setData({
+      nub: e.detail
+    })
+  },
+  btnClick(){
+    wx.navigateTo({
+      url: '../recruitStudent/recruitStudent',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

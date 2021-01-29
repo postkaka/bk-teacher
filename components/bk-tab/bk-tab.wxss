@@ -18,10 +18,15 @@
   color: #999999;
   font-size: 28rpx;
 }
+.center {
+  display: flex;
+  justify-content: center;
+}
 .line {
   width: 56rpx;
   height: 8rpx;
   margin-top: 16rpx;
   background: #60ADE1;
   border-radius: 4rpx;
+  
 }

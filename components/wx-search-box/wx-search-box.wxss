@@ -1,0 +1,25 @@
+/* components/wx-search-box/wx-search-box.wxss */
+.list {
+   border: 1rpx solid #ffffff;
+   border-radius: 30rpx;
+   margin: 32rpx;
+   height: 65rpx;
+}
+.input {
+   height: 65rpx;
+   border-radius: 40rpx;
+   display: flex;
+   justify-content: space-between;
+}
+.icons {
+    line-height: 65rpx;
+    height: 65rpx;
+    position: relative;
+    right: 32rpx;
+    top:18rpx;
+}
+.input-text {
+   height: 65rpx;
+   font-size: 28rpx;
+   margin-left: 64rpx;
+}

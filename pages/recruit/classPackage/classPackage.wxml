@@ -1,2 +1,31 @@
 <!--pages/recruit/classPackage/classPackage.wxml-->
-<text>pages/recruit/classPackage/classPackage.wxml</text>
+<bk-header header="{{header}}"></bk-header>
+<!-- 搜索框 -->
+<view class="search ">
+  <bk-search-box search="请输入课程名称"></bk-search-box>
+</view>
+<!-- tab -->
+<bk-tab tab="{{tab}}" bind:itemClick="itemClick"></bk-tab>
+
+<!-- 课程课时表 -->
+<view class="package {{nub == 0?'':'none'}}">
+  <block wx:for="{{package}}" wx:key="*this" data-index="{{index}}">
+    <bk-line-class lineText="{{item.name}}" lineBox="{{item.type}}" 
+    lineTextSec="{{item.class}}个班级" lineTextTh="{{item.nub}}"
+    borderBottom="{{index+1 == package.length?'':'1px solid #DDDDDD'}}" 
+    ></bk-line-class>
+  </block>
+</view>
+<!-- 共享课时包 -->
+<view class="share-package {{nub == 1?'':'none'}}">
+  <block wx:for="{{share}}" wx:key="*this" data-index="{{index}}">
+    <bk-line-class lineText="{{item.name}}" lineBox="{{item.type}}" 
+    lineTextSec="包含课程:{{item.class}}" lineTextTh="{{item.nub}}"
+    borderBottom="{{index+1 == share.length?'':'1px solid #DDDDDD'}}" 
+    ></bk-line-class>
+  </block>
+</view>
+<!-- 返回 -->
+<view class="btn" bindtap="btnClick">
+  <bk-btn btn="{{btn}}"></bk-btn>
+</view>
