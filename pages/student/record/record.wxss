@@ -1,0 +1,43 @@
+/* pages/student/record/record.wxss */
+/* 跟进记录 */
+.follow-up-records {
+  height: 806rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 30rpx;
+  margin: 16rpx 16rpx 16rpx 16rpx;
+}
+.records {
+  font-size: 28rpx;
+  padding: 36rpx 0 32rpx 0;
+}
+.records-fisrt {
+  margin: 0 32rpx 0 35rpx;
+}
+.records-fisrt-type {
+  margin-left: 16rpx;
+  font-weight: bold;
+  color: #60ADE1;
+}
+.records-fisrt-line {
+  align-self: center;
+  height: 23rpx;
+  border-right: 2rpx solid #999999;
+  margin: 0 8rpx 0 8rpx;
+}
+.records-second {
+  margin:4rpx 0 4rpx 96rpx ;
+}
+.records-end {
+  margin-left: 96rpx ;
+  font-size: 24rpx;
+  color: #999999;
+}
+.line {
+  border-bottom: 1rpx solid #DDDDDD;
+}
+.btn {
+  position: absolute;
+  bottom: 32rpx;
+  width: 100%;
+}

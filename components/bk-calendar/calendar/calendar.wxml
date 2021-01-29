@@ -1,0 +1,40 @@
+<view class='calendar'>
+	<!--显示当前年月日-->
+	<!-- <view class='calendar-title'>
+		<view class='item ctrl' bindtap='lastMonth'>{{lastMonth}}</view>
+		<view class='item title'>{{title}}</view>
+		<view class='item ctrl' bindtap='nextMonth'>{{nextMonth}}</view>
+		<view class='item ctrl today' bindtap='today'>今天</view>
+	</view> -->
+	<view class="title">
+		<image class="leftIcon" src="../../../assets/image/fback.png" bindtap='lastMonth'></image>
+		<view class="titleText">{{title}}</view>
+		<image class="leftIcon" src="../../../assets/image/fback.png" bindtap='nextMonth' style="transform: rotate(180deg)"></image>
+
+	</view>
+
+
+
+	<!-- ============平铺展示============  -->
+	<!--遍历星期-->
+	<view class='calendar-week'>
+		<view wx:for='{{weekText}}' class='item' wx:key='item'>{{item}}</view>
+	</view>
+
+	<view class='calendar-container'>
+		<!--当月格子-->
+		<view class='grid {{item.week==""?"gray":""}}' wx:for='{{thisMonthDays}}' wx:key='Windx'>
+			<view class="wrap {{ select === year+'-'+item.monthFormat+'-'+item.dateFormat ? 'select' :''}}" bindtap='{{item.week==""?"":"select"}}' data-date='{{item.date}}'>{{item.date}}</view>
+		</view>
+	</view>
+	<!-- <view class="bottom">
+		<view class="flexB" bindtap='today'>
+			<image class="leftIcon" src="../../../assets/image/packblack.png"></image>
+			<view style="line-height:100rpx;margin-left:10rpx;">今日</view>
+		</view>
+		<view class="flexB" bindtap='toggleType'>
+			<image class="leftIcon" src="../../../assets/image/today.png"></image>
+			<view style="line-height:100rpx;margin-left:10rpx;">收起</view>
+		</view>
+	</view> -->
+</view>

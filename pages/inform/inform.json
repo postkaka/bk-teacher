@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "bk-header":"../../components/wx-header/header",
+    "bk-tab":"../../components/bk-tab/bk-tab"
+  },
+  "navigationStyle": "custom"
+}

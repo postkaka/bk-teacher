@@ -1,0 +1,19 @@
+<!--pages/recruit/recruitStudent.wxml-->
+<bk-header header="{{header}}"></bk-header>
+
+<view class="student">
+  <view class="pic flex-a align-a justify-d">
+    <view class="flex-a align-a">
+      <view class='align-a pic-src'>
+        <image src="{{inform.src}}" style="height:78rpx;width:78rpx"></image>
+      </view>
+      <view class='align-a pic-name'>{{inform.name}}</view>
+      <view class='align-a'>{{inform.phone}}</view>
+    </view>
+  <view class="align-b src-img">
+    <image src="../../../assets/image/back.png" style="height:28rpx;width:28rpx;align-items:center;"></image>
+  </view>
+  </view>
+  <bk-lines name="报名课程分类:"  text="线下课程" nameSymbol="*" symbol="color:#F89470"></bk-lines>
+  <bk-lines name="报名课程"  text="请选择课程" nameSymbol="*" symbol="color:#F89470" borderBottom="" bindtap="packageClick"></bk-lines>
+</view>

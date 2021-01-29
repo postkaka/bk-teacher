@@ -1,0 +1,27 @@
+/* components/bk-tab/bk-tab.wxss */
+.tab {
+  padding-left: 155rpx;
+  padding-right: 155rpx;
+  background: #FFFFFF;
+  height: 5vh;
+  display: flex;
+  justify-content: space-around;
+  align-self: center;
+}
+.tab-text {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #60ADE1;
+}
+.common-tab-text {
+  font-weight: 400;
+  color: #999999;
+  font-size: 28rpx;
+}
+.line {
+  width: 56rpx;
+  height: 8rpx;
+  margin-top: 16rpx;
+  background: #60ADE1;
+  border-radius: 4rpx;
+}

@@ -1,0 +1,30 @@
+<!--pages/student/record/record.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<!-- 跟进记录 -->
+<view class="follow-up-records">
+  <bk-lines name="跟进记录" lineFw="bold" text="查看全部" textColor="#999999" bindtap="recordClick"></bk-lines>
+  <block wx:for="{{records}}" wx:key="*this" data-index="{{index}}">
+    <view class="records {{index+1 == records.length?'':'line'}}">
+      <view class="flex-a align-a justify-d records-fisrt">
+        <view class="flex-a align-a">
+          <view>
+          <image src="{{item.typeImg}}" style="height:48rpx;width:48rpx"></image>
+          </view>
+          <view class="align-a records-fisrt-type">{{item.type}}</view>
+        </view>
+        <view class="flex-a align-a">
+          <view >{{item.contact}}</view>
+          <view class="records-fisrt-line"></view>
+          <view>{{item.linkman}}</view>
+        </view>
+      </view>
+      <view class="records-second">{{item.operating}}</view>
+      <view class="records-second">{{item.intention}}</view>
+      <view class="records-end">操作人: {{item.operator}} {{item.time}}</view>
+    </view>
+  </block>
+</view>
+
+<view class="btn">
+  <bk-btn btn="{{btn}}" bind:btnClick="btnClick"></bk-btn>
+</view>

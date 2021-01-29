@@ -1,0 +1,26 @@
+<!--components/bk-line-picker/bk-line-picker.wxml-->
+<view class="line" style="border-bottom:{{borderBottom}}">
+  <view class='line-name' style="font-weight:{{lineFw}}">{{name}}</view>
+  <view class="line-img">
+    <view class="line-img-text" style="color:{{textColor}}" >{{picker_02_data}}</view>
+    <picker
+	isShowPicker="{{isShow_02}}"
+	bindsure="sureCallBack_02"
+	bindcancle="cancleCallBack_02"
+	scrollType="normal"
+	listData="{{listData_02}}"
+	indicatorStyle="height:72rpx"
+	maskStyle=""
+	titleStyle=""
+  sureStyle="color: #60ADE1;font-size:28rpx;font-weight: bold;margin-right:32rpx;"
+	cancelStyle="color: #60ADE1;font-size:28rpx;font-weight: bold;margin-left:32rpx"
+	chooseItemTextStyle="color: #333333;"
+	cancelText="cancle"
+	sureText="sure"
+></picker>
+    <view class='line-item' style="display:{{backDisplay}}" bindtap="showPicker_02">
+      <image src="../../assets/image/back.png" style="height:28rpx;width:28rpx;align-self: center;"></image>
+    </view>
+  </view>
+</view>
+

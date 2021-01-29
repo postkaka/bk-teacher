@@ -1,0 +1,28 @@
+<!--pages/student/integral-transformation/integral-transformation.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<!-- 积分信息 -->
+<view class="pic flex-a align-a">
+  <view class='align-a pic-src'>
+    <image src="{{inform.src}}" style="height:78rpx;width:78rpx"></image>
+  </view>
+  <view class='align-a pic-name'>{{inform.name}}</view>
+  <view class='align-a'>{{inform.phone}}</view>
+</view>
+<!-- 变化 -->
+<view class="conversion">
+  <bk-line-picker name="加分规则:"  listData_02="{{rule}}" picker_02_data="{{_rule}}" bind:picker='picker'></bk-line-picker>
+  <bk-lines name="自动加分："  backDisplay="none" borderBottom="" inputDisplay="" type="number" bind:bindKeyInput="bindKeyInput"></bk-lines>
+</view>
+<!-- 备注 -->
+<view class="remark">
+  <bk-lines name="备注"  backDisplay="none" lineFw="bold"></bk-lines>
+  <view class="remark-text">
+    <textarea  maxlength='200' placeholder="请输入备注……" class="text-area"
+    placeholder-style="font-size: 28rpx;font-family: PingFang SC;" bindinput="getValueLength"></textarea>
+  </view>
+  <view class="last-text">{{currentWordNumber|0}}/200</view>
+</view>
+
+<view class="btn">
+  <bk-btn btn="{{btn}}" bind:btnClick="btnClick"></bk-btn>
+</view>

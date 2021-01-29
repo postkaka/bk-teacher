@@ -1,0 +1,87 @@
+<!--pages/student/student-crm/student-crm.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<!-- 学员信息头部 -->
+<view class="header flex-a align-a">
+  <view class="align-a height-image">
+    <image src="../../../assets/image/crm-1.png" style="height: 78rpx;width:78rpx"></image>
+  </view>
+  <view class="align-a">
+    <view class="flex-a align-a crm-fisrt">
+      <view class="crm-name">{{crm.name}}</view>
+      <view class="crm-image" bindtap="basicInformationClick">
+        <image src='../../../assets/image/compile .png' style="height: 24rpx;width:24rpx"></image>
+      </view>
+      <view class="crm-text align-a">{{crm.time}}</view>
+      <view class="crm-text align-a crm-type">{{crm.type}}</view>
+    </view>
+    <view class="flex-a crm-text-else align-a">
+      <view>{{crm.intention}}</view>
+      <view class="right-border align-a"></view>
+      <view>{{crm.state}}</view>
+      <view class="right-border align-a"></view>
+      <view>{{crm.source}}</view>
+      <view class="right-border align-a"></view>
+      <view>{{crm.administrator}}</view>
+    </view>
+  </view>
+</view>
+<!-- 学员信息 -->
+<view class="student-information">
+  <bk-lines name="学员信息" lineFw="bold" text="查看全部" textColor="#999999" bindtap="studentClick"></bk-lines>
+  <bk-lines name="来源渠道:"  text="{{crm.source}}"></bk-lines>
+  <bk-lines name="意向课程:"></bk-lines>
+  <bk-lines name="意向课程:" text="{{crm.intention}}"></bk-lines>
+  <bk-lines name="市场来源:" borderBottom=""></bk-lines>
+</view>
+<!-- 跟进记录 -->
+<view class="follow-up-records">
+  <bk-lines name="跟进记录" lineFw="bold" text="查看全部" textColor="#999999" bindtap="recordClick"></bk-lines>
+  <block wx:for="{{records}}" wx:key="*this" data-index="{{index}}">
+    <view class="records {{index+1 == records.length?'':'line'}}">
+      <view class="flex-a align-a justify-d records-fisrt">
+        <view class="flex-a align-a">
+          <view>
+          <image src="{{item.typeImg}}" style="height:48rpx;width:48rpx"></image>
+          </view>
+          <view class="align-a records-fisrt-type">{{item.type}}</view>
+        </view>
+        <view class="flex-a align-a">
+          <view >{{item.contact}}</view>
+          <view class="records-fisrt-line"></view>
+          <view>{{item.linkman}}</view>
+        </view>
+      </view>
+      <view class="records-second">{{item.operating}}</view>
+      <view class="records-second">{{item.intention}}</view>
+      <view class="records-end">操作人: {{item.operator}} {{item.time}}</view>
+    </view>
+  </block>
+</view>
+<!-- 预约记录 -->
+<view class="reservation-record">
+  <bk-lines name="学员信息" lineFw="bold" text="查看全部" textColor="#999999"></bk-lines>
+  <view class="reservation">
+    <view class="ellipse reservation-frist flex-a align-a justify-d">
+      <view class='align-a ellipse-fisrt align-b'>试听未到</view>
+      <view class='align-a ellipse-second'>测试班级</view>
+      <view class='align-a'>2020-04-06</view>
+      <view class='align-a'>09:00~10:00</view>
+      <view class='align-a flex-a'>
+        <image src="../../../assets/image/back.png" style="height:28rpx;width:28rpx;margin-right:16rpx" class="align-a"></image>
+      </view>
+    </view>
+    <view class="ellipse reservation-frist flex-a align-a justify-d">
+      <view class='align-a ellipse-fisrt align-b'>完成到访</view>
+      <view class="flex-a align-a">
+        <view class='align-a'>2020-01-01</view>
+          <view class='align-a margins'>17:00</view>
+          <view class='align-a flex-a'>
+            <image src="../../../assets/image/back.png" style="height:28rpx;width:28rpx;margin-right:16rpx" class="align-a"></image>
+          </view>
+        </view>
+    </view>
+  </view>
+</view>
+<!-- 按钮 -->
+
+<bk-btn btn="{{btn}}"></bk-btn>

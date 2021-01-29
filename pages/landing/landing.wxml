@@ -1,0 +1,28 @@
+<!--pages/landing/landing.wxml-->
+<view class="pages">
+  <view>
+    <image src="../../assets/image/landing.png" mode="heightFix" style="height:58vh"></image>
+  </view>
+  <view class="box">
+    <view class="list">
+    <view class="lists">
+        <view class="texts">
+            <text class="text">*</text>
+            <text class="textitem">手机号:</text>
+        </view>
+        <view class="input">
+            <input class="input-text" type="number" auto-focus placeholder="请输入常用手机号" bindinput="handleInputPhone"></input>
+            <view class="input-note" bindtap="auth" disabled='{{disabled}}' data-id="2" >{{time}}</view>
+        </view>
+        <view class="texts">
+            <text class="text">*</text>
+            <text class="textitem">验证码:</text>
+        </view>
+        <view class="input">
+            <input class="input-text" type="number" auto-focus placeholder="请输入短信验证码" bindinput="handleInputNumber"></input>
+        </view>
+    </view>
+    <view class="button"bindtap='next' >下一步</view>
+</view>
+  </view>
+</view>

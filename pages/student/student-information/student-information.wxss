@@ -1,0 +1,43 @@
+/* pages/student/student-information/student-information.wxss */
+.base {
+  height: 944rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 30rpx;
+  margin: 16rpx 16rpx 0 16rpx ;
+}
+.other {
+  height: 419rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 30rpx;
+  margin: 16rpx 16rpx 0 16rpx ;
+}
+.linkman {
+  height: 314rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 30rpx;
+  margin: 16rpx 16rpx 0 16rpx ;
+}
+.add-linkman {
+  color: #F89470;
+  font-weight: bold;
+  height: 104rpx;
+}
+.custom {
+  height: 209rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 30rpx;
+  margin: 16rpx;
+}
+.last {
+  margin-bottom: 32rpx;
+}
+.bg-tab {
+  margin: 32rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #60ADE1;
+}

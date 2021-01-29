@@ -1,0 +1,27 @@
+/* components/bk-btn/bk-btn.wxss */
+.btn {
+  padding: 0 16rpx 0 16rpx;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
+.btns {
+  flex: 1;
+  height: 80rpx;
+  background: #FFFFFF;
+  border: 1rpx solid #60ADE1;
+  box-shadow: 0px 10rpx 20rpx rgba(153, 153, 153, 0.16);
+  border-radius: 30rpx;
+  margin-bottom: 35rpx;
+  font-size: 34rpx;
+  color: #60ADE1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 18rpx;
+}
+.else-btns {
+  background: linear-gradient(180deg, #96CBEB 0%, #60ADE1 100%);
+  color: #FFFFFF;
+}

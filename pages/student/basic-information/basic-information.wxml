@@ -1,0 +1,15 @@
+<!--pages/student/basic-information/basic-information.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<!-- 基础信息 -->
+<view class="box">
+  <bk-lines name="头像:"  photoDisplay="" photo="{{message.photo}}"></bk-lines>
+  <bk-line-picker name="性别:"  listData_02="{{option}}" picker_02_data="{{gender}}" bind:picker='picker'></bk-line-picker>
+  <bk-lines name="学员姓名:" backDisplay="none" text="{{message.name}}"></bk-lines>
+  <bk-line-picker name="国家码:"  listData_02="{{options}}" picker_02_data="{{code}}" bind:picker='pickers'></bk-line-picker>
+  <bk-lines name="注册手机:" borderBottom="" backDisplay="none" text="{{message.phone}}"></bk-lines>
+</view>
+
+<!-- 按钮 -->
+<view class="btn align-b" bindtap="btnClick">确认</view>
+
+<!-- 蒙层 -->

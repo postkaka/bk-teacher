@@ -1,0 +1,16 @@
+<!--pages/work/offwork/offwork.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<block wx:for="{{oldNews}}" wx:key="*this">
+  <view class="box">
+    <view class="flex-a box-item align-a justify-d">
+      <view class="box-types">{{item.type}}</view>
+      <view class="box-time align-a">{{item.time}}</view>
+    </view>
+    <view class="box-news">{{item.news}}</view>
+  </view>
+  <view class="flex-a">
+        <view class="flex-b  type-orders align-b">查看</view>
+  </view>
+</block>
+<!-- 提示 -->
+<view class="hint">没有更多了</view>

@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/workbench/workbench",
+    "pages/mine/mine",
+    "pages/news/news",
+    "pages/landing/landing",
+    "pages/inform/inform",
+    "pages/work/backlog/backlog",
+    "pages/work/offwork/offwork",
+    "pages/student/student-crm/student-crm",
+    "pages/student/basic-information/basic-information",
+    "pages/student/student-information/student-information",
+    "pages/student/integral/integral",
+    "pages/student/integral-transformation/integral-transformation",
+    "pages/student/record/record",
+    "pages/recruit/recruitStudent/recruitStudent",
+    "pages/recruit/classPackage/classPackage"
+  ],
+  "tabBar": {
+    "selectedColor": "#60ADE1",
+    "list": [
+      {
+        "pagePath": "pages/news/news",
+        "text": "消息",
+        "iconPath": "assets/image/news.png",
+        "selectedIconPath": "assets/image/news-1.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "工作台",
+        "iconPath": "assets/image/index.png",
+        "selectedIconPath": "assets/image/index-1.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "assets/image/mine.png",
+        "selectedIconPath": "assets/image/mine-1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap14.json"
+}

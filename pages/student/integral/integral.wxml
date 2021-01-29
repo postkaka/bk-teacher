@@ -1,0 +1,27 @@
+<!--pages/student/integral/integral.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<!-- 总积分 -->
+<view class="integral ">
+  <view class="integral-item">
+    <view class="integral-ball align-b">{{integral}}</view>
+  </view>
+  <view class='integral-text'>可用积分</view>
+</view>
+<!-- 积分记录 -->
+<view class="record">
+  <block wx:for="{{record}}"  wx:key="*this" data-index="{{index}}">
+    <view class="record-item {{index+1 == record.length?'':'line'}}">
+      <view class="flex-a justify-d">
+        <view class="record-type">{{item.type}}</view>
+        <view class="{{item.style}}">{{item.dispose}} {{item.integral}}</view>
+      </view>
+      <view class="record-remark">备注：{{item.remark}}</view>
+      <view class="record-remark">{{item.time}}</view>
+    </view>
+  </block>
+</view>
+
+<view class="btn">
+  <bk-btn btn="{{btn}}" bind:btnClick="btnClick"></bk-btn>
+</view>
+

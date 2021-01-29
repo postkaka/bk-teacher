@@ -1,0 +1,40 @@
+<!--pages/work/backlog/backlog.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<!-- tab -->
+<view class="tab-box flex-a align-a justify-c">
+  <block wx:for="{{tab}}" wx:key="*this">
+    <view class="align-a" data-index="{{index}}"bind:tap="tabClick">
+      <view class="align-b tab-text {{index == currentIndex?'tab-text-show':''}}">{{item.type}}</view>
+      <view class="tab-nub align-b">{{item.nub}}</view>
+    </view>
+  </block>
+</view>
+<!-- 已完成待办 -->
+<view class="radius-box flex-a justify-d align-a" bindtap="offworkClick">
+  <view class="flex-a align-a">
+    <view>
+      <image src="../../../assets/image/backlog-1.png" style="height:40rpx;width:40rpx"></image>
+    </view>
+    <view class="radius-box-text">已完成待办</view>
+  </view>
+  <view class="align-a">
+    <image src="../../../assets/image/back.png" style="height:28rpx;width:28rpx"></image>
+  </view>
+</view>
+<!-- 学员分配 -->
+<view class="news-box">
+  <block wx:for="{{news}}" wx:key="*this" data-index="{{index}}">
+    <view class="news-box-item flex-a justify-d align-a {{index+1 == news.length?'':'line'}}" bindtap="studentClick">
+      <view class="align-a">
+        <view class="news-box-item-text">{{item.news}}</view>
+        <view class="news-box-item-text-time">{{item.time}}</view>
+      </view>
+      <view class="align-a">
+        <image src="../../../assets/image/check.png" style="height:48rpx;width:48rpx"></image>
+      </view>
+    </view>
+  </block>
+</view>
+
+<!-- 提示 -->
+<view class="hint">没有更多了</view>

@@ -1,0 +1,6 @@
+<!--components/bk-btn/bk-btn.wxml-->
+<view class='btn'>
+  <block wx:for="{{btn}}"  wx:key="*this" data-index="{{index}}">
+    <view class=" btns {{index+1 == btn.length?'else-btns':''}}" bindtap="btnClick" data-index="{{index}}">{{item}}</view>
+  </block>
+</view>

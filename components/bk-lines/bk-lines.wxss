@@ -1,0 +1,33 @@
+/* components/bk-lines/bk-lines.wxss */
+.line {
+  display: flex;
+  height: 104rpx;
+  justify-content: space-between;
+  align-self: center;
+  padding: 0 32rpx 0 32rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  color: #333333;
+}
+.line-name {
+  align-self: center;
+}
+.line-img {
+  align-self: center;
+  display: flex;
+}
+.line-img-text {
+  align-self: center;
+  margin-right: 8rpx;
+}
+.line-img-input {
+  margin-right: 8rpx;
+  width: 80rpx;
+  text-align: center;
+}
+.line-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

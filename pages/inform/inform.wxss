@@ -1,0 +1,111 @@
+/* pages/inform/inform.wxss */
+.tab {
+  padding-left: 155rpx;
+  padding-right: 155rpx;
+  background: #FFFFFF;
+  height: 5vh;
+}
+.tab-text {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #60ADE1;
+}
+.common-tab-text {
+  font-weight: 400;
+  color: #999999;
+  font-size: 28rpx;
+}
+.line {
+  width: 56rpx;
+  height: 8rpx;
+  margin-top: 16rpx;
+  background: #60ADE1;
+  border-radius: 4rpx;
+}
+.box {
+  margin: 16rpx 16rpx 0 16rpx;
+  height: 13vh;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+}
+.box-item {
+  padding: 32rpx 32rpx 0 32rpx;
+  margin-bottom: 12rpx;
+}
+.box-types {
+  color: #999999;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.box-type {
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.box-time {
+  font-size: 24rpx;
+  color: #999999;
+}
+.box-news {
+  padding-left: 32rpx;
+  font-size: 24rpx;
+  color: #999999;
+}
+.type {
+  margin: 0 0 16rpx 16rpx;
+  border-top: 2rpx solid #DDDDDD;
+  font-size: 28rpx;
+  background: #FFFFFF;
+  height: 5vh; 
+  border-radius: 0px 0px 0px 30rpx;
+}
+.type-order {
+  background: #DDDDDD;
+  color: #999999;
+  margin: 0 16rpx 16rpx 0;
+  border-top: 2rpx solid #DDDDDD;
+  font-size: 28rpx;
+  height: 5vh;
+  border-radius: 0px 0px 30rpx 0px;
+}
+.type-orders {
+  background: #DDDDDD;
+  color: #999999;
+  margin: 0 16rpx 16rpx 16rpx;
+  border-top: 2rpx solid #DDDDDD;
+  font-size: 28rpx;
+  height: 5vh;
+  border-radius: 0px 0 30rpx 30rpx;
+}
+.bg-top {
+  top: 15vh;
+}
+.bg-image {
+  margin: 111rpx 0 43rpx 0;
+}
+.bg-text-1 {
+  text-align: center;
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #333333;
+}
+.bg-text-2 {
+  font-size: 28rpx;
+  margin: 32rpx 0 0 0;
+  text-align: center;
+}
+.bg-text-3 {
+  font-size: 28rpx;
+  margin: 5rpx 0 60rpx 0;
+  text-align: center;
+}
+.bg-button {
+  height: 80rpx;
+  background: linear-gradient(180deg, #96CBEB 0%, #60ADE1 100%);
+  box-shadow: 0px 10rpx 20rpx rgba(153, 153, 153, 0.16);
+  border-radius: 30rpx;
+  margin: 0 16rpx 20rpx 16rpx;
+  font-size: 34rpx;
+  color: #FFFFFF;
+}

@@ -1,0 +1,19 @@
+<view style="height:{{statusHeight+navHeight}}px" hidden='{{false}}' ></view>
+<view class='topbar' style="background-color:{{header.headerbg}}">
+  <view class='status' style="height:{{statusHeight}}px"></view>
+  <view class='navbar' style="height:{{navHeight}}px">
+    <view class='navbar_home'>
+      <image class='navbar_home-image' src="{{header.src}}" bindtap='backClick' mode="heightFix" style="height 100%"></image>
+      <!-- <image src='' bindtap='homeClick'></image> -->
+    </view>
+    <!-- <view class='navbar_back' bindtap='backClick'>
+      <image src='../../assets/image/back.png'></image>
+    </view> -->
+    <view class='navbar_title' style="height:{{navHeight}}px">
+      <view class="navbar_title-view" style="Color:{{header.fontColor}};font-size:{{header.fontSize}}">{{header.title}}</view>
+    </view>
+  </view>
+</view>
+
+
+

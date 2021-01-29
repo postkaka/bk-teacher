@@ -1,0 +1,44 @@
+<!--pages/student/student-information/student-information.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<!-- 基础信息 -->
+<view class="base">
+  <bk-lines name="生日:"  text="{{base.birthday}}" bindtap="showClick"></bk-lines>
+  <bk-lines name="年龄:"  text="{{base.age}}" backDisplay="none"></bk-lines>
+  <bk-lines name="学校:"  text="{{base.school}}" backDisplay="none"></bk-lines>
+  <bk-lines name="年级:"  text="{{base.grade}}" backDisplay="none"></bk-lines>
+  <bk-lines name="备注:"  text="{{base.remark}}" backDisplay="none"></bk-lines>
+  <bk-lines name="微信号:"  text="{{base.number}}" backDisplay="none"></bk-lines>
+  <bk-lines name="家庭住址:"  text="{{base.site}}" backDisplay="none"></bk-lines>
+  <bk-lines name="钱包余额:"  text="{{base.wallet}}" ></bk-lines>
+  <bk-lines name="积分分数:"  text="{{base.ntegral}}" borderBottom="" bindtap="integralClick"></bk-lines>
+</view>
+<!-- 其他信息 -->
+<view class="other">
+  <bk-line-picker name="来源渠道:"  listData_02="{{source}}" picker_02_data="{{_source}}" bind:picker='picker'></bk-line-picker>
+  <bk-line-picker name="意向课程:"  listData_02="{{class}}" picker_02_data="{{_class}}" bind:picker='pickerClass'></bk-line-picker>
+  <bk-line-picker name="意向程度:"  listData_02="{{intention}}" picker_02_data="{{_intention}}" bind:picker='pickerIntention'></bk-line-picker>
+  <bk-line-picker name="意向程度:"  listData_02="{{intention}}" picker_02_data="{{_intention}}" bind:picker='pickerIntention'></bk-line-picker>
+</view>
+<!-- 联系人 -->
+<view class="linkman">
+  <bk-lines name="联系人" lineFw="bold" backDisplay="none"></bk-lines>
+  <bk-lines name="爸爸:"  text="{{base.phone}}" backDisplay="none"></bk-lines>
+  <view class="add-linkman align-b">+ 添加联系人</view>
+</view>
+<!-- 自定义 -->
+<view class="custom">
+  <bk-lines name="自定义字段" lineFw="bold" backDisplay="none"></bk-lines>
+  <bk-lines name="会员介绍:"   borderBottom=""></bk-lines>
+</view>
+
+<view class='hint last'>录入时间: 2020-03-19</view>
+
+<!-- 蒙层 -->
+<view class="bg" style='display:{{display}} '></view>
+<view class="bg-item" style='display:{{display}} '>
+  <view class="flex-a justify-d bg-tab">
+    <view bindtap="buttonClick">取消</view>
+    <view bindtap="buttonClick">确认</view>
+  </view>
+  <bk-calendar bind:nowSelect="nowSelect"></bk-calendar>
+</view>

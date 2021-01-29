@@ -1,0 +1,59 @@
+<!--pages/index/index.wxml-->
+
+<view class="page">
+  <!-- 头部图片 -->
+<view>
+  <image src="../../assets/image/header.png" mode="widthFix" style="width: 100%"></image>
+</view>
+<!-- 消息通知 -->
+<view class="box flex-a align-a" bindtap="infromClick">
+  <view class="align-a horn">
+    <image src="../../assets/image/horn.png"  style="width: 44rpx;height:44rpx;"></image>
+  </view>
+  <view class="align-a  news">关于班客新赛道通知</view>
+</view>
+<view class='epiboly'>
+<!-- 快捷方式 -->
+  <view class="box-1 rounded">
+    <view class="main-text">快捷操作</view>
+    <view class="flex-a justify-a bottom">
+      <block  wx:for="{{shortcuts}}" wx:key="*this">
+        <view class="box-item" bindtap="shortcutsClick" data-index="{{index}}">
+          <view class="flex-a justify-b ">
+            <image src="{{item.icon}}" style="height:70rpx;width:70rpx"></image>
+          </view>
+          <view class="box-text">{{item.text}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+<!-- 校区管理 -->
+  <view class="box-2 rounded">
+    <view class="main-text">校区管理</view>
+    <view class="flex-a justify-a ">
+      <block  wx:for="{{management}}" wx:key="*this">
+        <view class="box-item">
+          <view class="flex-a justify-b ">
+            <image src="{{item.icon}}" style="height:70rpx;width:70rpx"></image>
+          </view>
+          <view class="box-text">{{item.text}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+<!-- 统计管理 -->
+  <view class="box-3 rounded">
+    <view class="main-text">数据统计</view>
+    <view class="flex-a justify-a bottom">
+      <block  wx:for="{{dataStatistics}}" wx:key="*this">
+        <view class="box-item">
+          <view class="flex-a justify-b ">
+            <image src="{{item.icon}}" style="height:70rpx;width:70rpx"></image>
+          </view>
+          <view class="box-text">{{item.text}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+</view>

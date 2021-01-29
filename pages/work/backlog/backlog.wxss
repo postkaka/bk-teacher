@@ -1,0 +1,63 @@
+/* pages/work/backlog/backlog.wxss */
+.tab-box {
+  height: 146rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 0px 0px 30rpx 30rpx;
+}
+.tab-text {
+  width: 128rpx;
+  height: 49rpx;
+  background: #DDDDDD;
+  border-radius: 28rpx;
+  font-size: 24rpx;
+}
+.tab-text-show {
+  background: linear-gradient(180deg, #96CBEB 0%, #60ADE1 100%);
+  color: #FFFFFF;
+}
+.tab-nub {
+  width: 52rpx;
+  height: 24rpx;
+  background: #F89470;
+  border-radius: 28rpx;
+  font-size: 20rpx;
+  color: #FFFFFF;
+  position: relative;
+  left: 102rpx;
+  top: -62rpx;
+}
+.radius-box {
+  height: 7vh;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 30rpx;
+  margin: 16rpx 16rpx 0 16rpx;
+  padding: 0 32rpx 0 32rpx;
+}
+.radius-box-text {
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-left: 16rpx;
+}
+.news-box {
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 30rpx;
+  margin: 16rpx 16rpx 0 16rpx;
+}
+.news-box-item {
+  height: 11vh;
+  padding: 0 32rpx 0 32rpx;
+}
+.news-box-item-text {
+  font-size: 28rpx;
+}
+.news-box-item-text-time {
+  font-size: 24rpx;
+  color: #999999;
+  margin-top: 8rpx;
+}
+.line {
+  border-bottom: 1rpx solid #DDDDDD;
+}

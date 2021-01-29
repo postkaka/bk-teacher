@@ -1,0 +1,36 @@
+/* pages/student/basic-information/basic-information.wxss */
+.box {
+  height: 532rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 30rpx;
+  margin: 16rpx;
+}
+.btn {
+  width: 96vw;
+  height: 80rpx;
+  background: linear-gradient(180deg, #96CBEB 0%, #60ADE1 100%);
+  box-shadow: 0px 10rpx 20rpx rgba(153, 153, 153, 0.16);
+  border-radius: 30rpx;
+  margin: 16rpx ;
+  font-size: 34rpx;
+  color: #FFFFFF;
+  position: absolute;
+  bottom: 16rpx;
+  left: 0;
+}
+.choose {
+  padding: 32rpx;
+  font-size: 28rpx;
+  color: #60ADE1;
+}
+.options {
+  margin-top:251rpx ;
+}
+.option {
+  height: 72rpx;
+  font-weight: bold;
+  font-size: 28rpx;
+  text-align: center;
+  border-top: 1px solid #DDDDDD;
+}

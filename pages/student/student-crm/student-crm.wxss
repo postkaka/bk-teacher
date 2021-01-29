@@ -1,0 +1,119 @@
+/* pages/student/student-crm/student-crm.wxss */
+/* 头部 */
+.header {
+  height: 158rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 0px 0px 30rpx 30rpx;
+}
+.crm-fisrt {
+  margin-bottom: 8rpx;
+}
+.height-image {
+  margin: 0 9rpx 0 32rpx;
+}
+.crm-name {
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.crm-image {
+  margin: 0 23rpx 0 8rpx ;
+}
+.crm-text {
+  font-size: 24rpx;
+}
+.crm-type {
+  margin-left:8rpx ;
+}
+.crm-text-else {
+  font-size: 20rpx;
+  color: #999999;
+}
+.right-border {
+  border-right: 1rpx solid #999999;
+  margin: 0 8rpx 0 8rpx;
+  height: 18rpx;
+  background: #999999;
+}
+/* 学员信息 */
+.student-information {
+  height: 524rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 30rpx;
+  margin: 16rpx;
+}
+/* 跟进记录 */
+.follow-up-records {
+  height: 806rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 30rpx;
+  margin: 0 16rpx 16rpx 16rpx;
+}
+.records {
+  font-size: 28rpx;
+  padding: 36rpx 0 32rpx 0;
+}
+.records-fisrt {
+  margin: 0 32rpx 0 35rpx;
+}
+.records-fisrt-type {
+  margin-left: 16rpx;
+  font-weight: bold;
+  color: #60ADE1;
+}
+.records-fisrt-line {
+  align-self: center;
+  height: 23rpx;
+  border-right: 2rpx solid #999999;
+  margin: 0 8rpx 0 8rpx;
+}
+.records-second {
+  margin:4rpx 0 4rpx 96rpx ;
+}
+.records-end {
+  margin-left: 96rpx ;
+  font-size: 24rpx;
+  color: #999999;
+}
+.line {
+  border-bottom: 1rpx solid #DDDDDD;
+}
+/* 预约记录 */
+.reservation-record {
+  height: 329rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 30rpx;
+  margin: 0 16rpx 16rpx 16rpx;
+}
+.reservation {
+  padding: 32rpx;
+}
+.ellipse {
+  height: 72rpx;
+  background: #FFFFFF;
+  border: 1rpx solid #60ADE1;
+  border-radius: 42rpx;
+  font-size: 24rpx;
+}
+.reservation-frist {
+  margin-bottom: 16rpx;
+}
+.ellipse-fisrt {
+  background: linear-gradient(180deg, #96CBEB 0%, #60ADE1 100%); 
+  border: 1rpx solid #60ADE1;
+  border-radius: 42rpx;
+  font-size: 28rpx;
+  color: #ffffff;
+  height: 56rpx;
+  width: 144rpx;
+  margin-left: 8rpx;
+}
+.ellipse-second {
+  color: #60ADE1;
+}
+.margins {
+  margin: 0 8rpx 0 17rpx
+}
