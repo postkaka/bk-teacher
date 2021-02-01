@@ -13,6 +13,7 @@
     <bk-line-class lineText="{{item.name}}" lineBox="{{item.type}}" 
     lineTextSec="{{item.class}}个班级" lineTextTh="{{item.nub}}"
     borderBottom="{{index+1 == package.length?'':'1px solid #DDDDDD'}}" 
+    bindtap="courseInformationClick"
     ></bk-line-class>
   </block>
 </view>
@@ -22,6 +23,7 @@
     <bk-line-class lineText="{{item.name}}" lineBox="{{item.type}}" 
     lineTextSec="包含课程:{{item.class}}" lineTextTh="{{item.nub}}"
     borderBottom="{{index+1 == share.length?'':'1px solid #DDDDDD'}}" 
+    bindtap="courseInformationClick"
     ></bk-line-class>
   </block>
 </view>

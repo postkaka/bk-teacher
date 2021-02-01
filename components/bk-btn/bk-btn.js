@@ -7,6 +7,10 @@ Component({
     btn:{
       type:Array,
       value:[]
+    },
+    btnStyle:{
+      type:String,
+      value:""
     }
   },
 

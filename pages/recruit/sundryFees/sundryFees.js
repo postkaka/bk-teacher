@@ -1,4 +1,4 @@
-// pages/recruit/classPackage/classPackage.js
+// pages/recruit/sundryFees/sundryFees.js
 Page({
 
   /**
@@ -13,33 +13,22 @@ Page({
       slot: false,
       src:'../../assets/image/fback.png'
     },
-    tab:["课程课时包","共享课时包"],
-    btn:["返回"],
-    package:[
-      {name:"能力风暴大颗粒",type:"1对1",class:"4"},
-      {name:"实验123",type:"班组课",class:"0",nub:"4个套餐"},
-      {name:"测试3",type:"班组课",class:"1"},
-      {name:"测试",type:"班组课",class:"2"}
+    sundry:[
+      {name:"哑铃",type:"体育器材",_type:"物品",value:"yl"},
+      {name:"笔记本",type:"教具",_type:"物品",value:"bjb"},
+      {name:"书费",type:"活动课",_type:"杂费",value:"sf"}
     ],
-    share:[
-      {name:"12",type:"班组课",class:"测试、测试3"}
-    ],
-    nub: 0
+    btn:["取消","确认"],
+    items:[]
+
   },
-  itemClick(e){
+  radioChange(e){
+  //  console.log(e.detail.value)
+    let newArray = e.detail.value 
     this.setData({
-      nub: e.detail
+      items: newArray
     })
-  },
-  btnClick(){
-    wx.navigateTo({
-      url: '../recruitStudent/recruitStudent',
-    })
-  },
-  courseInformationClick(){
-    wx.navigateTo({
-      url: '../courseInformation/courseInformation',
-    })
+    // console.log(this.data.items)
   },
   /**
    * 生命周期函数--监听页面加载

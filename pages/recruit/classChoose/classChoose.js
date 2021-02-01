@@ -1,4 +1,4 @@
-// pages/recruit/classPackage/classPackage.js
+// pages/recruit/classChoose/classChoose.js
 Page({
 
   /**
@@ -13,33 +13,42 @@ Page({
       slot: false,
       src:'../../assets/image/fback.png'
     },
-    tab:["课程课时包","共享课时包"],
-    btn:["返回"],
-    package:[
-      {name:"能力风暴大颗粒",type:"1对1",class:"4"},
-      {name:"实验123",type:"班组课",class:"0",nub:"4个套餐"},
-      {name:"测试3",type:"班组课",class:"1"},
-      {name:"测试",type:"班组课",class:"2"}
-    ],
-    share:[
-      {name:"12",type:"班组课",class:"测试、测试3"}
-    ],
-    nub: 0
+    inform:{
+      name:"李大王",
+      className:"能力风暴大颗粒",
+      time:"2020-05-16",
+      text:"无",
+      figure:1,
+      tea:"教师一号"
+    },
+    btn:["取消","确认"]
+    
   },
-  itemClick(e){
+  add(){
     this.setData({
-      nub: e.detail
+      ["inform.figure"]: this.data.inform.figure + 1
     })
   },
-  btnClick(){
-    wx.navigateTo({
-      url: '../recruitStudent/recruitStudent',
-    })
+  subtract(){
+    if(this.data.inform.figure >1){
+      this.setData({
+        ["inform.figure"]: this.data.inform.figure - 1
+      })
+    }
   },
-  courseInformationClick(){
-    wx.navigateTo({
-      url: '../courseInformation/courseInformation',
-    })
+  btnClick(e){
+    let that = this
+    let id = e.detail;
+    if(id == 1){
+      let add = JSON.stringify(this.data.inform)
+      wx.navigateTo({
+        url: '../courseInformation/courseInformation?add=' + add,
+      })
+    }else{
+      wx.navigateTo({
+        url: '../courseInformation/courseInformation',
+      })
+    }
   },
   /**
    * 生命周期函数--监听页面加载

@@ -1,0 +1,65 @@
+<!--pages/recruit/courseInformation/courseInformation.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<!-- 头部信息 -->
+<view class="pic flex-a align-a">
+  <view class='align-a pic-src'>
+    <image src="{{inform.src}}" style="height:78rpx;width:78rpx"></image>
+  </view>
+  <view class='align-a pic-name'>{{inform.name}}</view>
+  <view class='align-a pic-name'>{{inform.phone}}</view>
+  <view class="align-b src-box align-a">{{inform.type}}</view>
+</view>
+<!-- 课程报名信息 -->
+<view class="informmation">
+  <bk-lines name="{{class.name}}" text="￥{{class.price}}" tran="rotate(90deg)" lineFw="bold">
+    <view slot="pic" class="piu-src">
+      <image src="../../../assets/image/del.png" style="height:29rpx;width:27rpx"></image>
+    </view>
+  </bk-lines>
+  <bk-lines name="*报名类型" text="{{class.type}}"></bk-lines>
+  <bk-lines name="*购买课时数" text="课时" backDisplay="none" inputDisplay="" inputWidth="230"
+  pla="请输入购买课时数"></bk-lines>
+  <bk-lines name="课时有效期" text="请选择" textColor="#999999"></bk-lines>
+  <bk-lines name="课时金额" text="{{class.classPrixe}}元" backDisplay="none"></bk-lines>
+  <bk-lines name="优惠" text="-￥{{class.discounts}}" ></bk-lines>
+  <bk-lines  text="实际课时金额:" backDisplay="none">
+    <view slot="line-text" class="actual">￥{{class.actualPrice}}</view>
+  </bk-lines>
+  <view class="{{add.name  ?'none':''}}">
+    <bk-line-class lineText="{{class.name}}" lineBox="{{class.types}}" borderBottom="" alignText="color:#999999;"lineTextTh="请选择班级" bindtap="classClick"></bk-line-class>
+  </view>
+  <view class="{{add.name ?'':'none'}}">
+    <bk-line-class lineText="{{class.name}}" lineBox="{{class.types}}" alignText="color:#999999;" bindtap="classClick"></bk-line-class>
+  </view>
+  
+  <view wx:if="{{add.name}}">
+    <bk-lines name="班级名称" text="{{add.className}}.{{add.name}}" ></bk-lines>
+    <bk-lines name="教师" text="{{add.tea}}" backDisplay="none" ></bk-lines>
+    <bk-lines name="开课时间" text="{{add.time}}" backDisplay="none" ></bk-lines>
+    <bk-lines name="请假限制" text="请假限制:{{add.figure}}次" backDisplay="none" borderBottom="" ></bk-lines>
+  </view>
+  <bk-btn btn="{{_btn}}" bind:btnClick="btnClick"></bk-btn>
+  <bk-lines  text="增加物品杂费:" backDisplay="none">
+    <view slot="line-text" class="actual">￥{{class.incidentals}}</view>
+  </bk-lines>
+  <bk-lines  text="金额总计:" backDisplay="none" borderBottom="">
+    <view slot="line-text" class="actual" >￥{{class.amount}}</view>
+  </bk-lines>
+  <bk-btn btn="{{_1btn}}"></bk-btn>
+</view>
+
+<!-- 赠送课时 -->
+<view class="presenter">
+  <bk-lines name="赠送课时" text="增加赠送课时"  lineFw="bold" textColor="#999999" borderBottom="" >
+  </bk-lines>
+  <bk-btn btn="{{_2btn}}"></bk-btn>
+</view>
+
+<!-- 操作 -->
+<view class="flex-a last align-a ">
+  <view class="flex-a align-a flex-b">
+    <view>应付金额:</view>
+    <view class="pay">￥{{class.paymoney}}</view>
+  </view>   
+</view>
+<bk-btn btn="{{ _3btn}}" btnStyle="width:70%; position:relative;left:25%"></bk-btn>

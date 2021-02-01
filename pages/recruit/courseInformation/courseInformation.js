@@ -1,4 +1,4 @@
-// pages/recruit/classPackage/classPackage.js
+// pages/recruit/courseInformation/courseInformation.js
 Page({
 
   /**
@@ -13,39 +13,51 @@ Page({
       slot: false,
       src:'../../assets/image/fback.png'
     },
-    tab:["课程课时包","共享课时包"],
-    btn:["返回"],
-    package:[
-      {name:"能力风暴大颗粒",type:"1对1",class:"4"},
-      {name:"实验123",type:"班组课",class:"0",nub:"4个套餐"},
-      {name:"测试3",type:"班组课",class:"1"},
-      {name:"测试",type:"班组课",class:"2"}
-    ],
-    share:[
-      {name:"12",type:"班组课",class:"测试、测试3"}
-    ],
-    nub: 0
+    inform:{
+      src:'../../../assets/image/crm-1.png',
+      name:"李大王",
+      phone:"(13470070150)",
+      type:"线下课程"
+    },
+    class:{
+      name:"能力风暴大颗粒",
+      price:0,
+      type:"新生报名",
+      classPrixe:0,
+      discounts:0,
+      actualPrice:0,
+      types:"课程",
+      incidentals:0,
+      amount:0,
+      paymoney:0
+    },
+    add:{},
+    _btn:["增加物品杂费"],
+    _1btn:["再买一组"],
+    _2btn:["增加赠送课时"],
+    _3btn:["取消","下一步"]
   },
-  itemClick(e){
-    this.setData({
-      nub: e.detail
+  classClick(){
+    wx.navigateTo({
+      url: '../classChoose/classChoose',
     })
   },
   btnClick(){
     wx.navigateTo({
-      url: '../recruitStudent/recruitStudent',
+      url: '../sundryFees/sundryFees',
     })
   },
-  courseInformationClick(){
-    wx.navigateTo({
-      url: '../courseInformation/courseInformation',
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    if(options.add){
+      let add = JSON.parse(options.add)
+      this.setData({
+        add: add
+      })
+    }
   },
 
   /**

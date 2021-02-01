@@ -1,0 +1,26 @@
+<!--pages/recruit/sundryFees/sundryFees.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<!-- 搜索框 -->
+<view class="search ">
+  <bk-search-box search="请输入物品杂费名称"></bk-search-box>
+</view>
+
+<!-- 物品列表 -->
+<view class="sundry">
+      <checkbox-group bindchange="radioChange"> 
+        <label class="flex-a align-a label {{index+1 == sundry.length?'':'line'}}" wx:for="{{sundry}}" wx:key="*this" data-index="{{item}}">
+          <checkbox class="align-a checkbox" value="{{item.name}}" checked="{{item.checked}}"></checkbox>
+          <view>
+            <view class="flex-a align-a">
+              <view class="name">{{item.name}}</view>
+              <view class="_type align-b">{{item._type}}</view>
+            </view>
+            <view class="type">{{item.type}}</view>
+          </view>
+        </label>
+      </checkbox-group>
+</view>
+
+<view class="btn">
+  <bk-btn btn="{{btn}}" bind:btnClick="btnClick"></bk-btn>
+</view>

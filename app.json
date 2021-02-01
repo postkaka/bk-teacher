@@ -15,7 +15,10 @@
     "pages/student/integral-transformation/integral-transformation",
     "pages/student/record/record",
     "pages/recruit/recruitStudent/recruitStudent",
-    "pages/recruit/classPackage/classPackage"
+    "pages/recruit/classPackage/classPackage",
+    "pages/recruit/courseInformation/courseInformation",
+    "pages/recruit/classChoose/classChoose",
+    "pages/recruit/sundryFees/sundryFees"
   ],
   "tabBar": {
     "selectedColor": "#60ADE1",

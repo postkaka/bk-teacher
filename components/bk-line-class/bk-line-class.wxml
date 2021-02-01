@@ -8,7 +8,7 @@
     <view class="line-class-nub">{{lineTextSec}}</view>
   </view>
   <view class="align-a">
-    <view class="align-a-text">{{lineTextTh}}</view>
+    <view class="align-a-text" style="{{alignText}}" >{{lineTextTh}}</view>
     <view class="align-a-src">
       <image src="{{lineSrc}}" style="height:28rpx;width:28rpx;align-self: center;"></image>
     </view>

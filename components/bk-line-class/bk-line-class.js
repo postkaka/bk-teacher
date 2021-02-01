@@ -32,6 +32,10 @@ Component({
       type:String,
       value:"1px solid #DDDDDD"
     },
+    alignText:{
+      type:String,
+      value:""
+    }
   },
 
   /**

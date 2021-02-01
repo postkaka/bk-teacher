@@ -1,0 +1,27 @@
+<!--pages/recruit/classChoose/classChoose.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<!-- class信息 -->
+<view class="class-box">
+  <bk-lines name="班级名称:" backDisplay="none" nameSymbol="*" symbol="color:#F89470"
+  text="{{inform.className}}.{{inform.name}}"></bk-lines>
+  <bk-lines name="选择教师:" nameSymbol="*" symbol="color:#F89470"
+  text="请选择" textColor="#999999"></bk-lines>
+  <bk-lines name="开课时间:" nameSymbol="*" symbol="color:#F89470"
+  text="{{inform.time}}"></bk-lines>
+  <bk-lines name="选择助教:" text="{{inform.text}}"></bk-lines>
+  <bk-lines name="请假限制:"  borderBottom="" backDisplay="none">
+    <view slot="pic">
+      <switch class="_pic" checked bindchange="switch1Change" color="#60ADE1" />
+    </view>
+  </bk-lines>
+  <view class="flex-a align-a texts">
+    <view class="circle align-b align-a" bindtap="subtract">-</view>
+    <view class="text align-a ">{{inform.figure}}</view>
+    <view class="circle align-b align-a" bindtap="add">+</view>
+    <view class="align-a _text">次</view>
+  </view>
+</view>
+<!-- tab -->
+<view class="btn">
+  <bk-btn btn="{{btn}}" bind:btnClick="btnClick"></bk-btn>
+</view>

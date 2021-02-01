@@ -22,8 +22,7 @@
 }
 .line-img-input {
   margin-right: 8rpx;
-  width: 80rpx;
-  text-align: center;
+  text-align: right;
 }
 .line-item {
   display: flex;
