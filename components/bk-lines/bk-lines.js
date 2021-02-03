@@ -66,6 +66,14 @@ Component({
     inputWidth:{
       type:String,
       value:80
+    },
+    lineFws:{
+      type:String,
+      value:""
+    },
+    lineHight:{
+      type:String,
+      value:"104rpx"
     }
   },
   

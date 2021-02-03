@@ -1,0 +1,73 @@
+/* components/bk-crm-header/bk-crm-header.wxss */
+/* 头部 */
+.header {
+  height: 158rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 0px 0px 30rpx 30rpx;
+}
+.crm-fisrt {
+  margin-bottom: 8rpx;
+}
+.height-image {
+  margin: 0 9rpx 0 32rpx;
+}
+.crm-name {
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.crm-image {
+  margin: 0 23rpx 0 8rpx ;
+}
+.crm-text {
+  font-size: 24rpx;
+}
+.crm-type {
+  margin-left:8rpx ;
+}
+.crm-text-else {
+  font-size: 20rpx;
+  color: #999999;
+}
+.right-border {
+  border-right: 1rpx solid #999999;
+  margin: 0 8rpx 0 8rpx;
+  height: 18rpx;
+  background: #999999;
+}
+
+/* 布局样式 */
+.flex-a {
+  display: flex;
+  
+}
+.flex-b {
+  flex: 1;
+}
+/* 横向对齐 */
+.justify-b {
+  justify-content: center;
+}
+.justify-c {
+  justify-content: space-around;
+}
+.justify-d {
+  justify-content: space-between;
+}
+/* 竖向对齐 */
+.align-a {
+  align-self: center;
+}
+
+/* 换行 */
+.justify-a {
+  flex-wrap: wrap;
+  justify-content:start;
+}
+/* 文字横向竖向对齐 */
+.align-b {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

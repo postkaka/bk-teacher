@@ -1,4 +1,4 @@
-// pages/recruit/sundryFees/sundryFees.js
+// pages/recruit/classRecord/classRecord.js
 Page({
 
   /**
@@ -13,35 +13,37 @@ Page({
       slot: false,
       src:'../../assets/image/fback.png'
     },
-    sundry:[
-      {name:"哑铃",type:"体育器材",_type:"物品",value:"yl"},
-      {name:"笔记本",type:"教具",_type:"物品",value:"bjb"},
-      {name:"书费",type:"活动课",_type:"杂费",value:"sf"}
-    ],
-    btn:["取消","确认"],
-    items:[]
-
-  },
-  radioChange(e){
-  //  console.log(e.detail.value)
-    let newArray = e.detail.value 
-    this.setData({
-      items: newArray
-    })
-    // console.log(this.data.items)
+    btn:["新增记录","预约","报名"],
+    class:{
+      name:"能力风暴大颗粒",
+      class:12,
+      consume:0,
+      check:0.00,
+      diy:0.00,
+      roll:0.00
+    },
+    buys:[
+      {
+        src:"../../assets/image/time1.png",
+        buy:"+",
+        type: "购买课时",
+        time:"2020-04-27 周一",
+        quantity:'12'
+    }
+    ]
   },
   btnClick(e){
     if(e.detail == 0){
       wx.navigateTo({
-        url: '../courseInformation/courseInformation',
+        url: '../newRecord/newRecord',
       })
-    }else {
-      let items = JSON.stringify(this.data.items)
+    }else if(e.detail == 1){
       wx.navigateTo({
-        url: '../courseInformation/courseInformation?items=' + items,
+        url: '../appointmentTime/appointmentTime',
       })
     }
   },
+
   /**
    * 生命周期函数--监听页面加载
    */

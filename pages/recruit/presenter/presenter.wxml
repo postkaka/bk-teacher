@@ -1,0 +1,14 @@
+<!--pages/recruit/presenter/presenter.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<!-- 课时 -->
+<view class="presenter">
+  <bk-lines name="赠送课时类型" text="请选择" textColor="#999999"></bk-lines>
+  <bk-lines name="赠送课时数" text="课时"  pla="请输入赠送课时数" inputDisplay="" inputWidth="220"
+   backDisplay="none"></bk-lines>
+  <bk-lines name="赠送课时有效期至" text="请选择" textColor="#999999" borderBottom=""></bk-lines>
+  <bk-btn btn="{{_btn}}"></bk-btn>
+</view>
+<!-- tab -->
+<view class="btn">
+  <bk-btn btn="{{btn}}" bind:btnClick="btnClick"></bk-btn>
+</view>

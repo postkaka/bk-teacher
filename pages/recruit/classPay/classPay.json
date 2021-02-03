@@ -1,9 +1,9 @@
 {
   "usingComponents": {
     "bk-header":"../../../components/wx-header/header",
-    "bk-lines":"../../../components/bk-lines/bk-lines",
     "bk-btn":"../../../components/bk-btn/bk-btn",
-    "bk-crm-header":"../../../components/bk-crm-header/bk-crm-header"
+    "bk-line-class":"../../../components/bk-line-class/bk-line-class",
+    "bk-lines":"../../../components/bk-lines/bk-lines"
   },
   "navigationStyle": "custom"
 }

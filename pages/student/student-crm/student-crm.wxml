@@ -1,30 +1,7 @@
 <!--pages/student/student-crm/student-crm.wxml-->
 <bk-header header='{{header}}'></bk-header>
 <!-- 学员信息头部 -->
-<view class="header flex-a align-a">
-  <view class="align-a height-image">
-    <image src="../../../assets/image/crm-1.png" style="height: 78rpx;width:78rpx"></image>
-  </view>
-  <view class="align-a">
-    <view class="flex-a align-a crm-fisrt">
-      <view class="crm-name">{{crm.name}}</view>
-      <view class="crm-image" bindtap="basicInformationClick">
-        <image src='../../../assets/image/compile .png' style="height: 24rpx;width:24rpx"></image>
-      </view>
-      <view class="crm-text align-a">{{crm.time}}</view>
-      <view class="crm-text align-a crm-type">{{crm.type}}</view>
-    </view>
-    <view class="flex-a crm-text-else align-a">
-      <view>{{crm.intention}}</view>
-      <view class="right-border align-a"></view>
-      <view>{{crm.state}}</view>
-      <view class="right-border align-a"></view>
-      <view>{{crm.source}}</view>
-      <view class="right-border align-a"></view>
-      <view>{{crm.administrator}}</view>
-    </view>
-  </view>
-</view>
+<bk-crm-header crm="{{crm}}" bind:basicInformationClick="basicInformationClick"></bk-crm-header>
 <!-- 学员信息 -->
 <view class="student-information">
   <bk-lines name="学员信息" lineFw="bold" text="查看全部" textColor="#999999" bindtap="studentClick"></bk-lines>

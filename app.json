@@ -18,7 +18,15 @@
     "pages/recruit/classPackage/classPackage",
     "pages/recruit/courseInformation/courseInformation",
     "pages/recruit/classChoose/classChoose",
-    "pages/recruit/sundryFees/sundryFees"
+    "pages/recruit/sundryFees/sundryFees",
+    "pages/recruit/presenter/presenter",
+    "pages/recruit/classPay/classPay",
+    "pages/recruit/payment/payment",
+    "pages/recruit/inCourse/inCourse",
+    "pages/recruit/classTime/classTime",
+    "pages/recruit/classRecord/classRecord",
+    "pages/recruit/newRecord/newRecord",
+    "pages/recruit/appointmentTime/appointmentTime"
   ],
   "tabBar": {
     "selectedColor": "#60ADE1",

@@ -1,0 +1,65 @@
+/* components/wx-class-item/wx-class-item.wxss */
+.class-list {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 32rpx;
+    margin-right: 32rpx;
+    justify-content: space-between;
+    font-size: 28rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    line-height: 46rpx;
+    color: #333333;
+    padding-top: 30rpx;
+    }
+.class-item-left {
+    display: flex;
+}
+.class-item-left-image {
+    display: flex;
+    align-items: center;
+}
+.class-item-left-image-icon {
+    align-items: center;
+}
+.class-item-left-images {
+    margin-left: 16rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.class-item-left-images-view {
+    display: flex;
+    align-items: center;
+}
+.class-item-left-images-views {
+    margin-right: 8rpx;
+}
+.center {
+    display: flex;
+    align-items: center; 
+    margin-right: 9rpx;
+}
+.center-image {
+    align-items: center;
+}
+.class-item-right {
+    display: flex;
+    flex-direction: column;
+}
+.class-item-rights {
+    display: flex;
+    justify-content: flex-end;
+}
+.class-item-rights-type {
+    margin-left: 8rpx;
+}
+.class-slot {
+    display: flex;
+}
+.line {
+    border-bottom: 1rpx solid #DDDDDD;
+}
+.last-text {
+    text-align: right;
+}

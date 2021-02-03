@@ -1,0 +1,24 @@
+<!--pages/recruit/payment/payment.wxml-->
+<bk-header header="{{header}}"></bk-header>
+
+<!-- 提示信息 -->
+<view class="flex-a hints align-a">
+  <view class="icon align-b align-a">i</view>
+  <view class="icon-text">您需支付￥{{pay}}，请勾选支付方式后输入对应金额</view>
+</view>
+
+<!-- 支付方式 -->
+<view class="pay">
+  <radio-group bindchange="radioChange"> 
+    <label class="flex-a align-a label {{index+1 == pays.length?'':'line'}}" wx:for="{{pays}}" wx:key="*this" data-index="{{item}}">
+      <radio class="align-a checkbox" value="{{item}}" checked="{{item.checked}}">{{item}}</radio>
+    </label>
+  </radio-group>
+</view>
+
+<!-- 操作 -->
+<view class="operation">
+  <view>已付金额:<span class="paytext">￥{{alreadyPay}}</span></view>
+  <view>待付金额:<span class="paytext">￥{{pay}}</span></view>
+</view>
+<bk-btn btn="{{ _btn}}" btnStyle="width:70%; position:absolute;left:25%;bottom:32rpx" bind:btnClick="btnClick"></bk-btn>

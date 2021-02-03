@@ -1,0 +1,30 @@
+<!--components/wx-class-item/wx-class-item.wxml-->
+<view class="line" style="display:{{displays}}"></view>
+<view class="class-list" style="height:{{classlistheight}}rpx">
+   <view class="class-item-left" >
+       <view class="class-item-left-image" style="display:{{imagedisplay}}">
+           <image src="{{classitemimage}}"mode="widthFix" style="width:{{width}}rpx" class="class-item-left-image-icon"></image>
+       </view>
+       <view class="class-item-left-images" >
+           <view class="class-slot">
+            <view class="class-item-left-images-views" style="font-size:{{fontsize1}}rpx;font-weight:{{fontweight1}};">{{classitemleftview}}</view>
+            <view style="color:{{color1}}">{{classitemleftview2}}</view>
+           </view>
+           <view class="class-item-left-images-view">
+               <view class="center">
+                   <image src="{{classitemlefticon}}"  style="width: 28rpx;height:28rpx;" class="center-image"></image>
+               </view>
+               <view style="color:{{color2}};font-size:{{fontsize2}}rpx">{{classitemlefttime}}</view>
+           </view>
+           <view>{{classitemleftview3}}</view>
+       </view>
+   </view>
+   <view class="class-item-right" >
+       <view class="class-item-rights">
+            <view>{{classitemrighttime}}</view>
+            <view class="class-item-rights-type">{{classitemrighttype}}</view>
+       </view>
+       <view class="last-text" style="color: {{color3}}">{{classitemrighttimes}}</view>
+   </view>
+</view>
+

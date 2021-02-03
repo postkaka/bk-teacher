@@ -1,0 +1,26 @@
+<!--pages/recruit/inCourse/inCourse.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<bk-crm-header crm="{{crm}}" bind:basicInformationClick="basicInformationClick"></bk-crm-header>
+<!-- 学员信息 -->
+<view class="inform">
+  <bk-lines borderBottom="" name="学员信息" text="查看全部" textColor="#999999" lineFw="bold"></bk-lines>
+</view>
+<!-- 在学课程 -->
+<view class="inCourse">
+  <bk-lines name="在学课程" text="查看全部{{class.nub}}个课程" textColor="#999999" lineFw="bold"
+  bindtap="classTimeClick"></bk-lines>
+  <bk-lines name="{{class.name}}"  lineFw="bold" backDisplay="none"></bk-lines>
+  <bk-lines name="{{class.class}}"  backDisplay="none"></bk-lines>
+  <bk-lines name="请假情况:{{class.use}}次/{{class.sum}}次    出勤率:{{class.rate}}" backDisplay="none"></bk-lines>
+  <bk-lines name="剩余课时:"  text="{{class.time}}课时"></bk-lines>
+  <bk-lines borderBottom="" name="剩余有效期:" text="{{class.period}}天" ></bk-lines>
+</view>
+<!-- 跟进记录 -->
+<view class="record">
+  <bk-lines name="跟进记录"  text="共计{{class.follow}}条"></bk-lines>
+  <bk-lines borderBottom="" name="回访记录" text="共计{{class.followUp}}条" ></bk-lines>
+</view>
+<!-- 按钮 -->
+<view style="margin-top: 150rpx" >
+  <bk-btn btn="{{btn}}"></bk-btn>
+</view>

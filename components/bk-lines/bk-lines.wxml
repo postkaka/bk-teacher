@@ -1,11 +1,11 @@
 <!--components/bk-lines/bk-lines.wxml-->
-<view class="line" style="border-bottom:{{borderBottom}}">
+<view class="line" style="border-bottom:{{borderBottom}};hieght:{{lineHight}}">
   <view class='line-name' style="font-weight:{{lineFw}}"><span style="{{symbol}}">{{nameSymbol}}</span>{{name}}</view>
   <view class="line-img">
     <view  class="line-img-input" style="display:{{inputDisplay}};width:{{inputWidth}}rpx">
       <input type="{{type}}" placeholder="{{pla}}" bindinput="bindKeyInput" />
     </view>
-    <view class="line-img-text" style="color:{{textColor}}">{{text}}</view>
+    <view class="line-img-text" style="color:{{textColor}}; font-weight:{{lineFws}}">{{text}}</view>
     <slot name="line-text"></slot>
     <view class='line-item' style="display:{{photoDisplay}}">
       <image src="{{photo}}" style="height:78rpx;width:78rpx;align-self:center;"></image>

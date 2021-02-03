@@ -1,4 +1,4 @@
-// pages/recruit/sundryFees/sundryFees.js
+// pages/recruit/inCourse/inCourse.js
 Page({
 
   /**
@@ -13,34 +13,34 @@ Page({
       slot: false,
       src:'../../assets/image/fback.png'
     },
-    sundry:[
-      {name:"哑铃",type:"体育器材",_type:"物品",value:"yl"},
-      {name:"笔记本",type:"教具",_type:"物品",value:"bjb"},
-      {name:"书费",type:"活动课",_type:"杂费",value:"sf"}
-    ],
-    btn:["取消","确认"],
-    items:[]
-
+    crm:{
+      name:"李大王",
+      time:"2020-05-14",
+      type:"跟进过",
+      intention:"意向强烈",
+      state:"完成到访",
+      source:"地推",
+      administrator:"学员管理1号",
+      src:"../../assets/image/crm-1.png"
+    },
+    class:{
+      nub:1,
+      name:"能力风暴大颗粒",
+      class:"能力风暴大颗粒班",
+      rate:"~",
+      use:0,
+      sum:10,
+      time:10,
+      period:20,
+      follow:10,
+      followUp:0
+    },
+    btn:["新增记录","预约","报名"]
   },
-  radioChange(e){
-  //  console.log(e.detail.value)
-    let newArray = e.detail.value 
-    this.setData({
-      items: newArray
+  classTimeClick(){
+    wx.navigateTo({
+      url: '../classTime/classTime',
     })
-    // console.log(this.data.items)
-  },
-  btnClick(e){
-    if(e.detail == 0){
-      wx.navigateTo({
-        url: '../courseInformation/courseInformation',
-      })
-    }else {
-      let items = JSON.stringify(this.data.items)
-      wx.navigateTo({
-        url: '../courseInformation/courseInformation?items=' + items,
-      })
-    }
   },
   /**
    * 生命周期函数--监听页面加载

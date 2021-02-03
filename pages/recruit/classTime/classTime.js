@@ -1,4 +1,4 @@
-// pages/recruit/sundryFees/sundryFees.js
+// pages/recruit/classTime/classTime.js
 Page({
 
   /**
@@ -13,35 +13,23 @@ Page({
       slot: false,
       src:'../../assets/image/fback.png'
     },
-    sundry:[
-      {name:"哑铃",type:"体育器材",_type:"物品",value:"yl"},
-      {name:"笔记本",type:"教具",_type:"物品",value:"bjb"},
-      {name:"书费",type:"活动课",_type:"杂费",value:"sf"}
-    ],
-    btn:["取消","确认"],
-    items:[]
-
-  },
-  radioChange(e){
-  //  console.log(e.detail.value)
-    let newArray = e.detail.value 
-    this.setData({
-      items: newArray
-    })
-    // console.log(this.data.items)
-  },
-  btnClick(e){
-    if(e.detail == 0){
-      wx.navigateTo({
-        url: '../courseInformation/courseInformation',
-      })
-    }else {
-      let items = JSON.stringify(this.data.items)
-      wx.navigateTo({
-        url: '../courseInformation/courseInformation?items=' + items,
-      })
+    btn:["新增记录","预约","报名"],
+    class:{
+      name:"能力风暴大颗粒",
+      stuName:"李大王",
+      rate:"~",
+      use:"0次",
+      sum:"无限制",
+      tea:"教师1号",
+      residue:12
     }
   },
+  classRecordClick(){
+    wx.navigateTo({
+      url: '../classRecord/classRecord',
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

@@ -1,4 +1,4 @@
-// pages/recruit/sundryFees/sundryFees.js
+// pages/recruit/payment/payment.js
 Page({
 
   /**
@@ -6,49 +6,44 @@ Page({
    */
   data: {
     header:{
-      title: '学员信息',
+      title: '选择支付方式',
       fontColor: "#333333",
       headerbg: '#FFFFFF',
       hiddenBlock: false,
       slot: false,
       src:'../../assets/image/fback.png'
     },
-    sundry:[
-      {name:"哑铃",type:"体育器材",_type:"物品",value:"yl"},
-      {name:"笔记本",type:"教具",_type:"物品",value:"bjb"},
-      {name:"书费",type:"活动课",_type:"杂费",value:"sf"}
-    ],
-    btn:["取消","确认"],
-    items:[]
+    pays:["微信支付","现金","钱包(实充余额￥0)"],
+    _btn:["返回","确定"],
+    alreadyPay:0
+  },
 
-  },
-  radioChange(e){
-  //  console.log(e.detail.value)
-    let newArray = e.detail.value 
-    this.setData({
-      items: newArray
-    })
-    // console.log(this.data.items)
-  },
-  btnClick(e){
-    if(e.detail == 0){
-      wx.navigateTo({
-        url: '../courseInformation/courseInformation',
-      })
-    }else {
-      let items = JSON.stringify(this.data.items)
-      wx.navigateTo({
-        url: '../courseInformation/courseInformation?items=' + items,
-      })
-    }
-  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      pay:options.pay
+    })
   },
-
+  radioChange(e){
+    let newArray = e.detail.value 
+    this.setData({
+      newArray
+    })
+  },
+  btnClick(e){
+    if(e.detail == 1){
+      let newArray = this.data.newArray
+      wx.navigateTo({
+        url: '../classPay/classPay?newArray=' + newArray,
+      })
+    }else {
+      wx.navigateTo({
+        url: '../classPay/classPay',
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

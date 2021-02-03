@@ -1,4 +1,4 @@
-// pages/recruit/courseInformation/courseInformation.js
+// pages/recruit/classPay/classPay.js
 Page({
 
   /**
@@ -19,86 +19,88 @@ Page({
       phone:"(13470070150)",
       type:"线下课程"
     },
-    class:{
+    pay:24,
+    time:"2020-05-16",
+    show:false,
+    btn:["取消修改","确认修改"],
+    _btn:["取消","下一步"],
+    payment:{title:"选择付款方式",color:"#999999"},
+    pays:{
       name:"能力风暴大颗粒",
-      price:0,
-      type:"新生报名",
-      classPrixe:0,
-      discounts:0,
-      actualPrice:0,
-      types:"课程",
-      incidentals:0,
-      amount:0,
-      paymoney:0
-    },
-    add:{},
-    _btn:["增加物品杂费"],
-    _1btn:["再买一组"],
-    _2btn:["增加赠送课时"],
-    _3btn:["取消","下一步"]
+      text:"新生报名",
+      class:12,
+      classPay:24,
+      sundries:0,
+      stuName:"李大王",
+      type:"无请假限制"
+    }
   },
-  classClick(){
-    wx.navigateTo({
-      url: '../classChoose/classChoose',
-    })
-  },
-  btnClick(){
-    wx.navigateTo({
-      url: '../sundryFees/sundryFees',
-    })
-  },
-  presenterClick(){
-    wx.navigateTo({
-      url: '../presenter/presenter',
-    })
-  },
-  lineClick(e){
-    console.log(e.currentTarget.dataset.index)
-    let index = e.currentTarget.dataset.index
-    let items = this.data.items
-    items.splice(index,1)
-    console.log(items)
+  payChange(){
     this.setData({
-      items: items
+      show: true
     })
   },
-  classTime(e){
-    let index = e.currentTarget.dataset.index
-    let times = this.data.times
-    times.splice(index,1)
-    console.log(times)
+  paymentClick(){
+    let pay = this.data.pay
+    wx.navigateTo({
+      url: '../payment/payment?pay=' + pay,
+    })
+  },
+  bindKeyInput(e){
+    let pays = e.detail.value
     this.setData({
-      times: times
+      pays 
+    })
+  },
+  btnClick(e){
+    if(e.detail == 1){
+      this.setData({
+        pay: this.data.pays,
+        show: false
+      })
+    }else {
+      this.setData({
+        show:false
+      })
+    }
+  },
+  getValueLength: function (e) {
+    let value = e.detail.value
+    let len = parseInt(value.length)
+    this.setData({
+      remark: value
+    })
+    //最少字数限制
+    if (len <= this.data.min)
+      this.setData({
+        minWord: "至少填写10个字哦～"
+      })
+    else if (len > this.data.min)
+      this.setData({
+        minWord: " "
+      })
+    //最多字数限制
+    if (len > 200) return;
+    this.setData({
+      currentWordNumber: len //当前字数 
     })
   },
   lastBtnClick(e){
     if(e.detail == 1){
       wx.navigateTo({
-        url: '../classPay/classPay',
+        url: '../inCourse/inCourse',
       })
     }
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    if(options.add){
-      let add = JSON.parse(options.add)
+    if(options.newArray){
       this.setData({
-        add: add
+        ["payment.title"] : options.newArray,
+        ["payment.color"]:""
       })
-    }else if(options.items){
-      let items = JSON.parse(options.items)
-      this.setData({
-        items
-      })
-    }else if(options.times){
-      let times = JSON.parse(options.times)
-      this.setData({
-        times
-      })
-      console.log(this.data.times)
     }
   },
 

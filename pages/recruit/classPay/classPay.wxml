@@ -1,0 +1,78 @@
+<!--pages/recruit/classPay/classPay.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<!-- 头部信息 -->
+<view class="pic flex-a align-a">
+  <view class='align-a pic-src'>
+    <image src="{{inform.src}}" style="height:78rpx;width:78rpx"></image>
+  </view>
+  <view class='align-a pic-name'>{{inform.name}}</view>
+  <view class='align-a pic-name'>{{inform.phone}}</view>
+  <view class="align-b src-box align-a">{{inform.type}}</view>
+</view>
+
+<!-- 支付信息 -->
+<view class="payInform"> 
+  <bk-lines name="支付信息" lineFw="bold" backDisplay="none"></bk-lines>
+  <bk-lines name="应付金额" backDisplay="none" text="￥{{pay}}"></bk-lines>
+  <bk-lines name="实付金额" backDisplay="none" text="￥{{pay}}">
+    <view slot="pic" bindtap="payChange">
+      <image src="../../../assets/image/compile .png" style="height:38rpx;width:38rpx"></image>
+    </view>
+  </bk-lines>
+  <bk-lines name="支付方式" text="{{payment.title}}" textColor="{{payment.color}}" bindtap="paymentClick"></bk-lines>
+  <bk-lines name="报名时间" borderBottom="" text="{{time}}"></bk-lines>
+</view>
+<!-- 付款金额调整 -->
+<view class="{{show == true?'bg bgs':'none'}}"></view>
+<view class="{{show == true?'bg-item ':'none'}}">
+  <view class="bg-title">修改实付金额</view>
+  <view class="bg-change flex-a align-a">
+    <input class="bg-input align-a" type="digit" value="{{pay}}" bindinput="bindKeyInput" />
+    <view class="align-a _bg">元</view>
+  </view>
+  <view class="btn"><bk-btn btn="{{btn}}" bind:btnClick="btnClick"></bk-btn></view>
+</view>
+
+<!-- 业绩归属 -->
+<view class="performance">
+  <bk-lines name="业绩归属" lineFw="bold" backDisplay="none"></bk-lines>
+  <bk-lines name="咨询师" text="学管1号" textColor="#999999" ></bk-lines>
+  <bk-lines name="市场人员" text="无" textColor="#999999" ></bk-lines>
+  <bk-lines name="学员管理" text="无" textColor="#999999" borderBottom="" ></bk-lines>
+</view>
+
+<!-- 备注 -->
+<view class="remark">
+  <bk-lines name="备注"  backDisplay="none" lineFw="bold"></bk-lines>
+  <view class="remark-text">
+    <textarea  maxlength='200' placeholder="请输入备注……" class="text-area"
+    placeholder-style="font-size: 28rpx;font-family: PingFang SC;" bindinput="getValueLength"></textarea>
+  </view>
+  <view class="last-text">{{currentWordNumber|0}}/200</view>
+</view>
+
+<!-- 报名 -->
+<view class="apply">
+  <bk-lines name="报名信息({{pays.name}})" lineFw="bold" backDisplay="none"></bk-lines>
+  <bk-lines name="报名类型" backDisplay="none" text="{{pays.text}}"></bk-lines>
+  <bk-lines name="购买课时数" backDisplay="none" text="{{pays.class}}课时"></bk-lines>
+  <bk-lines name="实际课时金额" backDisplay="none" text="￥{{pays.classPay}}"></bk-lines>
+  <bk-lines name="物品杂费金额" backDisplay="none" text="￥{{pays.sundries}}"></bk-lines>
+  <bk-lines name="应付金额总计" backDisplay="none" text="￥{{pays.classPay+pays.sundries}}"></bk-lines>
+  <bk-lines name="实付金额总计" backDisplay="none" text="￥{{pays.classPay+pays.sundries}}" borderBottom=""></bk-lines>
+</view>
+
+<!-- 报名班级 -->
+<view class="class">
+  <bk-lines name="报名班级" lineFw="bold" backDisplay="none"></bk-lines>
+  <bk-lines name="{{pays.name}}.{{pays.stuName}}({{pays.type}})" backDisplay="none" borderBottom=""></bk-lines>
+</view>
+
+<!-- 操作 -->
+<view class="flex-a last align-a ">
+  <view class="flex-a align-a flex-b">
+    <view>应付金额:</view>
+    <view class="pay">￥{{pay}}</view>
+  </view>   
+</view>
+<bk-btn btn="{{ _btn}}" btnStyle="width:70%; position:relative;left:25%" bind:btnClick="lastBtnClick"></bk-btn>

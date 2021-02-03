@@ -1,6 +1,8 @@
 <!--pages/inform/inform.wxml-->
 <bk-header header='{{header}}'></bk-header>
-<bk-tab tab="{{tab}}" bind:itemClick="itemClick"></bk-tab>
+<view class="tabs">
+  <bk-tab tab="{{tab}}" bind:itemClick="itemClick"></bk-tab>
+</view>
 <!-- 最新 -->
 <block wx:for="{{news}}" wx:key="*this">
   <view class="{{currentIndex == 0 ?'box':'none'}}">

@@ -21,7 +21,8 @@ Page({
       intention:"意向强烈",
       state:"完成到访",
       source:"地推",
-      administrator:"学员管理1号"
+      administrator:"学员管理1号",
+      src:"../../assets/image/crm-1.png"
     },
     records:[
       {type:"移入公共池",typeImg:"../../../assets/image/std2.png",contact:"电话",linkman:"本人",operating:"流失原因: 价格贵",intention:"考虑",operator:"任生",time:"2020-05-27 14:28"},

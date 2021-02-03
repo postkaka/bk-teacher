@@ -1,0 +1,25 @@
+<!--components/bk-crm-header/bk-crm-header.wxml-->
+<view class="header flex-a align-a">
+  <view class="align-a height-image">
+    <image src="{{crm.src}}" style="height: 78rpx;width:78rpx"></image>
+  </view>
+  <view class="align-a">
+    <view class="flex-a align-a crm-fisrt">
+      <view class="crm-name">{{crm.name}}</view>
+      <view class="crm-image" bindtap="basicInformationClick">
+        <image src='../../assets/image/compile .png' style="height: 24rpx;width:24rpx"></image>
+      </view>
+      <view class="crm-text align-a">{{crm.time}}</view>
+      <view class="crm-text align-a crm-type">{{crm.type}}</view>
+    </view>
+    <view class="flex-a crm-text-else align-a">
+      <view>{{crm.intention}}</view>
+      <view class="right-border align-a"></view>
+      <view>{{crm.state}}</view>
+      <view class="right-border align-a"></view>
+      <view>{{crm.source}}</view>
+      <view class="right-border align-a"></view>
+      <view>{{crm.administrator}}</view>
+    </view>
+  </view>
+</view>

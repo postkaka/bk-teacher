@@ -1,0 +1,14 @@
+<!--pages/recruit/classTime/classTime.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<!-- 学员信息 -->
+<view class="classTime">
+  <bk-lines name="{{class.name}}"  lineFw="bold" backDisplay="none"
+  ></bk-lines>
+  <bk-lines name="{{class.name}}·{{class.stuName}}"  backDisplay="none"></bk-lines>
+  <bk-lines name="教师:{{class.tea}} 请假情况:{{class.use}}/{{class.sum}}    出勤率:{{class.rate}}" backDisplay="none"></bk-lines>
+  <bk-lines borderBottom="" name="剩余课时:" text="{{class.residue}}" bindtap="classRecordClick" ></bk-lines>
+</view>
+<!-- 按钮 -->
+<view class="btn" >
+  <bk-btn btn="{{btn}}"></bk-btn>
+</view>

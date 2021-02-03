@@ -1,0 +1,78 @@
+/* pages/recruit/payment/payment.wxss */
+.icon {
+  width: 24rpx;
+  height: 24rpx;
+  background: #F89470;
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-size: 16rpx;
+  margin: 0 16rpx 0 0;
+}
+.hints {
+  margin: 16rpx 0 0 32rpx;
+}
+.icon-text {
+  font-size: 24rpx;
+  color: #F89470;
+}
+
+
+/* 支付方式 */
+.pay {
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 30rpx;
+  margin: 16rpx;
+}
+
+/* 选中样式 */
+radio .wx-radio-input {
+	width: 34rpx;
+	height: 34rpx;
+	border-radius: 50%;
+}
+/*checkbox选中后样式  */
+radio .wx-radio-input.wx-radio-input-checked {
+  background: #FFFFFF;
+  border-color:#60ADE1;
+}
+/*checkbox选中后图标样式  */
+radio .wx-radio-input.wx-radio-input-checked::before {
+  width: 20rpx;
+  height: 20rpx;  
+  line-height: 20rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #fff;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  content: '';
+  border-radius: 50%;
+  background-color: #60ADE1;
+}
+.label {
+  padding: 32rpx;
+}
+.checkbox {
+  margin-right: 16rpx;
+}
+.name {
+  font-size: 28rpx;
+}
+
+.line {
+  border-bottom: 1rpx solid #DDDDDD;
+}
+/* 操作 */
+.operation{
+  position:absolute;
+  left: 0;
+  bottom: 65rpx;
+  margin-left:18rpx ;
+  font-weight: bold;
+  font-size: 28rpx;
+}
+.paytext {
+  color: #F89470;
+}

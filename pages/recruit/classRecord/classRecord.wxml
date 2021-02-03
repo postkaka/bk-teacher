@@ -1,0 +1,55 @@
+<!--pages/recruit/classRecord/classRecord.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<!-- 课时记录 -->
+<view class="record">
+  <bk-lines name="{{class.name}}"  lineFw="bold" backDisplay="none" text="{{class.class}} 课时"
+  lineFws="bold"
+  ></bk-lines>
+  <bk-lines name="消耗课程"  backDisplay="none" text="{{class.consume}} 课时"></bk-lines>
+  <view class="flex-a justify-d line">
+    <view>考勤消耗:</view>
+    <view>{{class.check}} 课时</view>
+  </view>
+  <view class="flex-a justify-d lines">
+    <view>自定义扣课时消耗:</view>
+    <view>{{class.diy}} 课时</view>
+  </view>
+  <view class="flex-a justify-d liness">
+    <view>转出课时:</view>
+    <view>{{class.roll}} 课时</view>
+  </view>
+  <bk-lines borderBottom="" name="剩余课时:" text="{{class.class}} 课时" backDisplay="none"
+  bindtap="classRecordClick" ></bk-lines>
+</view>
+<!--  -->
+<view class="smalllist">
+        <view class="smalllist-fist">
+            <view class="smalllist-fist-view">
+                <view>课消类型:</view>
+                <view class="smalllist-fist-view-change" bindtap="tabClick">选择类型</view>
+                <view>
+                    <image src='../../../assets/image/back.png' style="height:28rpx;width:28rpx; transform:rotate(90deg)"></image>
+                </view>
+            </view>
+            <view class="smalllist-fist-view">
+                <view>班级:</view>
+                <view class="smalllist-fist-view-change">选择班级</view>
+                <view>
+                    <image src='../../../assets/image/back.png' style="height:28rpx;width:28rpx;transform:rotate(90deg)"></image>
+                </view>
+            </view>
+        </view>
+        <view>
+            <block wx:for="{{buys}}" wx:key="index">
+                <bk-class-item classitemimage="{{item.src}}" imagedisplay="" classitemleftview="{{item.type}}" classitemleftview2="{{item.type2}}"
+                    classitemlefttime="{{item.time}}" classitemlefticon="../../assets/image/time.png" classlistheight='132' color1="#F25A43"
+                    classitemrighttime="{{item.buy}}{{item.quantity}}" classitemrighttype="课时" color2="#999999" classitemleftview3="{{item.time2}}"
+                    classitemrighttimes="{{item.quantity2}}" color3="#999999" 
+                ></bk-class-item>
+            </block>
+        </view>
+    </view>
+<!-- 按钮 -->
+<view class="btn" >
+  <bk-btn btn="{{btn}}" bind:btnClick="btnClick"></bk-btn>
+</view>

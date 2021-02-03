@@ -54,8 +54,8 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/recruit/sundryFees/sundryFees",
-          "pathName": "pages/recruit/sundryFees/sundryFees",
+          "name": "pages/recruit/inCourse/inCourse",
+          "pathName": "pages/recruit/inCourse/inCourse",
           "query": "",
           "scene": null
         }

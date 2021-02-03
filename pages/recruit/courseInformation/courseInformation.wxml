@@ -25,18 +25,31 @@
   <bk-lines  text="实际课时金额:" backDisplay="none">
     <view slot="line-text" class="actual">￥{{class.actualPrice}}</view>
   </bk-lines>
-  <view class="{{add.name  ?'none':''}}">
+  <view class="{{add.name||items  ?'none':''}}">
     <bk-line-class lineText="{{class.name}}" lineBox="{{class.types}}" borderBottom="" alignText="color:#999999;"lineTextTh="请选择班级" bindtap="classClick"></bk-line-class>
-  </view>
-  <view class="{{add.name ?'':'none'}}">
-    <bk-line-class lineText="{{class.name}}" lineBox="{{class.types}}" alignText="color:#999999;" bindtap="classClick"></bk-line-class>
-  </view>
-  
+  </view>  
+  <!-- 教师 -->
   <view wx:if="{{add.name}}">
+    <bk-line-class lineText="{{class.name}}" lineBox="{{class.types}}" alignText="color:#999999;" bindtap="classClick"></bk-line-class>
     <bk-lines name="班级名称" text="{{add.className}}.{{add.name}}" ></bk-lines>
     <bk-lines name="教师" text="{{add.tea}}" backDisplay="none" ></bk-lines>
     <bk-lines name="开课时间" text="{{add.time}}" backDisplay="none" ></bk-lines>
     <bk-lines name="请假限制" text="请假限制:{{add.figure}}次" backDisplay="none" borderBottom="" ></bk-lines>
+  </view>
+  <!-- 物品 -->
+  <view wx:if="{{items}}">
+    <bk-line-class lineText="{{class.name}}" lineBox="{{class.types}}" alignText="color:#999999;" bindtap="classClick"></bk-line-class>
+    <block wx:for="{{items}}" wx:key="*this">
+      <bk-line-class lineText="{{item}}" lineBox="物品" lineSrc="../../assets/image/del.png" bindtap="lineClick"  data-index="{{index}}"></bk-line-class>
+      <bk-lines name="规格"></bk-lines>
+      <bk-lines name="价格" text="元" backDisplay="none" inputDisplay="" inputWidth="230"pla="请输入价格"></bk-lines>
+      <bk-lines name="数量" text="元" backDisplay="none" inputDisplay="" inputWidth="230"pla="请输入数量"></bk-lines>
+      <bk-lines name="领取"  backDisplay="none" borderBottom="{{index+1 == items.length?'':'1px solid #DDDDDD'}}">
+        <view slot="pic">
+          <switch class="_pic"  bindchange="switch1Change" color="#60ADE1" />
+        </view>
+       </bk-lines>
+    </block>
   </view>
   <bk-btn btn="{{_btn}}" bind:btnClick="btnClick"></bk-btn>
   <bk-lines  text="增加物品杂费:" backDisplay="none">
@@ -50,8 +63,16 @@
 
 <!-- 赠送课时 -->
 <view class="presenter">
-  <bk-lines name="赠送课时" text="增加赠送课时"  lineFw="bold" textColor="#999999" borderBottom="" >
-  </bk-lines>
+  <bk-lines name="赠送课时" text="增加赠送课时"  lineFw="bold" textColor="#999999" borderBottom="{{times[0]?'1px solid #DDDDDD':''}}" 
+    bindtap="presenterClick"></bk-lines>
+  <view wx:if="{{times}}">
+    <block wx:for="{{times}}" wx:key="*this">
+      <bk-line-class lineText="赠送课时类型"  lineSrc="../../assets/image/del.png" lineTextTh="赠送课时"
+        data-index="{{index}}" lineture="none" bindtap="classTime"></bk-line-class>
+      <bk-lines name="赠送课时数" text="{{item.times}}课时" backDisplay="none" ></bk-lines>
+      <bk-lines name="赠送课时有效期至" text="{{item.time}}" borderBottom="{{index+1 == items.length?'':'1px solid #DDDDDD'}}"></bk-lines>
+    </block>
+  </view>
   <bk-btn btn="{{_2btn}}"></bk-btn>
 </view>
 
@@ -62,4 +83,4 @@
     <view class="pay">￥{{class.paymoney}}</view>
   </view>   
 </view>
-<bk-btn btn="{{ _3btn}}" btnStyle="width:70%; position:relative;left:25%"></bk-btn>
+<bk-btn btn="{{ _3btn}}" btnStyle="width:70%; position:relative;left:25%" bind:btnClick="lastBtnClick"></bk-btn>
