@@ -35,6 +35,10 @@ Component({
     alignText:{
       type:String,
       value:""
+    },
+    heighter:{
+      type:String,
+      value:"136rpx"
     }
   },
 

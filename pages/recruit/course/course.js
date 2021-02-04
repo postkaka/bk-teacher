@@ -1,4 +1,4 @@
-// pages/recruit/classRecord/classRecord.js
+// pages/recruit/course/course.js
 Page({
 
   /**
@@ -13,41 +13,15 @@ Page({
       slot: false,
       src:'../../assets/image/fback.png'
     },
-    btn:["新增记录","预约","报名"],
-    class:{
-      name:"能力风暴大颗粒",
-      class:12,
-      consume:0,
-      check:0.00,
-      diy:0.00,
-      roll:0.00
-    },
-    buys:[
-      {
-        src:"../../assets/image/time1.png",
-        buy:"+",
-        type: "购买课时",
-        time:"2020-04-27 周一",
-        quantity:'12'
-    }
-    ]
+    btn:["取消"],
+    num:0,
+    class:"能力风暴大颗粒"
   },
-  btnClick(e){
-    if(e.detail == 0){
-      wx.navigateTo({
-        url: '../newRecord/newRecord',
-      })
-    }else if(e.detail == 1){
-      wx.navigateTo({
-        url: '../appointmentTime/appointmentTime',
-      })
-    }else {
-      wx.navigateTo({
-        url: '../course/course',
-      })
-    }
+  bkClick(){
+    this.setData({
+      num: 1
+    })
   },
-
   /**
    * 生命周期函数--监听页面加载
    */

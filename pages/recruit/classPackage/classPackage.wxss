@@ -1,9 +1,5 @@
 /* pages/recruit/classPackage/classPackage.wxss */
-.search {
-  background: #FFFFFF;
-  height: 140rpx;
-  padding-top: 20rpx;
-}
+
 .package {
   height: 547rpx;
   background: #FFFFFF;

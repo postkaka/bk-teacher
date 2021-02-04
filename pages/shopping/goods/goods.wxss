@@ -1,0 +1,25 @@
+/* pages/shopping/goods/goods.wxss */
+.src {
+  margin-left: 8rpx;
+}
+.classify {
+  font-size: 28rpx;
+  margin: 16rpx 0 16rpx 0;
+  color: #333333;
+}
+.classifyList {
+  padding: 16rpx 0 16rpx 32rpx;
+  font-size: 28rpx;
+}
+.line {
+  border: 1rpx solid #DDDDDD;
+  padding: 0 32rpx 0 32rpx;
+}
+/* 物品明细 */
+.goods {
+  margin: 16rpx;
+  height: 314rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 30rpx;
+}

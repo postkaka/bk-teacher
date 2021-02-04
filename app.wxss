@@ -59,6 +59,22 @@ page {
   left: 0;
   z-index: 3;
 }
+._bg {
+  height: 100%;
+	width: 100%;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 2;
+	top: 40%;
+	left: 0;
+}
+._bg-item {
+  width: 100%;
+  position: fixed;
+  background: #FFFFFF;
+  left: 0;
+  z-index: 3;
+}
 /* 隐藏样式 */
 .none {
   display: none;
@@ -86,4 +102,10 @@ page {
 /* 苹果开关 */
 ._pic {
   zoom: .7;
+}
+/* 搜索框 */
+.search {
+  background: #FFFFFF;
+  height: 140rpx;
+  padding-top: 20rpx;
 }

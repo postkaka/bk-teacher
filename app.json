@@ -26,7 +26,12 @@
     "pages/recruit/classTime/classTime",
     "pages/recruit/classRecord/classRecord",
     "pages/recruit/newRecord/newRecord",
-    "pages/recruit/appointmentTime/appointmentTime"
+    "pages/recruit/appointmentTime/appointmentTime",
+    "pages/recruit/course/course",
+    "pages/wallet/walletTopUp/walletTopUp",
+    "pages/wallet/prepaidInformation/prepaidInformation",
+    "pages/shopping/shoppingList/shoppingList",
+    "pages/shopping/goods/goods"
   ],
   "tabBar": {
     "selectedColor": "#60ADE1",

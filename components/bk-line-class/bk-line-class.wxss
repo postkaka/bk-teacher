@@ -10,7 +10,7 @@
   font-size: 28rpx;
 }
 .line-class-text-border {
-  width: 97rpx;
+  width: 120rpx;
   height: 40rpx;
   border: 1rpx solid #539BCB;
   border-radius: 20rpx;

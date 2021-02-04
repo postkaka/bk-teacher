@@ -45,7 +45,18 @@ Page({
       wx.navigateTo({
         url: '../work/backlog/backlog',
       })
+    }else if(num == 1){
+      wx.navigateTo({
+        url: '../wallet/walletTopUp/walletTopUp',
+      })
+    }else if(num == 2){
+
+    }else if(num == 3){
+      wx.navigateTo({
+        url: '../shopping/shoppingList/shoppingList',
+      })
     }
+
   },
 
   /**

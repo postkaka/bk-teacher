@@ -1,0 +1,57 @@
+<!--pages/wallet/prepaidInformation/prepaidInformation.wxml-->
+<bk-header header="{{header}}"></bk-header>
+
+<view class="header">
+  <bk-lines name="{{item.name}} ({{item.phone}})" borderBottom="" backDisplay="none">
+      <view slot="header">
+        <image src="{{item.src}}" style="height:78rpx;width:78rpx;margin-right:17rpx"></image>
+      </view>
+    </bk-lines>
+</view>
+<!-- 充值信息 -->
+<view class="prepaid">
+  <bk-lines name="充值信息" backDisplay="none" lineFw="bold"></bk-lines>
+  <view class="flex-a  money">
+    <view><span class="moneys">*</span>实充金额:</view>
+    <view>
+      <view class="bg-change flex-a align-a">
+        <input class="bg-input align-a" type="digit" value="{{pay}}" bindinput="bindKeyInput" placeholder="请输入实充金额" />
+        <view class="align-a _bg">元</view>
+      </view>
+      <view class="prepaid-text">当前钱包实充金额￥100</view>
+    </view>
+  </view>
+</view>
+<!-- 支付信息 -->
+<view class="payment">
+  <bk-lines name="支付信息" backDisplay="none" lineFw="bold"></bk-lines>
+  <bk-lines name="充值时间:" nameSymbol="*" symbol="color:#F89470" text="{{item.time}}"></bk-lines>
+  <bk-lines name="支付方式:" nameSymbol="*" symbol="color:#F89470"  text="请选择支付方式"
+  textColor="#999999" borderBottom=""
+  ></bk-lines>
+</view>
+<!-- 业绩归属 -->
+<view class="performance">
+  <bk-lines name="业绩归属" backDisplay="none" lineFw="bold"></bk-lines>
+  <bk-line-picker name="咨询师:" listData_02="{{counselors}}" picker_02_data="{{_counselors}}" 
+    bind:picker='_picker'></bk-line-picker>
+  <bk-lines name="市场人员:"></bk-lines>
+  <bk-lines name="学员管理:"  borderBottom=""></bk-lines>
+</view>
+<!-- 备注 -->
+<view class="remark">
+  <bk-lines name="备注" backDisplay="none" lineFw="bold"></bk-lines>
+  <view class="remark-text">
+    <textarea  maxlength='200' placeholder="请输入备注……" class="text-area"
+    placeholder-style="font-size: 28rpx;font-family: PingFang SC;" bindinput="getValueLength"></textarea>
+  </view>
+  <view class="last-text">{{currentWordNumber|0}}/200</view>
+</view>
+<!-- 按钮 -->
+<view class="flex-a _last align-a ">
+  <view class="flex-a align-a flex-b">
+    <view>应付金额:</view>
+    <view class="pay">￥{{pay}}</view>
+  </view>   
+</view>
+<bk-btn btn="{{ _btn}}" btnStyle="width:70%; position:relative;left:25%" bind:btnClick="lastBtnClick"></bk-btn>

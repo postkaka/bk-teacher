@@ -1,0 +1,15 @@
+<!--pages/recruit/course/course.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<view class="course">
+  <bk-lines name="续报已有课程:" bindtap="bkClick"></bk-lines>
+  <view class="{{num == 0?'none':'show'}}">
+    <bk-lines name="{{class}}"></bk-lines>
+  </view>
+  <bk-lines name="报名新的线下课程:"></bk-lines>
+  <bk-lines name="报名新的线上视频课程:" borderBottom="none"></bk-lines>
+</view>
+
+<!-- 按钮 -->
+<view class="btn" >
+  <bk-btn btn="{{btn}}" bind:btnClick="btnClick"></bk-btn>
+</view>

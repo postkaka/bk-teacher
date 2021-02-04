@@ -1,4 +1,4 @@
-// pages/recruit/classRecord/classRecord.js
+// pages/shopping/shoppingList/shoppingList.js
 Page({
 
   /**
@@ -6,46 +6,24 @@ Page({
    */
   data: {
     header:{
-      title: '学员信息',
+      title: '物品杂费购买',
       fontColor: "#333333",
       headerbg: '#FFFFFF',
       hiddenBlock: false,
       slot: false,
       src:'../../assets/image/fback.png'
     },
-    btn:["新增记录","预约","报名"],
-    class:{
-      name:"能力风暴大颗粒",
-      class:12,
-      consume:0,
-      check:0.00,
-      diy:0.00,
-      roll:0.00
-    },
-    buys:[
-      {
-        src:"../../assets/image/time1.png",
-        buy:"+",
-        type: "购买课时",
-        time:"2020-04-27 周一",
-        quantity:'12'
-    }
+    list:[
+      {src:"../../../assets/image/crm-2.png",name:"柴伊娃",phone:"13840164610"},
+      {src:"../../../assets/image/crm-2.png",name:"柴伊娃",phone:"13840164610"},
+      {src:"../../../assets/image/crm-2.png",name:"柴伊娃",phone:"13840164610"},
+      {src:"../../../assets/image/crm-2.png",name:"柴伊娃",phone:"13840164610"}
     ]
   },
-  btnClick(e){
-    if(e.detail == 0){
-      wx.navigateTo({
-        url: '../newRecord/newRecord',
-      })
-    }else if(e.detail == 1){
-      wx.navigateTo({
-        url: '../appointmentTime/appointmentTime',
-      })
-    }else {
-      wx.navigateTo({
-        url: '../course/course',
-      })
-    }
+  prepaidInformationClick(){
+    wx.navigateTo({
+      url: '../goods/goods',
+    })
   },
 
   /**

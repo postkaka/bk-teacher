@@ -1,0 +1,26 @@
+<!--pages/shopping/goods/goods.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<view class="search">
+  <bk-search-box search="请输入学员姓名或手机号"></bk-search-box>
+</view>
+<!-- 分类信息 -->
+<view class="flex-a align-a justify-b classify">
+  <view class="align-a">{{classify}}</view>
+  <view class="align-a src flex-a" bindtap="showClick">
+    <image src="../../../assets/image/back.png" style="height:30rpx;width:30rpx" class="align-a"></image>
+  </view>
+</view>
+<!-- 蒙层 -->
+<view class="{{show == 0?'none':'_bg'}}"></view>
+<view class="{{show == 0?'none':'_bg-item'}}">
+  <block wx:for="{{classifyList}}" wx:key="*this"  >
+    <view class="classifyList " bindtap="itemClick" data-index="{{index}}">{{item}}</view>
+    <view class=" {{index+1 == classifyList.length?'none':'line'}}"></view>
+  </block>
+</view>
+<!-- 物品明细 -->
+<view class="goods">
+  <block wx:for="{{goods}}" wx:key="*this">
+    <bk-line-class lineText="{{item.name}}" heighter="104rpx" borderBottom="{{index+1 == goods.length?'':'1px solid #DDDDDD'}}"lineBox="{{item.type}}" ></bk-line-class>
+  </block>
+</view>

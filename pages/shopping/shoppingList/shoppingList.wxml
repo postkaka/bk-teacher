@@ -1,0 +1,20 @@
+<!--pages/shopping/shoppingList/shoppingList.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<view class="search">
+  <bk-search-box search="请输入学员姓名或手机号"></bk-search-box>
+</view>
+<!-- 人员名单 -->
+<view class="list">
+  <block wx:for="{{list}}" wx:key="*this" data-index="{{index}}">
+    <bk-lines name="{{item.name}} ({{item.phone}})" text="购买" textColor="#999999" 
+    borderBottom="{{index+1 == list.length?'':'1px solid #DDDDDD'}}" bindtap="prepaidInformationClick"
+    >
+      <view slot="header">
+        <image src="{{item.src}}" style="height:78rpx;width:78rpx;margin-right:17rpx"></image>
+      </view>
+    </bk-lines>
+  </block>
+</view>
+
+<!-- 提示 -->
+<view class="hint">没有更多了</view>
