@@ -13,8 +13,7 @@ Page({
       slot: false,
       src:'../../assets/image/fback.png'
     },
-    classify:"物品/杂费类型",
-    classifyList:["物品/杂费类型",'资料','教具',"服装",'体育器材','实验器材','活动课'],
+    classifyList:[{list:["物品/杂费类型",'资料','教具',"服装",'体育器材','实验器材','活动课'],nums:0}],
     show: 0,
     goods:[
       {name:"哑铃",type:"体育器材"},
@@ -22,17 +21,10 @@ Page({
       {name:"笔记本",type:"教具"}
     ]
   },
-  showClick(){
-    this.setData({
-      show: 1
-    })
-  },
-  itemClick(e){
-    console.log(e)
-    let classify = this.data.classifyList[e.currentTarget.dataset.index]
-    this.setData({
-      show: 0,
-      classify: classify 
+  goodsInform(e){
+    let name = this.data.goods[e.currentTarget.dataset.index].name
+    wx.navigateTo({
+      url: '../goodsInform/goodsInform?name=' + name,
     })
   },
   /**

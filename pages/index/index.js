@@ -50,13 +50,31 @@ Page({
         url: '../wallet/walletTopUp/walletTopUp',
       })
     }else if(num == 2){
-
+      wx.navigateTo({
+        url: '../spendingRecord/spending/spending',
+      })
     }else if(num == 3){
       wx.navigateTo({
         url: '../shopping/shoppingList/shoppingList',
       })
+    }else if(num == 4){
+      wx.navigateTo({
+        url: '../get/getGoods/getGoods',
+      })
+    }else if(num == 5){
+      wx.navigateTo({
+        url: '../warehouse/warehouse/warehouse',
+      })
     }
 
+  },
+  managementClick(e){
+    let num = e.currentTarget.dataset.index
+    if(num == 0){
+      wx.navigateTo({
+        url: '../recruit/enrollmentManagement/enrollmentManagement',
+      })
+    }
   },
 
   /**

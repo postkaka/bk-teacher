@@ -14,11 +14,8 @@
       <switch class="_pic" checked bindchange="switch1Change" color="#60ADE1" />
     </view>
   </bk-lines>
-  <view class="flex-a align-a texts">
-    <view class="circle align-b align-a" bindtap="subtract">-</view>
-    <view class="text align-a ">{{inform.figure}}</view>
-    <view class="circle align-b align-a" bindtap="add">+</view>
-    <view class="align-a _text">次</view>
+  <view class="key">
+    <bk-key figure="{{inform.figure}}" bind:subtract="subtract" bind:add="add"></bk-key>
   </view>
 </view>
 <!-- tab -->

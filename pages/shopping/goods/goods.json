@@ -2,7 +2,8 @@
   "usingComponents": {
     "bk-header":"../../../components/wx-header/header",
     "bk-search-box":"../../../components/wx-search-box/wx-search-box",
-    "bk-line-class":"../../../components/bk-line-class/bk-line-class"
+    "bk-line-class":"../../../components/bk-line-class/bk-line-class",
+    "bk-searching":"../../../components/bk-searching/bk-searching"
   },
   "navigationStyle": "custom"
 }

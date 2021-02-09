@@ -1,0 +1,25 @@
+<!--components/bk-searching/bk-searching.wxml-->
+<!-- 分类信息 -->
+<view class="flex-a align-a justify-c classify">
+ <block wx:for="{{classifyList.length}}" wx:key="*this" >
+  <view class="flex-a align-a">
+    <view class="align-a">{{classifyList[item].list[classifyList[item].nums]}}</view>
+    <view class="align-a src flex-a" bindtap="showClick"  data-index="{{index}}">
+      <image src="../../assets/image/back.png" style="height:30rpx;width:30rpx" class="align-a"></image>
+    </view>
+  </view>
+ </block>
+</view>
+<!-- 蒙层 -->
+<view class="{{show == 0?'none':'_bg'}}"></view>
+<view class="{{show == 0?'none':'_bg-item'}}">
+  <block wx:for="{{classifyList[num].list}}" wx:key="*this"  >
+    <view class="classifyList" bindtap="itemClick" data-index="{{index}}">
+      {{item}}
+    </view>
+    <view class=" {{index+1 == classifyList[num].list.length?'none':'line'}}"></view>
+  </block>
+  <slot name="switch"></slot>
+  <slot name="_switch"></slot>
+  <slot name='tab'></slot>
+</view>

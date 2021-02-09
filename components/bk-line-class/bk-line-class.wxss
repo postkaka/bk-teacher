@@ -40,4 +40,11 @@
 }
 .align-a-src {
   align-self: center;
+  margin-top:5rpx ;
+}
+.align-b {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }

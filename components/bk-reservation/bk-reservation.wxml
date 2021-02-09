@@ -1,0 +1,11 @@
+<!--components/bk-reservation/bk-reservation.wxml-->
+<view class="ellipse reservation-frist flex-a align-a justify-d">
+  <view class='align-a ellipse-fisrt align-b'>{{reservation.type}}</view>
+  <view class='align-a ellipse-second'>{{reservation.className}}</view>
+  
+  <view class='align-a flex-a'>
+    <view class='align-a text'>{{reservation.data}}</view>
+    <view class='align-a _text'>{{reservation.time}}</view>
+    <image src="../../assets/image/back.png" style="height:28rpx;width:28rpx;margin-right:16rpx" class="align-a"></image>
+  </view>
+</view>

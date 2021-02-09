@@ -3,12 +3,12 @@
 	<!--<view class="modal" bindtap="tapModal"></view>-->
 	<view class="picker">
 		<view class="picker-header" style="{{pickerHeaderStyle}}">
-			<view bindtap="cancle" >
-				<text style="{{cancelStyle}}">取消</text>
+			<view bindtap="cancle" class="picker-header-view">
+				<text style="{{cancelStyle}}" class="picker-header-view-text">取消</text>
 			</view>
-			<text style="{{titleStyle}}">{{titleText}}</text>
-			<view bindtap="sure">
-				<text  style="{{sureStyle}}">确认</text>
+			<text style="{{titleStyle}}" class="picker-header-view-text">{{titleText}}</text>
+			<view bindtap="sure" class="picker-header-view">
+				<text  style="{{sureStyle}}" class="picker-header-view-text">确认</text>
 			</view>
 		</view>
 		<picker-view

@@ -1,0 +1,61 @@
+/* pages/warehouse/outboundListing/outboundListing.wxss */
+.searching {
+  float: left;
+  margin-left:32rpx
+}
+.goods {
+  margin: 80rpx 16rpx 16rpx 16rpx;
+  background: #FFFFFF;
+  border-radius: 30rpx;
+}
+.outboundGoods {
+  margin: 16rpx;
+  height: 348rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 30rpx;
+}
+._outboundGoods {
+  padding: 32rpx;
+  font-size: 28rpx;
+  color: #333333;
+  border-bottom: 1rpx solid #DDDDDD;
+}
+.itemName {
+  padding: 32rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #F89470;
+  border-bottom: 1rpx solid #DDDDDD;
+}
+/* 按钮 */
+._last {
+  position: absolute;
+  bottom: 32rpx;
+  left: 32rpx;
+  right: 32rpx;
+}
+.__last {
+  font-size: 26rpx;
+  font-weight: bold;
+  color: #333333;
+}
+.pay {
+  margin-left: 8rpx;
+  color: #F89470;
+}
+.next {
+  width: 408rpx;
+  height: 80rpx;
+  background: linear-gradient(180deg, #96CBEB 0%, #60ADE1 100%);
+  border-radius: 30rpx;
+  font-size: 34rpx;
+  color: #FFFFFF;
+}
+
+.center {
+  margin: 0rpx 6rpx 0 6rpx;
+}
+.end {
+  margin-right:8rpx ;
+}

@@ -9,23 +9,8 @@
 ._pic {
  zoom: .7;
 }
-.texts {
-  font-size: 28rpx;
-  color: #333333;
+.key{
   position: relative;
   top: -68rpx;
   left: 180rpx;
-}
-.circle {
-  width: 30rpx;
-  height: 30rpx;
-  background: #FFFFFF;
-  border: 1rpx solid #333333;
-  border-radius: 50%;
-}
-.text {
-  margin:0 8rpx 0 8rpx ;
-}
-._text {
-  margin-left: 16rpx;
 }

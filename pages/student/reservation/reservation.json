@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "bk-header":"../../../components/wx-header/header",
+    "bk-lines":"../../../components/bk-lines/bk-lines",
+    "bk-btn":"../../../components/bk-btn/bk-btn",
+    "bk-reservation":"../../../components/bk-reservation/bk-reservation"
+  },
+  "navigationStyle": "custom"
+}

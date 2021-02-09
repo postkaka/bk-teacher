@@ -1,0 +1,41 @@
+<!--pages/warehouse/outboundListing/outboundListing.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<view class="search">
+  <bk-search-box search="请输入物品名称"></bk-search-box>
+</view>
+<!-- 检索 -->
+<view class="searching">
+  <bk-searching classifyList="{{classifyList}}"></bk-searching>
+</view>
+<!-- 物品 -->
+<block wx:for="{{add}}" wx:key="*this">
+  <view class="goods">
+    <bk-line-class lineText="{{item.name}}" lineBox="{{item.ty}}" lineTextTh="出库"
+    alignText="color: #999999;align-self: center"
+    ></bk-line-class>
+    <bk-goods delStyle="display:none" a="规格" _a="{{item.specification}}"
+     c="库存" _c="{{item.laterCount}}"></bk-goods>
+  </view>
+</block>
+<!-- 出库物品-->
+<view class="outboundGoods">
+  <view class="_outboundGoods">出库物品({{add.length}})</view>
+  <block wx:for="{{add}}" wx:key="*this">
+    <view class="itemName">{{item.name}}</view>
+    <bk-goods delStyle="display:none" a="规格" _a="{{item.specification}}" 
+    b="购买价格" _b="{{item.price}}" c="出库数量" _c="{{item.frontCount}}"></bk-goods>
+  </block>
+</view>
+
+<!-- 按钮 -->
+<view class="flex-a align-a _last ">
+  <view class="flex-a align-a flex-b __last">
+    <view>已添加出库物品:</view>
+    <view class="center">{{add[0].frontCount}}</view>
+    <view class="end">
+      <image src="../../../assets/image/fback.png" 
+      style="height:28rpx;width:28rpx;transform:rotate(270deg);"></image>
+    </view>
+  </view>   
+  <view class="next align-b" bindtap="nextClick">下一步({{add.length}})</view>
+</view>

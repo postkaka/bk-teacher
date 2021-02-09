@@ -1,0 +1,33 @@
+<!--pages/warehouse/inventoryDetails/inventoryDetails.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<!-- 检索 -->
+<bk-searching classifyList="{{classifyList}}"></bk-searching>
+<!-- goods -->
+<view class="goods">
+  <bk-lines name="{{name}}"></bk-lines>
+  <bk-lines name="物品类型" text="{{type}}" backDisplay="none"></bk-lines>
+  <bk-lines name="单位" borderBottom="" backDisplay="none" text="{{unit}}"></bk-lines>
+</view>
+<!-- 备注 -->
+<view class="remark">
+  <bk-lines name="备注" backDisplay="none" lineFw="bold"></bk-lines>
+  <view class="remark-text">
+    <textarea  maxlength='200' placeholder="请输入备注……" class="text-area"
+    placeholder-style="font-size: 28rpx;font-family: PingFang SC;" bindinput="getValueLength"></textarea>
+  </view>
+  <view class="last-text">{{currentWordNumber|0}}/200</view>
+</view>
+<!-- 库存变更记录 -->
+<block wx:for="{{goodsList}}" wx:key="*this">
+  <view class="goodsList" data-index="{{index}}">
+    <bk-lines name="库存变更记录" lineFw="bold" class="{{index == 0?'':'none'}}" backDisplay="none"></bk-lines>
+    <bk-lines name="规格:" backDisplay="none"></bk-lines>
+    <bk-lines name="变更类型:" backDisplay="none" text="{{item.type}}"></bk-lines>
+    <bk-lines name="变更数量:" backDisplay="none" text="{{item.alteration}}({{unit}})"></bk-lines>
+    <bk-lines name="变更金额:" backDisplay="none" text='{{item.change}}'></bk-lines>
+    <bk-lines name="变更后库存:" backDisplay="none" text="{{item.Changes}}"></bk-lines>
+    <bk-lines name="经办人:" backDisplay="none" text="{{item.person}}"></bk-lines>
+    <bk-lines name="经办时间:" backDisplay="none" text="{{item.time}}" borderBottom=""></bk-lines>
+  </view>
+</block>
+<view class="placeholder"></view>

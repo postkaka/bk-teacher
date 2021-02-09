@@ -1,0 +1,34 @@
+/* pages/warehouse/warehouse/warehouse.wxss */
+/* 插槽 */
+.switch {
+  position: relative;
+  top: -210rpx;
+  right: 32rpx;
+  float: right;
+}
+._switch {
+  position: relative;
+  top: -140rpx;
+  right: -48rpx;
+  float: right;
+}
+.tab {
+  position: relative;
+  top: -40rpx;
+  width: 90%;
+}
+.tab-box {
+  width: 130rpx;
+  height: 40rpx;
+  background: #999999;
+  border-radius: 20rpx;
+  font-size: 24rpx;
+  color: #FFFFFF;
+  margin:0 30rpx 0 30rpx;
+}
+/* 商品信息 */
+.goods {
+  margin: 16rpx;
+  background: #FFFFFF;
+  border-radius: 30rpx;
+}

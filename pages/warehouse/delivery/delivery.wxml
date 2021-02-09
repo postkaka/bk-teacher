@@ -1,0 +1,22 @@
+<!--pages/warehouse/delivery/delivery.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<!-- 物品 -->
+<view class="goods">
+  <block wx:for="{{goods}}" wx:key="*this">
+    <bk-lines name="出库物品:" text="{{item.name}}" backDisplay="none"></bk-lines>
+    <bk-lines backDisplay="none" name="规格:{{item.specification}}" lineFw="bold">
+      <view slot="pic" data-index="{{index}}" bindtap="delClick"> 
+        <image src="../../../assets/image/del.png" style="height:40rpx;width:40rpx"></image>
+      </view>
+    </bk-lines>
+    <bk-lines name="出库价格:" text="{{item.price}} 元" backDisplay="none"></bk-lines>
+    <bk-lines name="出库数量:" text="{{item.type}}" backDisplay="none" type="Number"
+    inputDisplay="" pla="请输入出库数量" inputWidth="200" bind:bindKeyInput="bindKeyInput"
+    ></bk-lines>
+    <bk-lines name="出库后库存:" text="{{item.laterCount}} {{item.type}}" backDisplay="none" borderBottom=""></bk-lines>
+  </block>
+</view>
+<!-- 按钮 -->
+<view class="btn">
+  <bk-btn btn="{{btn}}" bind:btnClick="btnClick"></bk-btn>
+</view>

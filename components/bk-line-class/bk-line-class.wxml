@@ -7,10 +7,10 @@
     </view>
     <view class="line-class-nub">{{lineTextSec}}</view>
   </view>
-  <view class="align-a">
-    <view class="align-a-text" style="{{alignText}}" >{{lineTextTh}}</view>
-    <view class="align-a-src">
-      <image src="{{lineSrc}}" style="height:28rpx;width:28rpx;align-self: center;"></image>
+  <view class="flex-a align-a">
+    <view class="align-a-text align-a" style="{{alignText}}" >{{lineTextTh}}</view>
+    <view class="align-a-src align-b">
+      <image src="{{lineSrc}}" style="height:28rpx;width:28rpx;align-self:center;"></image>
     </view>
   </view>
 </view>

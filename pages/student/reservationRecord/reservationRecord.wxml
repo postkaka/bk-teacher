@@ -1,0 +1,31 @@
+<!--pages/student/reservationRecord/reservationRecord.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<!-- 试听未到 -->
+<view class="box">
+  <bk-lines name="试听未到" lineFw="bold" backDisplay='none' text="{{time}}"></bk-lines>
+  <view class="box-text">
+    <view class="_text">试听课程:<span>{{inform.name}}</span></view>
+    <view class="_text">试听时间:<span>{{inform.time}}</span></view>
+    <view class="_text">试听班级:<span>{{inform.class}}</span></view>
+    <view class="_text">沟通对象:<span>{{inform.object}}</span></view>
+    <view class="_text">沟通方式:<span>{{inform.way}}</span></view>
+    <view class="_text">沟通内容:<span>{{inform.content}}</span></view>
+  </view>
+</view>
+<!-- 试听反馈 -->
+<view class="_box">
+  <bk-lines name="试听反馈" lineFw="bold" backDisplay='none'></bk-lines>
+  <bk-lines name="是否到访" text="试听未到"></bk-lines>
+  <view class="box-text">
+    <view>1</view>
+  </view>
+</view>
+<!-- 按钮 -->
+<view class="flex-a last">
+  <view class="flex-a ds align-a">
+    <image src="../../../assets/image/ds1.png"  style="height:60rpx;width:60rpx"></image> 
+  </view>
+  <view class="align-a">
+    <view class="next align-b" bindtap="nextClick">提交</view>
+  </view>
+</view>

@@ -1,0 +1,31 @@
+<!--pages/warehouse/outbound/outbound.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<!-- 出库 -->
+<view class="payBox">
+  <bk-lines name="出库时间:" text="{{time}}"></bk-lines>
+  <bk-lines backDisplay="none" name="其他费用:" text="{{pay}} 元" ></bk-lines>
+  <bk-lines   name="支付金额:" text="{{add[0].price*add[0].frontCount}} 元"></bk-lines>
+  <bk-lines name="支付方式:"  borderBottom=""></bk-lines>
+</view>
+<!-- 备注 -->
+<view class="remark">
+  <bk-lines name="备注" backDisplay="none" lineFw="bold"></bk-lines>
+  <view class="remark-text">
+    <textarea  maxlength='200' placeholder="请输入备注……" class="text-area"
+    placeholder-style="font-size: 28rpx;font-family: PingFang SC;" bindinput="getValueLength"></textarea>
+  </view>
+  <view class="last-text">{{currentWordNumber|0}}/200</view>
+</view>
+<!-- 出库物品-->
+<view class="outboundGoods">
+  <view class="_outboundGoods">出库物品({{add.length}})</view>
+  <block wx:for="{{add}}" wx:key="*this">
+    <view class="itemName">{{item.name}}</view>
+    <bk-goods delStyle="display:none" a="规格" _a="{{item.specification}}" 
+    b="购买价格" _b="{{item.price}}" c="出库数量" _c="{{item.frontCount}}"></bk-goods>
+  </block>
+</view>
+<!-- 按钮 -->
+<view class="bns">
+</view>
+<bk-btn btn="{{btn}}" bind:btnClick="btnClick"></bk-btn>

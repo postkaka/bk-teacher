@@ -1,0 +1,30 @@
+<!--pages/student/reservation/reservation.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<!-- 预约 -->
+<view class="_reservation">
+  <bk-lines name="预约记录" lineFw="bold" text="查看全部" textColor="#999999" bindtap="reservationClick"></bk-lines>
+  <view class="reservation">
+    <block  wx:for="{{reservation}}" wx:key="*this" data-index="{{index}}">
+      <bk-reservation reservation="{{item}}" bindtap="reservationRecordClick"></bk-reservation>
+    </block>
+  </view>
+  <view class="details">
+    <view class="details-text flex-a justify-d">
+      <view class="flex-a ">
+        <view>2020-01-01</view>
+        <view class="time">16:42</view>
+      </view>
+      <view class="flex-a">
+        <view class='align-a'>电话</view>
+        <view class="lines align-a"></view>
+        <view class='align-a'>本人</view>
+      </view>
+    </view>
+    <view class="last">1</view>
+  </view>
+</view>
+
+<!-- 按钮 -->
+<view class="btn">
+  <bk-btn btn="{{btn}}" bind:btnClick="btnClick"></bk-btn>
+</view>

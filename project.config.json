@@ -54,8 +54,8 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/shopping/goods/goods",
-          "pathName": "pages/shopping/goods/goods",
+          "name": "pages/student/student-crm/student-crm",
+          "pathName": "pages/student/student-crm/student-crm",
           "query": "",
           "scene": null
         }

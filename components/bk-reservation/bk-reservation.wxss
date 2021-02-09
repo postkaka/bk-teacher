@@ -1,0 +1,76 @@
+/* components/bk-reservation/bk-reservation.wxss */
+.reservation-record {
+  height: 329rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 30rpx;
+  margin: 0 16rpx 16rpx 16rpx;
+}
+.reservation {
+  padding: 32rpx;
+}
+.ellipse {
+  height: 72rpx;
+  background: #FFFFFF;
+  border: 1rpx solid #60ADE1;
+  border-radius: 42rpx;
+  font-size: 24rpx;
+}
+.reservation-frist {
+  margin-bottom: 16rpx;
+}
+.ellipse-fisrt {
+  background: linear-gradient(180deg, #96CBEB 0%, #60ADE1 100%); 
+  border: 1rpx solid #60ADE1;
+  border-radius: 42rpx;
+  font-size: 28rpx;
+  color: #ffffff;
+  height: 56rpx;
+  width: 144rpx;
+  margin-left: 8rpx;
+}
+._text {
+  margin:0 10rpx 0 10rpx;
+}
+
+.ellipse-second {
+  color: #60ADE1;
+}
+.margins {
+  margin: 0 8rpx 0 17rpx
+}
+/* 布局样式 */
+.flex-a {
+  display: flex;
+  
+}
+.flex-b {
+  flex: 1;
+}
+/* 横向对齐 */
+.justify-b {
+  justify-content: center;
+}
+.justify-c {
+  justify-content: space-around;
+}
+.justify-d {
+  justify-content: space-between;
+}
+/* 竖向对齐 */
+.align-a {
+  align-self: center;
+}
+
+/* 换行 */
+.justify-a {
+  flex-wrap: wrap;
+  justify-content:start;
+}
+/* 文字横向竖向对齐 */
+.align-b {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

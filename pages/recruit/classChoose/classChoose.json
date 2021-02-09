@@ -2,7 +2,8 @@
   "usingComponents": {
     "bk-header":"../../../components/wx-header/header",
     "bk-btn":"../../../components/bk-btn/bk-btn",
-    "bk-lines":"../../../components/bk-lines/bk-lines"
+    "bk-lines":"../../../components/bk-lines/bk-lines",
+    "bk-key":"../../../components/bk-key/bk-key"
   },
   "navigationStyle": "custom"
 }

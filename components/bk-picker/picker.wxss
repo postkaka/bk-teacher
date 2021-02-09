@@ -58,13 +58,13 @@
 	justify-content: space-between;
 	align-items: center;
 }
-.picker-header view {
+.picker-header-view {
 	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-.picker-header view text{
+.picker-header-view-text{
 	font-size: 36rpx;
 }
 .picker-content {

@@ -1,0 +1,21 @@
+<!--pages/shopping/goodsInform/goodsInform.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<view class="buy">
+  <bk-lines name="购买物品:" text="{{name}}"></bk-lines>
+  <bk-lines name="购买规格:" text="{{unit}}"></bk-lines>
+  <bk-lines backDisplay="none" name="购买价格:" text="{{price}} 元"></bk-lines>
+  <bk-lines borderBottom="" backDisplay="none" text="个">
+    <view slot="header">
+      <view>购买数量:</view>
+      <view class="inventory">库存剩余{{inventory}}个</view>
+    </view>
+  </bk-lines>
+  <view class="key">
+    <bk-key display="none" figure="{{figure}}" bind:subtract="subtract" bind:add="add"></bk-key>
+  </view>
+</view>
+
+<!-- btn -->
+<view class="btn">
+  <bk-btn btn="{{btn}}" bind:btnClick="btnClick"></bk-btn>
+</view>

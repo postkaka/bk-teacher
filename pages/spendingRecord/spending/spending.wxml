@@ -1,0 +1,53 @@
+<!--pages/spendingRecord/spending/spending.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<view class="search">
+  <bk-search-box search="请输入费用名称"></bk-search-box>
+</view>
+<view class="time flex-a justify-d align-a">
+  <view class="flex-a align-a" bindtap="showClick">
+    <view>
+      <image src="../../../assets/image/times.png" style="height:30rpx;width:29rpx"></image>
+    </view>
+    <view class="text-2">{{time}}</view>
+  </view>
+  <view class="flex-a align-a">
+    <view class="text-3 align-a">+</view>
+    <view class="text-4 align-a" bindtap="addClick">添加支出</view>
+  </view>
+</view>
+<!-- 分类搜索 -->
+<view>
+  <view class="left">
+  <bk-line-picker borderBottom='' picker_02_data="{{_data}}" listData_02="{{dates}}" bind:picker='picker'></bk-line-picker>
+  </view>
+  <view class="right">总计:<span class="span">￥{{totalPrice}}</span></view>
+</view>
+
+<!-- 商品 -->
+<view class="list">
+  <block  wx:for="{{list}}" wx:key="*this">
+    <view class="flex-a align-a justify-d listItem"> 
+      <view class="align-a">
+        <view class="flex-a align-a title">
+          <view>{{item.name}}</view>
+          <view class="smallLine align-a"></view>
+          <view>{{item.type}}</view>
+        </view>
+        <view class="align-a times">{{item.time}}</view>
+      </view>
+      <view class='align-a'>￥{{item.price}}</view>
+    </view>
+    <view class="line"></view>
+  </block>
+</view>
+
+
+<!-- 蒙层 -->
+<view class="_bgs" style='display:{{display}} '></view>
+<view class="bg-item" style='display:{{display}} '>
+  <view class="flex-a justify-d bg-tab">
+    <view bindtap="buttonClick">取消</view>
+    <view bindtap="buttonClick">确认</view>
+  </view>
+  <bk-calendar bind:nowSelect="nowSelect"></bk-calendar>
+</view>

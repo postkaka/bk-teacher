@@ -1,0 +1,40 @@
+<!--pages/recruit/editInformation/editInformation.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<!-- 基本信息 -->
+<view class="basic">
+  <bk-lines name="基本信息" lineFw="bold" backDisplay="none"></bk-lines>
+  <bk-lines name="学员姓名:" nameSymbol="*" symbol="color:#F89470" backDisplay="none" inputDisplay="" 
+  pla="请输入学员姓名" inputWidth="200"></bk-lines>
+  <bk-lines name="手机号码:" nameSymbol="*" symbol="color:#F89470" backDisplay="none" inputDisplay="" 
+  pla="请输入手机号码" inputWidth="200"></bk-lines>
+  <bk-line-picker name="性别:" picker_02_data="{{_gender}}" listData_02="{{gender}}" bind:picker="genderPicker"></bk-line-picker>
+  <bk-lines name="生日:"  text="{{birthday}}" bindtap="showClick"></bk-lines>
+  <bk-lines name="年龄:"  backDisplay="none" inputDisplay="" pla="请输入年龄" inputWidth="200"></bk-lines>
+  <bk-line-picker name="关系:" picker_02_data="{{_relation}}" listData_02="{{relation}}" bind:picker="relationPicker"></bk-line-picker>
+  <bk-line-picker name="国家码:" picker_02_data="{{_code}}" listData_02="{{code}}" bind:picker="codePicker"></bk-line-picker>
+  <bk-line-picker name="来源渠道:" picker_02_data="{{_channel}}" listData_02="{{channel}}" bind:picker="channelPicker"></bk-line-picker>
+  <bk-line-picker name="意向课程:" picker_02_data="{{_class}}" listData_02="{{class}}" bind:picker="classPicker"></bk-line-picker>
+  <bk-line-picker name="意向程度:" picker_02_data="{{_intention}}" listData_02="{{intention}}" bind:picker="intentionPicker" borderBottom=""></bk-line-picker>
+</view>
+<!-- 自定义字段 -->
+<view class="diy">
+  <bk-lines name="自定义字段" lineFw="bold" backDisplay="none"></bk-lines>
+  <bk-lines name="会员介绍:"  borderBottom=""></bk-lines>
+</view>
+
+<!-- 按钮 -->
+<bk-btn btn="{{btn}}"></bk-btn>
+
+
+
+
+
+<!-- 蒙层 -->
+<view class="bg" style='display:{{display}} '></view>
+<view class="bg-item" style='display:{{display}} '>
+  <view class="flex-a justify-d bg-tab">
+    <view bindtap="buttonClick">取消</view>
+    <view bindtap="buttonClick">确认</view>
+  </view>
+  <bk-calendar bind:nowSelect="nowSelect"></bk-calendar>
+</view>

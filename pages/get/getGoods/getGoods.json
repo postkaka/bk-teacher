@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "bk-header":"../../../components/wx-header/header",
+    "bk-search-box":"../../../components/wx-search-box/wx-search-box",
+    "bk-key":"../../../components/bk-key/bk-key",
+    "bk-searching":"../../../components/bk-searching/bk-searching",
+    "bk-btn":"../../../components/bk-btn/bk-btn"
+  },
+  "navigationStyle": "custom"
+}

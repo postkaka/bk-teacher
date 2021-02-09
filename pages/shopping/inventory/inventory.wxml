@@ -1,0 +1,28 @@
+<!--pages/shopping/inventory/inventory.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<view class="top">
+  <bk-lines borderBottom="" backDisplay="none" name="购买学员:" lineFw="bold" text="{{list.name}}({{list.phone}})"></bk-lines>
+</view>
+
+<view class="buy">
+  <bk-lines name="购买物品({{goods.length}})" backDisplay="none"></bk-lines>
+  <block wx:for="{{goods}}" wx:key="*this" data-index="{{index}}">
+    <view class="name">{{item.name}}</view>
+    <bk-goods a="规格" _a="1" b="购买价格" _b="{{item.price*item.figure}}" c="数量" _c="{{item.figure}}"
+    bind:delClick="delClick"
+    ></bk-goods>
+  </block>
+</view>
+
+<!-- 按钮 -->
+<view class="flex-a align-a _last ">
+  <view class="flex-a align-a flex-b __last">
+    <view>已添加物品/杂费:</view>
+    <view class="center">{{goods.length}}</view>
+    <view class="end">
+      <image src="../../../assets/image/fback.png" 
+      style="height:28rpx;width:28rpx;transform:rotate(270deg);"></image>
+    </view>
+  </view>   
+  <view class="next align-b" bindtap="nextClick">下一步({{goods.length}})</view>
+</view>

@@ -1,0 +1,38 @@
+<!--pages/get/getGoods/getGoods.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<view class="search">
+  <bk-search-box search="请输入学员姓名或手机号"></bk-search-box>
+</view>
+<!-- 检索 -->
+<bk-searching classifyList="{{classifyList}}"></bk-searching>
+<!-- 学员信息 -->
+<view class="stu">
+  <block  wx:for="{{stu}}" wx:key="*this">
+    <view class="flex-a align-a src">
+      <view class="align-a ">
+        <image src="{{item.src}}" style="height:78rpx;width:78rpx"></image>
+      </view>
+      <view class="align-a name">{{item.name}}({{item.iphone}})</view>
+    </view>
+    <view class="flex-a justify-d text {{index+1 == stu.length?'':'line'}}">
+      <view>{{item.type}}/{{item.num}}</view>
+      <view data-index="{{index}}" class="box align-b" bindtap="getClick">领取</view>
+    </view>
+  </block>
+</view>
+<!-- 蒙层 -->
+<view class="{{show == 0?'none':'bg'}}"></view>
+<view class="{{show == 0?'none':'bg-item'}}">
+  <view class="title">物品领取确认</view>
+  <view class="littleTitle line">领取学员: {{stu[i].name}}</view>
+  <view class="littleTitle line">领取物品: {{stu[i].type}}</view>
+  <view class="littleTitle line">领取规格: {{stu[i].num}}</view>
+  <view class="littleTitle ">领取数量</view>
+  <view class="key">
+    <bk-key type="个" figure="{{figure}}"  bind:subtract="subtract" bind:add="add"></bk-key>
+  </view>
+  <view class="lastTitle">可领取{{figure}}个；库存{{inventory}}个</view>
+  <view class="btn">
+  <bk-btn btn="{{btn}}" bind:btnClick="btnClick"></bk-btn>
+  </view>
+</view>

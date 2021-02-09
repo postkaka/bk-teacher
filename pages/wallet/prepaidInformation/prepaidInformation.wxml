@@ -16,7 +16,7 @@
     <view>
       <view class="bg-change flex-a align-a">
         <input class="bg-input align-a" type="digit" value="{{pay}}" bindinput="bindKeyInput" placeholder="请输入实充金额" />
-        <view class="align-a _bg">元</view>
+        <view class="align-a _bgs">元</view>
       </view>
       <view class="prepaid-text">当前钱包实充金额￥100</view>
     </view>

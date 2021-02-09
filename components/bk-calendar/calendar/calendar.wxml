@@ -10,7 +10,6 @@
 		<image class="leftIcon" src="../../../assets/image/fback.png" bindtap='lastMonth'></image>
 		<view class="titleText">{{title}}</view>
 		<image class="leftIcon" src="../../../assets/image/fback.png" bindtap='nextMonth' style="transform: rotate(180deg)"></image>
-
 	</view>
 
 

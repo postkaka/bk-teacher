@@ -106,8 +106,9 @@ Component({
                 month: this.data.month,
                 date: date
             });
-            console.log(this.data.select)
-            this.triggerEvent("nowSelect",this.data.select)
+            let add = [this.data.select,this.data.title]
+            // console.log(this.data.select)
+            this.triggerEvent("nowSelect",add)
         },
         //上个月
         lastMonth: function () {

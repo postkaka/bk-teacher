@@ -36,29 +36,13 @@
 </view>
 <!-- 预约记录 -->
 <view class="reservation-record">
-  <bk-lines name="学员信息" lineFw="bold" text="查看全部" textColor="#999999"></bk-lines>
+  <bk-lines name="学员信息" lineFw="bold" text="查看全部" textColor="#999999" bindtap="reservationClick"></bk-lines>
   <view class="reservation">
-    <view class="ellipse reservation-frist flex-a align-a justify-d">
-      <view class='align-a ellipse-fisrt align-b'>试听未到</view>
-      <view class='align-a ellipse-second'>测试班级</view>
-      <view class='align-a'>2020-04-06</view>
-      <view class='align-a'>09:00~10:00</view>
-      <view class='align-a flex-a'>
-        <image src="../../../assets/image/back.png" style="height:28rpx;width:28rpx;margin-right:16rpx" class="align-a"></image>
-      </view>
-    </view>
-    <view class="ellipse reservation-frist flex-a align-a justify-d">
-      <view class='align-a ellipse-fisrt align-b'>完成到访</view>
-      <view class="flex-a align-a">
-        <view class='align-a'>2020-01-01</view>
-          <view class='align-a margins'>17:00</view>
-          <view class='align-a flex-a'>
-            <image src="../../../assets/image/back.png" style="height:28rpx;width:28rpx;margin-right:16rpx" class="align-a"></image>
-          </view>
-        </view>
-    </view>
+    <block  wx:for="{{reservation}}" wx:key="*this" data-index="{{index}}">
+      <bk-reservation reservation="{{item}}"></bk-reservation>
+    </block>
   </view>
 </view>
 <!-- 按钮 -->
 
-<bk-btn btn="{{btn}}"></bk-btn>
+<bk-btn btn="{{btn}}" bind:btnClick="itemClick"></bk-btn>

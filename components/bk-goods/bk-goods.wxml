@@ -1,0 +1,18 @@
+<!--components/bk-goods/bk-goods.wxml-->
+<view class="flex-a align-a list justify-d">
+  <view class="align-a">
+    <view class="text">{{a}}</view>
+    <view class="_text">{{_a}}</view>
+  </view>
+  <view class="align-a">
+    <view class="text">{{b}}</view>
+    <view  class="_text">{{_b}}</view>
+  </view>
+  <view class="align-a">
+    <view class="text">{{c}}</view>
+    <view  class="_text">{{_c}}</view>
+  </view>
+  <view class="align-a" bindtap="delClick" style="{{delStyle}}">
+    <image src="../../assets/image/del.png" style="height:40rpx;width:40rpx"></image>
+  </view>
+</view>

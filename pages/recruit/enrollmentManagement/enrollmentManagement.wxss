@@ -1,0 +1,55 @@
+/* pages/recruit/enrollmentManagement/enrollmentManagement.wxss */
+.stu {
+  margin: 16rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 30rpx;
+}
+/* 学员 */
+.header {
+  padding: 33rpx;
+}
+.crm-fisrt {
+  margin-bottom: 8rpx;
+}
+.height-image {
+  margin: 0 17rpx 0 0;
+}
+.crm-name {
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.crm-image {
+  margin: 0 23rpx 0 8rpx ;
+}
+.crm-text {
+  font-size: 20rpx;
+  color: #999999;
+}
+.crm-type {
+  margin-left:100rpx ;
+}
+.crm-text-else {
+  font-size: 20rpx;
+  color: #999999;
+}
+.right-border {
+  border-right: 1rpx solid #999999;
+  margin: 0 8rpx 0 8rpx;
+  height: 18rpx;
+  background: #999999;
+}
+/* 加号 */
+.pos {
+  display: flex;
+  justify-content: center;
+}
+.plus {
+  width: 130rpx;
+  height: 130rpx;
+  background: linear-gradient(180deg, #96CBEB 0%, #60ADE1 100%);
+  box-shadow: 0px 10rpx 21rpx rgba(62, 100, 139, 0.4);
+  border-radius: 50%;
+  font-size: 50rpx;
+  color: #FFFFFF;
+}

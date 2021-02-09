@@ -1,0 +1,11 @@
+/* pages/warehouse/stock/stock.wxss */
+.searching {
+  float: left;
+  margin-left:32rpx
+}
+.goods {
+  margin: 80rpx 16rpx 16rpx 16rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 30rpx;
+}

@@ -63,7 +63,7 @@ Page({
     let data = "base.birthday"
     console.log(data)
     this.setData({
-      [data] : e.detail 
+      [data] : e.detail[0] 
     })
   },
   integralClick(){

@@ -1,0 +1,90 @@
+/* pages/shopping/settlement/settlement.wxss */
+.top {
+  height: 104rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 3rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 0px 0px 30rpx 30rpx;
+}
+.payBox {
+  margin: 16rpx;
+  height: 314rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 30rpx;
+}
+.buy {
+  margin: 16rpx;
+  height: 348rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 30rpx;
+}
+.name {
+  padding: 32rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #F89470;
+  border-bottom: 1rpx solid #DDDDDD;
+}
+/* 支付信息 */
+.payment {
+  margin: 16rpx;
+  height: 314rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 30rpx;
+}
+/* 业绩归属 */
+.performance {
+  height: 419rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  margin: 16rpx;
+  border-radius: 30rpx;
+}
+/* 备注 */
+.remark{
+  margin: 16rpx;
+  height: 422rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 30rpx;
+}
+.remark-text {
+  position: relative;
+  padding: 32rpx;
+  width: 100%;
+  height: 213rpx;
+  top:0rpx;
+  overflow-x:hidden;
+}
+.text-area{
+  margin-top: 8rpx;
+  font-size:24rpx;
+  height: 100rpx;
+}
+.last-text {
+  font-size: 20rpx;
+  color: #999999;
+  position: relative;
+  left: 85%;
+  bottom: 20rpx;
+}
+.last {
+  font-size: 20rpx;
+  color: #999999;
+  position: relative;
+  margin-left: 32rpx;
+  bottom: 90rpx;
+}
+/* 按钮 */
+._last {
+  margin: -40rpx 16rpx 36rpx 16rpx;
+  position:relative;
+  bottom: -80rpx;
+  font-size: 28rpx;
+}
+.pay {
+  margin-left: 4rpx;
+  color: #F89470;
+}

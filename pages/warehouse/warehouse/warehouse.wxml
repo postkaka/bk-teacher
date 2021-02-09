@@ -1,0 +1,34 @@
+<!--pages/warehouse/warehouse/warehouse.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<view class="search">
+  <bk-search-box search="请输入物品名称"></bk-search-box>
+</view>
+<!-- 检索 -->
+<bk-searching classifyList="{{classifyList}}" bind:itemClick="itemClick" bind:showClick="showClick">
+  <view slot="{{show == 1?'switch':''}}" class="switch">
+    <switch class='_pic' color="#60ADE1"></switch>
+  </view>
+  <view slot="{{show == 1?'_switch':''}}" class="_switch">
+    <switch class='_pic' color="#60ADE1"></switch>
+  </view>
+  <view slot="{{show == 1?'tab':''}}" class="flex-a justify-c tab">
+    <block wx:for="{{tab}}" wx:key="*this">
+        <view class="tab-box align-b">{{item}}</view>
+    </block>
+  </view>
+</bk-searching>
+
+<!-- 物品信息 -->
+<block wx:for="{{goods}}" wx:key="*this">
+  <view class="goods">
+    <bk-line-class lineText="{{item.name}}" lineBox="{{item.type}}" lineTextTh="详情"
+    alignText="color: #999999;align-self: center"
+    ></bk-line-class>
+    <bk-goods delStyle="display:none" a="规格" _a="{{item.specification}}"
+    b="库存" _b="{{item.inventory}}" c="已购未领" _c="{{item.unget}}"></bk-goods>
+  </view>
+</block>
+<!-- 按钮 -->
+<view class="btn">
+  <bk-btn btn="{{btn}}" bind:btnClick="btnClick"></bk-btn>
+</view>

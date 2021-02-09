@@ -1,0 +1,53 @@
+/* components/bk-key/bk-key.wxss */
+.texts {
+  font-size: 28rpx;
+  color: #333333;
+}
+.circle {
+  width: 30rpx;
+  height: 30rpx;
+  background: #FFFFFF;
+  border: 1rpx solid #333333;
+  border-radius: 50%;
+}
+.text {
+  margin:0 8rpx 0 8rpx ;
+}
+._text {
+  margin-left: 16rpx;
+}
+/* 布局样式 */
+.flex-a {
+  display: flex;
+  
+}
+.flex-b {
+  flex: 1;
+}
+/* 横向对齐 */
+.justify-b {
+  justify-content: center;
+}
+.justify-c {
+  justify-content: space-around;
+}
+.justify-d {
+  justify-content: space-between;
+}
+/* 竖向对齐 */
+.align-a {
+  align-self: center;
+}
+
+/* 换行 */
+.justify-a {
+  flex-wrap: wrap;
+  justify-content:start;
+}
+/* 文字横向竖向对齐 */
+.align-b {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

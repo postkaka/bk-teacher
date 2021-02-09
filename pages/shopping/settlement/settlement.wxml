@@ -1,0 +1,39 @@
+<!--pages/shopping/settlement/settlement.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<view class="top">
+  <bk-lines borderBottom="" backDisplay="none" name="购买学员:" lineFw="bold" text="{{list.name}}({{list.phone}})"></bk-lines>
+</view>
+<!--  -->
+<view class="payBox">
+  <bk-lines backDisplay="none" name="支付总金额:" text="￥ 40" textColor="#F89470"></bk-lines>
+  <bk-lines name="支付方式:" text="请选择支付方式" textColor="#999999"nameSymbol="*" symbol="color:#F89470"></bk-lines>
+  <bk-lines borderBottom=""  name="购买时间:" text="2020-05-15"></bk-lines>
+</view>
+<!-- 备注 -->
+<view class="remark">
+  <bk-lines name="备注" backDisplay="none" lineFw="bold"></bk-lines>
+  <view class="remark-text">
+    <textarea  maxlength='200' placeholder="请输入备注……" class="text-area"
+    placeholder-style="font-size: 28rpx;font-family: PingFang SC;" bindinput="getValueLength"></textarea>
+  </view>
+  <view class="last-text">{{currentWordNumber|0}}/200</view>
+</view>
+<!-- buy -->
+<view class="buy">
+  <bk-lines name="购买物品({{goods.length}})" backDisplay="none"></bk-lines>
+  <block wx:for="{{goods}}" wx:key="*this" data-index="{{index}}">
+    <view class="name">{{item.name}}</view>
+    <bk-goods a="规格" _a="1" b="购买价格" _b="{{item.price*item.figure}}" c="数量" _c="{{item.figure}}"
+    bind:delClick="delClick"
+    ></bk-goods>
+  </block>
+</view>
+
+<!-- 按钮 -->
+<view class="flex-a _last align-a ">
+  <view class="flex-a align-a flex-b">
+    <view>实付金额:</view>
+    <view class="pay">￥40</view>
+  </view>   
+</view>
+<bk-btn btn="{{ _btn}}" btnStyle="width:70%; position:relative;left:25%" bind:btnClick="lastBtnClick"></bk-btn>

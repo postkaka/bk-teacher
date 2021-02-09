@@ -1,0 +1,72 @@
+/* components/bk-searching/bk-searching.wxss */
+.src {
+  margin-left: 8rpx;
+}
+.classify {
+  font-size: 28rpx;
+  margin: 16rpx 0 16rpx 0;
+  color: #333333;
+}
+.classifyList {
+  padding: 16rpx 0 16rpx 32rpx;
+  font-size: 28rpx;
+}
+.line {
+  border-bottom: 1rpx solid #DDDDDD;
+  margin: 0 32rpx 0 32rpx;
+}
+/* 布局样式 */
+.flex-a {
+  display: flex;
+  
+}
+.flex-b {
+  flex: 1;
+}
+/* 横向对齐 */
+.justify-b {
+  justify-content: center;
+}
+.justify-c {
+  justify-content: space-around;
+}
+.justify-d {
+  justify-content: space-between;
+}
+/* 竖向对齐 */
+.align-a {
+  align-self: center;
+}
+
+/* 换行 */
+.justify-a {
+  flex-wrap: wrap;
+  justify-content:start;
+}
+/* 文字横向竖向对齐 */
+.align-b {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+._bg {
+  height: 100%;
+	width: 100%;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 2;
+	/* top: 40%; */
+	left: 0;
+}
+._bg-item {
+  width: 100%;
+  position: fixed;
+  background: #FFFFFF;
+  left: 0;
+  z-index: 3;
+}
+/* 隐藏样式 */
+.none {
+  display: none;
+}

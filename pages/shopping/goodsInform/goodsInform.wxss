@@ -1,0 +1,19 @@
+/* pages/shopping/goodsInform/goodsInform.wxss */
+.buy {
+  margin: 16rpx;
+  height: 423rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 30rpx;
+}
+.key {
+  position: relative;
+  top: -68rpx;
+  float: right;
+  padding-right: 80rpx;
+}
+.inventory {
+  font-size: 20rpx;
+  color: #F89470;
+  margin-top: 8rpx;
+}

@@ -1,0 +1,45 @@
+<!--pages/recruit/enrollmentManagement/enrollmentManagement.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<!-- 搜索框 -->
+<view class="search">
+  <bk-search-box search="请输入学员姓名或手机号"></bk-search-box>
+</view>
+<!-- 检索 -->
+<bk-searching classifyList="{{classifyList}}"></bk-searching>
+<!-- 提示文字 -->
+<view class="hint">共有{{crm.length}}人 当前显示{{crm.length}}人</view>
+<!-- 学员 -->
+<view class="stu">
+  <block wx:for="{{crm}}" wx:key="*this">
+    <view class="header flex-a align-a justify-d">
+      <view class="flex-a align-a">
+        <view class="align-a height-image">
+        <image src="{{item.src}}" style="height: 78rpx;width:78rpx"></image>
+      </view>
+      <view class="align-a">
+        <view class="flex-a align-a crm-fisrt">
+          <view class="crm-name">{{item.name}}</view>
+          <view class="crm-text align-a crm-type">{{item.time}}</view>
+          <view class="crm-text align-a ">{{item.type}}</view>
+        </view>
+        <view class="flex-a crm-text-else align-a">
+          <view>{{item.intention}}</view>
+          <view class="right-border align-a"></view>
+          <view>{{item.state}}</view>
+          <view class="right-border align-a"></view>
+          <view>{{item.source}}</view>
+          <view class="right-border align-a"></view>
+          <view>{{item.administrator}}</view>
+        </view>
+      </view>
+      </view>
+      <view class="align-a">
+        <image src="../../../assets/image/back.png" style="height:28rpx;width:28rpx"></image>
+      </view>
+</view>
+  </block>
+</view>
+<!-- 加号 -->
+<view class="btn pos" bindtap="plusClick">
+  <view class="plus align-b">+</view>
+</view>

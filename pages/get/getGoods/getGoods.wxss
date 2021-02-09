@@ -1,0 +1,57 @@
+/* pages/get/getGoods/getGoods.wxss */
+.stu {
+  margin: 16rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 30rpx;
+}
+.src {
+  padding: 17rpx 32rpx 17rpx 32rpx;
+  border-bottom: 1rpx solid #DDDDDD;
+}
+.name {
+  margin-left: 17rpx;
+  font-size: 28rpx;
+  color: #333333;
+}
+.text {
+  padding: 17rpx 32rpx 17rpx 32rpx;
+}
+.line {
+  border-bottom: 1rpx solid #DDDDDD;
+}
+.box {
+  width: 97rpx;
+  height: 33rpx;
+  background: #60ADE1;
+  border-radius: 20rpx;
+  font-size: 20rpx;
+  color: #FFFFFF;
+}
+.title {
+  padding: 32rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #333333;
+  border-bottom: 1rpx solid #dddddd;
+}
+.littleTitle {
+  padding: 16rpx 32rpx 16rpx 32rpx;
+  font-size: 28rpx;
+  color: #333333;
+}
+.line {
+  border-bottom: 1rpx solid #dddddd;
+}
+.key {
+  position: relative;
+  left: 150rpx;
+  top: -51rpx;
+}
+.lastTitle {
+  position: relative;
+  left: 150rpx;
+  top: -42rpx;
+  color: #999999;
+  font-size: 24rpx;
+}

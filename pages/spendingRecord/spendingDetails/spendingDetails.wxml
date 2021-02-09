@@ -1,0 +1,45 @@
+<!--pages/spendingRecord/spendingDetails/spendingDetails.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<!-- 费用类别 -->
+<view class="spending">
+  <bk-line-picker name="费用类别:" picker_02_data="{{_data}}" listData_02="{{dates}}" bind:picker='picker'></bk-line-picker>
+  <bk-lines name="费用名称:" backDisplay="none" text="{{list.goodsName}}">
+    <view slot="pic" class="pic align-a">×</view>
+  </bk-lines>
+  <bk-lines name="支出金额:" backDisplay="none" text="{{list.price}}">
+    <view slot="pic" class="pic align-a">×</view>
+  </bk-lines>
+  <bk-lines name="支出日期:" text="{{list.time}}" bindtap="showClick"></bk-lines>
+  <bk-lines name="经办人:" backDisplay="none" text="{{list.name}}" borderBottom=""></bk-lines>
+</view>
+<!-- 蒙层 -->
+<view class="bg" style='display:{{display}} '></view>
+<view class="bg-item" style='display:{{display}} '>
+  <view class="flex-a justify-d bg-tab">
+    <view bindtap="buttonClick">取消</view>
+    <view bindtap="buttonClick">确认</view>
+  </view>
+  <bk-calendar bind:nowSelect="nowSelect"></bk-calendar>
+</view>
+<!-- 备注 -->
+<view class="remark">
+  <bk-lines name="备注" backDisplay="none" lineFw="bold"></bk-lines>
+  <view class="remark-text">
+    <textarea  maxlength='200' placeholder="请输入备注……" class="text-area"
+    placeholder-style="font-size: 28rpx;font-family: PingFang SC;" bindinput="getValueLength"></textarea>
+  </view>
+  <view class="last-text">{{currentWordNumber|0}}/40</view>
+</view>
+<!-- 按钮 -->
+<view class="btn">
+  <bk-btn btn="{{btn}}" bind:btnClick="btnClick"></bk-btn>
+</view>
+<!-- 蒙层 -->
+<view class="bg" style='display:{{displays}} '></view>
+<view class="bg-item" style='display:{{displays}} '>
+  <view class="flex-a justify-b bg-image">
+    <image src="../../../assets/image/bg.png" style="height:160rpx;width:160rpx"></image>
+  </view>
+  <view class='bg-text-1'>操作成功</view>
+  <view class='bg-button align-b' bindtap="_buttonClick">确认</view>
+</view>

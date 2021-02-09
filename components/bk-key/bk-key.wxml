@@ -1,0 +1,7 @@
+<!--components/bk-key/bk-key.wxml-->
+<view class="flex-a align-a texts">
+    <view class="circle align-b align-a" bindtap="subtract">-</view>
+    <view class="text align-a ">{{figure}}</view>
+    <view class="circle align-b align-a" bindtap="add">+</view>
+    <view class="align-a _text" style="display:{{display}}">{{type}}</view>
+</view>

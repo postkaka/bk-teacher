@@ -1,0 +1,48 @@
+/* components/bk-goods/bk-goods.wxss */
+.list {
+  padding: 32rpx;
+}
+.text {
+  font-size: 24rpx;
+  color: #999999;
+}
+._text{
+  font-size: 24rpx;
+  color: #333333;
+  margin-top: 8rpx;
+}
+/* 布局样式 */
+.flex-a {
+  display: flex;
+  
+}
+.flex-b {
+  flex: 1;
+}
+/* 横向对齐 */
+.justify-b {
+  justify-content: center;
+}
+.justify-c {
+  justify-content: space-around;
+}
+.justify-d {
+  justify-content: space-between;
+}
+/* 竖向对齐 */
+.align-a {
+  align-self: center;
+}
+
+/* 换行 */
+.justify-a {
+  flex-wrap: wrap;
+  justify-content:start;
+}
+/* 文字横向竖向对齐 */
+.align-b {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

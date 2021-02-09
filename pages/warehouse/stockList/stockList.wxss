@@ -1,0 +1,7 @@
+/* pages/warehouse/stockList/stockList.wxss */
+.goods {
+  margin: 16rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 30rpx;
+}
