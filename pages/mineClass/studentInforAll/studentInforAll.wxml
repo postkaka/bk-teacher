@@ -1,0 +1,25 @@
+<!--pages/mineClass/studentInforAll/studentInforAll.wxml-->
+<bk-header header='{{header}}'></bk-header>
+ <block wx:for="{{add}}" wx:key="*this">
+  <view class="box">
+    <bk-lines name="{{item.name}}" lineFw="bold" backDisplay="none"></bk-lines>
+    <bk-lines name="{{item.i1}}" backDisplay="none"></bk-lines>
+    <view class="{{item.i2?'':'none'}}">
+      <bk-lines name="请假情况: {{item.i2}}次/无限制  出勤率:{{item.i3}}" backDisplay="none"></bk-lines>
+    </view>
+    <view class="{{item.i4?'':'none'}}">
+      <bk-lines name="{{item.i4}}" backDisplay="none"></bk-lines>
+    </view>
+    <bk-lines name="教师:{{item.i5}} {{item.i6}}次/10次  出勤率:{{item.i7}}" backDisplay="none"></bk-lines>
+    <bk-lines name="剩余课时:" borderBottom="" text="{{item.i8}}课时"></bk-lines>
+  </view>
+ </block>
+
+ <!-- 赠送课程 -->
+ <view class="box">
+   <bk-line-class lineText="赠送课程" lineBox="赠送课时" lineSrc=""></bk-line-class>
+   <bk-lines name="剩余课时:"  text="剩余有效期:{{day}}天"></bk-lines>
+   <bk-lines name="剩余总课时:" borderBottom="" ></bk-lines>
+ </view>
+ <!-- 按钮 -->
+<bk-btn btn="{{btn}}"></bk-btn>

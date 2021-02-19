@@ -1,0 +1,40 @@
+<!--pages/mineClass/studentInfor/studentInfor.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<!-- 头部 -->
+<view class="header">
+  <bk-lines name="{{add.name}}{{phone}}" backDisplay="none"
+    borderBottom="">
+      <view slot="header">
+        <image src="{{add.src}}" style="height:78rpx;width:78rpx;margin-right:17rpx"></image>
+      </view>
+    </bk-lines>
+</view>
+<!-- 学员信息 -->
+<view class="box">
+  <bk-lines name="学员信息" lineFw="bold" text="查看全部" textColor="#999999"></bk-lines>
+  <bk-lines name="在学课程" lineFw="bold" text="查看全部{{item.length}}个课程" textColor="#999999" borderBottom="" bindtap="studentClick"></bk-lines>
+</view>
+<!-- 暂未分班(测试) -->
+<block wx:for="{{item}}" wx:key="*this">
+  <view class="box">
+    <bk-lines name="{{item.name}}" lineFw="bold" backDisplay="none"></bk-lines>
+    <bk-lines name="{{item.i1}}" backDisplay="none"></bk-lines>
+    <view class="{{item.i2?'':'none'}}">
+      <bk-lines name="请假情况: {{item.i2}}次/无限制  出勤率:{{item.i3}}" backDisplay="none"></bk-lines>
+    </view>
+    <view class="{{item.i4?'':'none'}}">
+      <bk-lines name="{{item.i4}}" backDisplay="none"></bk-lines>
+    </view>
+    <bk-lines name="教师:{{item.i5}} {{item.i6}}次/10次  出勤率:{{item.i7}}" backDisplay="none"></bk-lines>
+    <bk-lines name="剩余课时:" borderBottom="" text="{{item.i8}}课时"></bk-lines>
+  </view>
+</block>
+
+<!-- 记录 -->
+<view class="box">
+  <bk-lines name="跟进记录"  text="共计{{record}}条" ></bk-lines>
+  <bk-lines name="回访记录" borderBottom="" text="共计{{visit}}条"></bk-lines>
+</view>
+
+<!-- 按钮 -->
+<bk-btn btn="{{btn}}" bind:btnClick="btnClick"></bk-btn>

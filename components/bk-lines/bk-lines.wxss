@@ -9,6 +9,9 @@
   font-family: PingFang SC;
   color: #333333;
 }
+.lines {
+  align-self: center;
+}
 .line-name {
   align-self: center;
 }

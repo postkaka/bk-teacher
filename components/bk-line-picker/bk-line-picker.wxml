@@ -2,7 +2,8 @@
 <view class="line" style="border-bottom:{{borderBottom}}">
   <view class='line-name' style="font-weight:{{lineFw}}">{{name}}</view>
   <view class="line-img">
-    <view class="line-img-text" style="color:{{textColor}}" >{{picker_02_data}}</view>
+		<slot name="pic" bindtap="showPicker_02"></slot>
+		<view class="line-img-text" style="color:{{textColor}}" >{{picker_02_data}}</view>
     <picker
 	isShowPicker="{{isShow_02}}"
 	bindsure="sureCallBack_02"

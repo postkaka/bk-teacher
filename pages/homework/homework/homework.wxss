@@ -1,0 +1,18 @@
+/* pages/homework/homework/homework.wxss */
+.box{
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  margin: 16rpx;
+  border-radius: 30rpx;
+}
+.text {
+  padding: 32rpx;
+  font-size: 28rpx;
+  border-bottom: 1rpx solid #DDDDDD;
+}
+._text {
+  margin: 8rpx 0 0 0;
+}
+.__text {
+  margin: 8rpx 0 8rpx 0;
+}

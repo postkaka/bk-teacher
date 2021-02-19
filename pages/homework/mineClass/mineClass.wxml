@@ -1,0 +1,23 @@
+<!--pages/homework/mineClass/mineClass.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<!-- 搜索框 -->
+<view class="search">
+  <bk-search-box search="请输入班级名称"></bk-search-box>
+</view>
+<!-- 班级 -->
+<view class="box">
+  <bk-lines name="只看我负责的班级" lineFw="bold" backDisplay="none">
+    <view slot="pic">
+      <switch class="_pic"  bindchange="switch1Change" color="#60ADE1" />
+    </view>
+  </bk-lines>
+  <block wx:for="{{class}}" wx:key="*this" data-index="{{index}}">
+    <bk-lines name="班级: {{item.name}}·{{item.class}}" borderBottom="{{index+1==class.length?'':'1rpx solid #DDDDDD'}}">
+      <view slot="text" class="text">教师:{{item.teacher}}</view>
+    </bk-lines>
+  </block>
+</view>
+<!-- 按钮 -->
+<view class="btn">
+  <bk-btn btn="{{btn}}" bind:btnClick="btnClick"></bk-btn>
+</view>

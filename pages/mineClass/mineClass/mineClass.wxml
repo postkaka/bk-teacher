@@ -1,0 +1,47 @@
+<!--pages/mineClass/mineClass/mineClass.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<!-- 班级名称 -->
+<view class="className">
+  <view class="flex-a justify-d align-a classNames">
+    <view class="align-a">
+      <view>{{name}}</view>
+      <view class="_name">{{_name}}</view>
+    </view>
+    <view class='align-a'>
+      <image src="../../../assets/image/back.png" style="height:28rpx;width:28rpx;align-self:center;"></image>
+    </view>
+  </view>
+</view>
+<!-- 班级学生 -->
+<view class="box">
+  <bk-lines name="班级学生" text="{{inform.stu}}人" bindtap="studentClick">
+    <view slot="header">
+      <image src="../../../assets/image/c1.png" style="width:24rpx;height:32rpx;margin-right:19rpx"></image>
+    </view>
+  </bk-lines>
+  <bk-lines name="布置作业" text="{{inform.homework}}份" bindtap="homeworkClick">
+    <view slot="header">
+      <image src="../../../assets/image/c2.png" style="width:24rpx;height:32rpx;margin-right:19rpx"></image>
+    </view>
+  </bk-lines>
+  <bk-lines name="本周课表" text="{{inform.timetable}}次">
+    <view slot="header">
+      <image src="../../../assets/image/c3.png" style="width:24rpx;height:32rpx;margin-right:19rpx"></image>
+    </view>
+  </bk-lines>
+  <bk-lines name="出勤率" text="{{inform.attendance}}">
+    <view slot="header">
+      <image src="../../../assets/image/c4.png" style="width:24rpx;height:32rpx;margin-right:19rpx"></image>
+    </view>
+  </bk-lines>
+  <bk-lines name="消耗课时" text="{{inform.consume}}课时">
+    <view slot="header">
+      <image src="../../../assets/image/c5.png" style="width:24rpx;height:32rpx;margin-right:19rpx"></image>
+    </view>
+  </bk-lines>
+  <bk-lines name="学员签到" text="{{inform.sign}}人" borderBottom="">
+    <view slot="header">
+      <image src="../../../assets/image/c6.png" style="width:24rpx;height:32rpx;margin-right:19rpx"></image>
+    </view>
+  </bk-lines>
+</view>

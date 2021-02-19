@@ -1,9 +1,8 @@
 {
   "usingComponents": {
     "bk-header":"../../../components/wx-header/header",
-    "bk-lines":"../../../components/bk-lines/bk-lines",
     "bk-btn":"../../../components/bk-btn/bk-btn",
-    "bk-line-picker":"../../../components/bk-line-picker/bk-line-picker"
+    "bk-lines":"../../../components/bk-lines/bk-lines"
   },
   "navigationStyle": "custom"
 }

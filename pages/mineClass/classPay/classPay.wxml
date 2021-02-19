@@ -1,0 +1,44 @@
+<!--pages/mineClass/classPay/classPay.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<!-- 头部信息 -->
+<view class="pic flex-a align-a">
+  <view class='align-a pic-src'>
+    <image src="{{inform.src}}" style="height:78rpx;width:78rpx"></image>
+  </view>
+  <view class='align-a pic-name'>{{inform.name}}</view>
+  <view class='align-a pic-name'>{{inform.phone}}</view>
+  <view class="align-b src-box align-a">{{inform.type}}</view>
+</view>
+<!-- 支付信息 -->
+<view class="box"> 
+  <bk-lines name="支付信息" lineFw="bold" backDisplay="none"></bk-lines>
+  <bk-lines name="应付金额" backDisplay="none" text="￥{{pay}}"></bk-lines>
+  <bk-lines name="实付金额" backDisplay="none" text="￥{{pay}}">
+  </bk-lines>
+  <bk-lines name="支付方式" text="{{payment.title}}" textColor="{{payment.color}}" bindtap="paymentClick"></bk-lines>
+  <bk-lines name="报名时间" borderBottom="" text="{{time}}"></bk-lines>
+</view>
+<!-- 备注 -->
+<view class="remark">
+  <bk-lines name="备注"  backDisplay="none" lineFw="bold"></bk-lines>
+  <view class="remark-text">
+    <textarea  maxlength='200' placeholder="请输入备注……" class="text-area"
+    placeholder-style="font-size: 28rpx;font-family: PingFang SC;" bindinput="getValueLength"></textarea>
+  </view>
+  <view class="last-text">{{currentWordNumber|0}}/200</view>
+</view>
+<!-- 报名 -->
+<view class="box">
+  <bk-lines name="报名信息({{pays.name}})" lineFw="bold" backDisplay="none"></bk-lines>
+  <bk-lines name="报名类型:" backDisplay="none" text="{{pays.text}}"></bk-lines>
+  <bk-lines name="购买课时数" backDisplay="none" text="{{pays.title}}"></bk-lines>
+  <bk-lines name="支付方式"  text="请选择支付方式" borderBottom=""></bk-lines>
+</view>
+<!-- 操作 -->
+<view class="flex-a last align-a ">
+  <view class="flex-a align-a flex-b">
+    <view>应付金额:</view>
+    <view class="pay">￥{{pay}}</view>
+  </view>   
+</view>
+<bk-btn btn="{{btn}}" btnStyle="width:70%; position:relative;left:25%" bind:btnClick="lastBtnClick"></bk-btn>

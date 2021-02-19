@@ -51,7 +51,18 @@
     "pages/recruit/editInformation/editInformation",
     "pages/student/reservation/reservation",
     "pages/student/reservationRecord/reservationRecord",
-    "pages/student/newRecord/newRecord"
+    "pages/student/newRecord/newRecord",
+    "pages/mineClass/mineClass/mineClass",
+    "pages/mineClass/student/student",
+    "pages/mineClass/studentInfor/studentInfor",
+    "pages/mineClass/studentInforAll/studentInforAll",
+    "pages/mineClass/classify/classify",
+    "pages/mineClass/visit/visit",
+    "pages/mineClass/classChoose/classChoose",
+    "pages/mineClass/pay/pay",
+    "pages/mineClass/classPay/classPay",
+    "pages/homework/homework/homework",
+    "pages/homework/mineClass/mineClass"
   ],
   "tabBar": {
     "selectedColor": "#60ADE1",

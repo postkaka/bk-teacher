@@ -1,0 +1,28 @@
+<!--pages/homework/homework/homework.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<!-- 班级 -->
+<view class="box">
+  <bk-lines name="班级" borderBottom="" text="{{class}}" bindtap="classesClick"></bk-lines>
+</view>
+<!-- 检索 -->
+<bk-searching classifyList="{{classifyList}}"></bk-searching>
+<block wx:for="{{infor}}" wx:key="*this">
+<!-- 新作业 -->
+  <view class="box">
+    <bk-line-class lineText="{{item.type}}" lineBox="{{item.title}}"  lineSrc="" 
+      ></bk-line-class>
+      <view class="text">
+        <view>班级名称: <span>{{item.name}}</span></view>
+        <view class="_text">上课时间:  <span>{{item.time}}</span></view>
+        <view class="__text">提交时间:  <span>{{item.times}}</span></view>
+        <view>提交情况:  <span>{{item.case}}</span></view>
+      </view>
+    <bk-lines name="查看详情" borderBottom=""></bk-lines>
+  </view>
+</block>
+
+<!-- 按钮 -->
+<view class="btn">
+  <bk-btn btn="{{btn}}" bind:btnClick="btnClick"></bk-btn>
+</view>
+

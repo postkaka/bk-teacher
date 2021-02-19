@@ -33,7 +33,7 @@ Component({
     },
     borderBottom:{
       type:String,
-      value:"1px solid #DDDDDD"
+      value:"1rpx solid #DDDDDD"
     },
     backDisplay:{
       type:String,

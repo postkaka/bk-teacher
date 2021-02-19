@@ -1,0 +1,23 @@
+/* pages/mineClass/mineClass/mineClass.wxss */
+.className {
+  margin: 16rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 30rpx;
+}
+.classNames {
+  height: 145rpx;
+  padding: 0 32rpx 0 32rpx;
+  font-size: 24rpx;
+  color: #333333;
+}
+._name {
+  margin-top: 8rpx;
+}
+.box {
+  margin: 16rpx;  
+  height: 629rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 30rpx;
+}

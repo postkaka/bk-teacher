@@ -1,0 +1,17 @@
+<!--pages/mineClass/student/student.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<view class="box">
+  <view class="box-text">{{class}}</view>
+</view>
+
+<view class="box-1 flex-a justify-b">
+  <block  wx:for="{{infor}}" wx:key="*this" data-index="{{index}}">
+   <view class="infor" >
+    <view >
+      <image src="{{item.src}}" style="height:80rpx;width:80rpx" bindtap="srcClick" data-index="{{index}}"></image>
+    </view>
+    <view class="name">{{item.name}}</view>
+    <view>{{item.nub}}课时</view>
+   </view>
+  </block>
+</view>

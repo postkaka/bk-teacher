@@ -1,0 +1,20 @@
+/* pages/mineClass/visit/visit.wxss */
+.box{
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  margin: 16rpx;
+  border-radius: 30rpx;
+  padding: 32rpx;
+  font-size: 28rpx;
+}
+.text {
+  font-size: 24rpx;
+  color: #999999;
+  margin-top: 8rpx;
+}
+.bottom {
+  height: 25rpx;
+  background: #FFFFFF;
+  border: 1rpx solid #707070;
+  margin: 0 8rpx 0 8rpx;
+}

@@ -1,0 +1,18 @@
+<!--pages/mineClass/visit/visit.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<view class="box flex-a justify-d">
+  <view>
+    <view>野火烧不尽</view>
+    <view class="text">2020-03-17 14:57</view>
+  </view>
+  <view class="flex-a align-a">
+    <view>电话</view>
+    <view class="bottom align-a"></view>
+    <view>本人</view>
+  </view>
+</view>
+
+<!-- btn -->
+<view class="btn">
+  <bk-btn btn="{{btn}}" bind:btnClick="btnClick"></bk-btn>
+</view>

@@ -1,0 +1,17 @@
+<!--pages/mineClass/classChoose/classChoose.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<!-- 搜索框 -->
+<view class="search">
+  <bk-search-box search="请输入课程名称"></bk-search-box>
+</view>
+<!-- 课程 -->
+<view class="box">
+  <block  wx:for="{{class}}" wx:key="*this">
+    <bk-lines name="{{item.name}}" text="开设{{item.mub}}个班" borderBottom="{{index+1 == class.length?'':'1px solid #DDDDDD'}}" data-index="{{index}}" bindtap="payClick"></bk-lines>
+  </block>
+</view>
+
+<!-- btn -->
+<view class="btn">
+  <bk-btn btn="{{btn}}" bind:btnClick="btnClick"></bk-btn>
+</view>

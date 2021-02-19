@@ -74,6 +74,24 @@ Page({
       wx.navigateTo({
         url: '../recruit/enrollmentManagement/enrollmentManagement',
       })
+    }else if(num == 1){
+
+    }else if(num == 2){
+
+    }else if(num == 3){
+
+    }else if(num == 4){
+
+    }else if(num == 5){
+
+    }else if(num == 6){
+      wx.navigateTo({
+        url: '../mineClass/mineClass/mineClass',
+      })
+    }else if(num == 7){
+      wx.navigateTo({
+        url: '../homework/homework/homework',
+      })
     }
   },
 

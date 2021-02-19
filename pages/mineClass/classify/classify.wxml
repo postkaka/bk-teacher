@@ -1,0 +1,16 @@
+<!--pages/mineClass/classify/classify.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<!-- 头部 -->
+<view class="header">
+  <bk-lines name="{{add.name}}{{phone}}" backDisplay="none"
+    borderBottom="">
+      <view slot="header">
+        <image src="{{add.src}}" style="height:78rpx;width:78rpx;margin-right:17rpx"></image>
+      </view>
+    </bk-lines>
+</view>
+
+<view class="box">
+  <bk-lines name="报名课程分类:" nameSymbol="*" lineFw="bold" symbol="color:#F89470" text="线下课程" bindtap="classChoose"></bk-lines>
+  <bk-lines name="报名课程:" nameSymbol="*" lineFw="bold" symbol="color:#F89470" text="请选择课程" textColor="#999999" borderBottom=""></bk-lines>
+</view>

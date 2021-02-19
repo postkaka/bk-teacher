@@ -1,0 +1,27 @@
+<!--pages/mineClass/pay/pay.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<!-- 头部信息 -->
+<view class="pic flex-a align-a">
+  <view class='align-a pic-src'>
+    <image src="{{inform.src}}" style="height:78rpx;width:78rpx"></image>
+  </view>
+  <view class='align-a pic-name'>{{inform.name}}</view>
+  <view class='align-a pic-name'>{{inform.phone}}</view>
+  <view class="align-b src-box align-a">{{inform.type}}</view>
+</view>
+<!-- 课程 -->
+<view class="box">
+  <bk-lines name="{{add.name}}:" lineFw="bold" backDisplay="none"></bk-lines>
+  <bk-lines name="班级" nameSymbol="*" symbol="color:#F89470" text="{{class}}"></bk-lines>
+  <bk-lines name="套餐" nameSymbol="*" symbol="color:#F89470" ></bk-lines>
+  <bk-lines name="报名类型" nameSymbol="*" symbol="color:#F89470" text="{{type}}" borderBottom=""></bk-lines>
+</view>
+
+<!-- 操作 -->
+<view class="flex-a last align-a ">
+  <view class="flex-a align-a flex-b">
+    <view>应付金额:</view>
+    <view class="pay">￥{{paymoney}}</view>
+  </view>   
+</view>
+<bk-btn btn="{{btn}}" btnStyle="width:70%; position:absolute;left:25%;bottom:30rpx" bind:btnClick="lastBtnClick"></bk-btn>

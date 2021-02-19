@@ -1,0 +1,7 @@
+/* pages/mineClass/studentInforAll/studentInforAll.wxss */
+.box{
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  margin: 16rpx;
+  border-radius: 30rpx;
+}
