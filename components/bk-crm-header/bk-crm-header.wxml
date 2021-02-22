@@ -7,7 +7,7 @@
     <view class="flex-a align-a crm-fisrt">
       <view class="crm-name">{{crm.name}}</view>
       <view class="crm-image" bindtap="basicInformationClick">
-        <image src='../../assets/image/compile .png' style="height: 24rpx;width:24rpx"></image>
+        <image src='../../assets/image/compile.png' style="height: 24rpx;width:24rpx"></image>
       </view>
       <view class="crm-text align-a">{{crm.time}}</view>
       <view class="crm-text align-a crm-type">{{crm.type}}</view>

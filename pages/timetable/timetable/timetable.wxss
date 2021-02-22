@@ -38,3 +38,16 @@
 .line {
   border-bottom:1rpx solid #DDDDDD;
 }
+/* 蒙层 */
+.bg-top {
+  top: 10vh;
+}
+.bg-image {
+  margin: 111rpx 0 43rpx 0;
+}
+.bg-text-1 {
+  text-align: center;
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #333333;
+}

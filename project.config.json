@@ -54,8 +54,8 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/timetable/timetable/timetable",
-          "pathName": "pages/timetable/timetable/timetable",
+          "name": "pages/mineClass/attendance/attendance",
+          "pathName": "pages/mineClass/attendance/attendance",
           "query": "",
           "scene": null
         }

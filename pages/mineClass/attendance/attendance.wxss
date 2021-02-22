@@ -1,0 +1,12 @@
+/* pages/mineClass/attendance/attendance.wxss */
+.first {
+  padding: 32rpx 0 32rpx 0;
+  font-size: 28rpx;
+  color: #333333;
+  border-bottom:1rpx solid #DDDDDD;
+}
+.last {
+  padding: 32rpx 0 32rpx 0;
+  font-size: 28rpx;
+  color: #333333;
+}

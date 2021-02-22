@@ -1,0 +1,48 @@
+<!--pages/timetable/courseDetails/courseDetails.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<!-- 选择班级 -->
+<view class="box">
+  <bk-lines name="选择班级:" nameSymbol="*" symbol="color:#F89470" text="{{class.class}}·{{class.student}}"></bk-lines>
+  <bk-lines name="上课日期:" nameSymbol="*" symbol="color:#F89470" text="{{class.data}}" backDisplay="none">
+    <view slot="line-text" class="align-b">
+      <image src="../../../assets/image/times.png" style='height:28rpx;width:28rpx;align-self: center;'></image>
+    </view>
+  </bk-lines>
+  <bk-lines name="上课时间:" nameSymbol="*" symbol="color:#F89470" text="{{class.time}}" backDisplay="none">
+    <view slot="line-text" class="align-b">
+      <image src="../../../assets/image/time.png" style='height:28rpx;width:28rpx;align-self: center;'></image>
+    </view>
+  </bk-lines>
+  <bk-lines name="单次时长:" nameSymbol="*" symbol="color:#F89470" backDisplay="none" borderBottom=""></bk-lines>
+</view>
+<!-- 本次课程 -->
+<view class="box">
+  <bk-lines name="本次课名:" backDisplay="none"></bk-lines>
+  <bk-lines name="教学目标:" backDisplay="none"></bk-lines>
+<!-- 备注 -->
+ <bk-lines name="沟通内容:"  backDisplay="none" borderBottom=""></bk-lines>
+  <view class="remark-text">
+    <textarea  maxlength='1000' placeholder="请输入沟通内容" class="text-area"
+    placeholder-style="font-size: 28rpx;font-family: PingFang SC;" bindinput="getValueLength"></textarea>
+  </view>
+  <view class="last-text">{{currentWordNumber|0}}/1000</view>
+  <view class="last">支持jpg、png格式，最多9张</view>
+  <view class="last-camera align-b" bindtap='chooseImageTap'>+</view>
+</view>
+<!-- btn -->
+<view class="_btn">
+  <bk-btn btn="{{btn}}"  bind:btnClick="btnClick"></bk-btn>
+</view>
+
+<!-- 蒙层 -->
+<view class="bg bg-top" style='display:{{display}} '></view>
+<view class="bg-item" style="display:{{display}}">
+  <view class="flex-a justify-b bg-image">
+    <image src="../../../assets/image/bg.png" style="height:160rpx;width:160rpx"></image>
+  </view>
+  <view class='bg-text-1'>预约排课成功</view>
+  <view class="bg-text-2">系统已将课程信息通知学员及教务人员</view>
+  <view class="btn">
+    <bk-btn btn="{{btns}}" bind:btnClick="_btnClick"></bk-btn>
+  </view>
+</view>

@@ -2,7 +2,6 @@
   "usingComponents": {
     "bk-header":"../../../components/wx-header/header",
     "bk-lines":"../../../components/bk-lines/bk-lines",
-    "nbk-calendar":"../../../components/wx-calendar/calendar/calendar",
     "bk-btn":"../../../components/bk-btn/bk-btn"
   },
   "navigationStyle": "custom"

@@ -1,0 +1,13 @@
+<!--pages/mineClass/attendance/attendance.wxml-->
+<wxs src="../../../wxs/sub.wxs" module="tools"/>
+<bk-header header='{{header}}'></bk-header>
+<view class="xxx">
+  <view class="flex-a justify-c first">
+    <view>上课时间</view>
+    <view>出勤率</view>
+  </view>
+  <block wx:for="{{attendance}}" wx:key="*this"  data-index="{{index}}">
+    <bk-lines name="{{item.data}} {{item.time}}" text="{{tools.Percentage(attendance[index].a,attendance[index].b)}}  ({{item.a}}/{{item.b}})"></bk-lines>
+  </block>
+  <view class="last align-b">更多</view>
+</view>

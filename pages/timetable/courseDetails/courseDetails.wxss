@@ -1,0 +1,73 @@
+/* pages/timetable/courseDetails/courseDetails.wxss */
+.box{
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  margin: 16rpx;
+  border-radius: 30rpx;
+}
+/* 备注 */
+.remark-text {
+  position: relative;
+  padding: 32rpx;
+  width: 100%;
+  height: 100rpx;
+  top:-60rpx;
+  overflow-x:hidden;
+}
+.text-area{
+  margin-top: 8rpx;
+  font-size:24rpx;
+  height: 100rpx;
+}
+.last-text {
+  font-size: 20rpx;
+  color: #999999;
+  position: relative;
+  left: 85%;
+  bottom: -80rpx;
+}
+.last {
+  font-size: 20rpx;
+  color: #999999;
+  position: relative;
+  margin-left: 32rpx;
+  bottom: -60rpx;
+}
+.last-camera {
+  margin-left: 32rpx;
+  position: relative;
+  bottom: 100rpx;
+  width: 88rpx;
+  height: 88rpx;
+  background: #FFFFFF;
+  border: 2rpx solid #999999;
+  border-radius: 10rpx;
+  font-size: 50rpx;
+  color:#999999;
+}
+/* btn */
+._btn {
+  position: absolute;
+  left: 0;
+  bottom: -10rpx;
+  width: 100%;
+}
+/* 蒙层 */
+.bg-top {
+  top: 10vh;
+}
+.bg-image {
+  margin: 111rpx 0 43rpx 0;
+}
+.bg-text-1 {
+  text-align: center;
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #333333;
+}
+.bg-text-2{
+  text-align: center;
+  font-size: 34rpx;
+  margin-top: 32rpx;
+  color: #333333;
+}

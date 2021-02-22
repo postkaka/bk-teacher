@@ -1,4 +1,4 @@
-// pages/mineClass/mineClass/mineClass.js
+// pages/timetable/modification/modification.js
 Page({
 
   /**
@@ -6,42 +6,34 @@ Page({
    */
   data: {
     header:{
-      title: '我的班级',
+      title: '修改排课',
       fontColor: "#333333",
       headerbg: '#FFFFFF',
       hiddenBlock: false,
       slot: false,
       src:'../../assets/image/fback.png'
     },
-    name:"测试",
-    _name:"测试班级",
-    inform:{
-      stu:2,
-      homework:0,
-      timetable:2,
-      attendance:"12.5%",
-      consume:8,
-      sign:20
-    }
+    class:{
+      class:'能力风暴大颗粒',
+      student:"李大王",
+      data:'2020-05-19',
+      time:'20:09',
+      nub:90,
+      order:"暂不配置",
+      tea:"教师1号"
+    },
+    btn:["取消修改","确认修改"],
+    display:'none',
+    _btn:["确认"]
   },
-  studentClick(){
-    wx.navigateTo({
-      url: '../student/student',
+  _btnClick(){
+    this.setData({
+      display:''
     })
   },
-  homeworkClick(){
+  btnClick(){
     wx.navigateTo({
-      url: '../../homework/homework/homework',
-    })
-  },
-  timetableClick(){
-    wx.navigateTo({
-      url: '../../timetable/timetable/timetable',
-    })
-  },
-  attendanceClick(){
-    wx.navigateTo({
-      url: '../attendance/attendance',
+      url: '../timetable/timetable',
     })
   },
 

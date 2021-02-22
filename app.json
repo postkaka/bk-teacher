@@ -61,12 +61,16 @@
     "pages/mineClass/classChoose/classChoose",
     "pages/mineClass/pay/pay",
     "pages/mineClass/classPay/classPay",
+    "pages/mineClass/attendance/attendance",
     "pages/homework/homework/homework",
     "pages/homework/mineClass/mineClass",
     "pages/homework/putCourse/putCourse",
     "pages/homework/assign/assign",
     "pages/homework/statistics/statistics",
-    "pages/timetable/timetable/timetable"
+    "pages/timetable/timetable/timetable",
+    "pages/timetable/courseDetails/courseDetails",
+    "pages/timetable/modification/modification",
+    "pages/timetable/compile/compile"
   ],
   "tabBar": {
     "selectedColor": "#60ADE1",

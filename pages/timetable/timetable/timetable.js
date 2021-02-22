@@ -17,7 +17,9 @@ Page({
     class:[
       {time:"07:05~10:05",type:'待上课',class:'文曲星2班',name:'李大王',teacher:'教师1号',nub:0},
       {time:"20:09~21:39",type:'待上课',class:'能力风暴大粒',name:'李大王',teacher:'教师1号',nub:1},
-    ]
+    ],
+    display:'none',
+    btn:["取消","确认"]
   },
   nowSelect(e){
     this.setData({
@@ -46,6 +48,36 @@ Page({
             type: 0
         })
     }
+  },
+  deleteClick(){
+    this.setData({
+      display:''
+    })
+  },
+  btnClick(e){
+    this.setData({
+      display:"none"
+    })
+    if(e.detail == 1){
+      this.setData({
+        class:[]
+      })
+    }
+  },
+  classClick(){
+    wx.navigateTo({
+      url: '../courseDetails/courseDetails',
+    })
+  },
+  modificationClick(){
+    wx.navigateTo({
+      url: '../modification/modification',
+    })
+  },
+  compileClick(){
+    wx.navigateTo({
+      url: '../compile/compile',
+    })
   },
   /**
    * 生命周期函数--监听页面加载

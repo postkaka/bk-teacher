@@ -29,7 +29,7 @@
       <image src="../../../assets/image/c3.png" style="width:24rpx;height:32rpx;margin-right:19rpx"></image>
     </view>
   </bk-lines>
-  <bk-lines name="出勤率" text="{{inform.attendance}}">
+  <bk-lines name="出勤率" text="{{inform.attendance}}" bindtap="attendanceClick">
     <view slot="header">
       <image src="../../../assets/image/c4.png" style="width:24rpx;height:32rpx;margin-right:19rpx"></image>
     </view>

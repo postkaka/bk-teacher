@@ -1,0 +1,4 @@
+var Percentage = function  Percentage(a,b){
+  return (Math.round(a/b * 10000) / 100.00 + "%");
+}
+module.exports.Percentage = Percentage

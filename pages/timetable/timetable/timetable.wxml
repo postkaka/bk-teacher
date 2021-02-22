@@ -11,14 +11,14 @@
       <image src="../../../assets/image/book.png" style="height:28rpx;width:32rpx;margin-right:8rpx"></image>
     </view>
     <view slot="line-text" class="flex-a align-a">
-      <view class="align-a">
+      <view class="align-a" bindtap="deleteClick">
         <image src="../../../assets/image/del.png" style="height:40rpx;width:40rpx;margin-right:8rpx"></image>
       </view>
       <view class="text align-a">批量删除</view>
     </view>
   </bk-lines>
   <block wx:for="{{class}}" wx:key="*this">
-    <bk-lines name="{{item.time}}" text="{{item.type}}"></bk-lines>
+    <bk-lines name="{{item.time}}" text="{{item.type}}" bindtap="classClick"></bk-lines>
     <view class="wx-class">
       <view>{{item.class}}·{{item.name}}</view>
       <view class="teacher">教:{{item.teacher}}</view>
@@ -28,11 +28,24 @@
       <view class="align-b">
         <image src="../../../assets/image/page.png" style="height:32rpx;width:32rpx;"></image>
       </view>
-      <view style="margin-left:8rpx">编辑大纲</view>
+      <view style="margin-left:8rpx" bindtap="compileClick">编辑大纲</view>
       <view class="align-b">
         <image src="../../../assets/image/compile.png" style="height:32rpx;width:32rpx;margin-left:8rpx"></image>
       </view>
-      <view>编辑</view>
+      <view bindtap="modificationClick">编辑</view>
     </view>
   </block>
+</view>
+
+
+<!-- 蒙层 -->
+<view class="bg bg-top" style='display:{{display}} '></view>
+<view class="bg-item" style="display:{{display}}">
+  <view class="flex-a justify-b bg-image">
+    <image src="../../../assets/image/bg.png" style="height:160rpx;width:160rpx"></image>
+  </view>
+  <view class='bg-text-1'>确认删除该课次吗</view>
+  <view class="btn">
+    <bk-btn btn="{{btn}}" bind:btnClick="btnClick"></bk-btn>
+  </view>
 </view>

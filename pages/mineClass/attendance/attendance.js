@@ -1,4 +1,4 @@
-// pages/mineClass/mineClass/mineClass.js
+// pages/mineClass/attendance/attendance.js
 Page({
 
   /**
@@ -6,50 +6,26 @@ Page({
    */
   data: {
     header:{
-      title: '我的班级',
+      title: '出勤记录',
       fontColor: "#333333",
       headerbg: '#FFFFFF',
       hiddenBlock: false,
       slot: false,
       src:'../../assets/image/fback.png'
     },
-    name:"测试",
-    _name:"测试班级",
-    inform:{
-      stu:2,
-      homework:0,
-      timetable:2,
-      attendance:"12.5%",
-      consume:8,
-      sign:20
-    }
+    attendance:[
+      {data:"2020-03-16",time:"09:10~10:10",a:2,b:3},
+      {data:"2020-03-16",time:"09:10~10:10",a:0,b:5},
+      {data:"2020-03-16",time:"09:10~10:10",a:0,b:4},
+      {data:"2020-03-16",time:"09:10~10:10",a:0,b:4},
+      {data:"2020-03-16",time:"09:10~10:10",a:0,b:4},
+    ]
   },
-  studentClick(){
-    wx.navigateTo({
-      url: '../student/student',
-    })
-  },
-  homeworkClick(){
-    wx.navigateTo({
-      url: '../../homework/homework/homework',
-    })
-  },
-  timetableClick(){
-    wx.navigateTo({
-      url: '../../timetable/timetable/timetable',
-    })
-  },
-  attendanceClick(){
-    wx.navigateTo({
-      url: '../attendance/attendance',
-    })
-  },
-
+  
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
   },
 
   /**
@@ -63,7 +39,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
   },
 
   /**

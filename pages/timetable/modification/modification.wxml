@@ -1,0 +1,35 @@
+<!--pages/timetable/modification/modification.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<!-- 选择班级 -->
+<view class="box">
+  <bk-lines name="选择班级:" text="{{class.class}}·{{class.student}}"></bk-lines>
+  <bk-lines name="上课时长:" text="{{class.nub}}分钟" backDisplay="none"></bk-lines>
+  <bk-lines name="上课日期:" nameSymbol="*" symbol="color:#F89470" text="{{class.data}}" backDisplay="none">
+    <view slot="line-text" class="align-b">
+      <image src="../../../assets/image/times.png" style='height:28rpx;width:28rpx;align-self: center;'></image>
+    </view>
+  </bk-lines>
+  <bk-lines name="上课时间:" nameSymbol="*" symbol="color:#F89470" text="{{class.time}}" backDisplay="none">
+    <view slot="line-text" class="align-b">
+      <image src="../../../assets/image/time.png" style='height:28rpx;width:28rpx;align-self: center;'></image>
+    </view>
+  </bk-lines>
+  <bk-lines name="教师:" nameSymbol="*" symbol="color:#F89470" text="{{class.tea}}"></bk-lines>
+  <bk-lines name="助教:"   borderBottom="" text="{{class.order}}"></bk-lines>
+</view>
+<!-- btn -->
+<view class='btn'>
+  <bk-btn  btn="{{btn}}" bind:btnClick="_btnClick"></bk-btn>
+</view>
+
+<!-- 蒙层 -->
+<view class="bg bg-top" style='display:{{display}} '></view>
+<view class="bg-item" style="display:{{display}}">
+  <view class="flex-a justify-b bg-image">
+    <image src="../../../assets/image/bg.png" style="height:160rpx;width:160rpx"></image>
+  </view>
+  <view class='bg-text-1'>您已完成班级调课</view>
+  <view class="btn">
+    <bk-btn btn="{{_btn}}" bind:btnClick="btnClick"></bk-btn>
+  </view>
+</view>
