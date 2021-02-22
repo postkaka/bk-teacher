@@ -1,0 +1,37 @@
+<!--pages/homework/assign/assign.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<!-- 班级 -->
+<view class="box">
+  <bk-lines name="班级" text="{{class}}" backDisplay="none"></bk-lines>
+  <bk-lines name="对应课堂:" text="{{time}}" borderBottom=""></bk-lines>
+</view>
+<!-- 作业 -->
+<view class="box">
+  <bk-lines name="已选学员({{add.length}}人)" backDisplay="none"></bk-lines>
+  <bk-lines name="{{add[0].name}}" backDisplay="none">
+    <view slot="header">
+      <image src="{{add[0].src}}" style="height:80rpx;width:80rpx;margin-right:8rpx"></image>
+    </view>
+  </bk-lines>
+  <bk-lines name="作业提交时间:" text="选择提交时间" lineFws="#999999"></bk-lines>
+  <bk-lines name="作业类型:" text="选择作业类型" lineFws="#999999"></bk-lines>
+  <bk-lines name="作业名称:" inputDisplay="" borderBottom="" pla="输入作业名称" inputWidth="200" backDisplay="none"></bk-lines>
+</view>
+<!-- 作业内容 -->
+<view class="box">
+  <bk-lines name="作业内容" backDisplay="none"></bk-lines>
+  <bk-lines name="班级： {{class}}" backDisplay="none" borderBottom=""></bk-lines>
+</view>
+<!-- 操作 -->
+<view class="flex-a last align-a ">
+ <view class="align-a">
+  <image src="../../../assets/image/h1.png" style="height:60rpx;width:60rpx"></image>
+ </view>
+ <view class="align-a">
+  <image src="../../../assets/image/h2.png" style="height:60rpx;width:60rpx"></image>
+ </view>
+ <view class="align-a">
+  <image src="../../../assets/image/h3.png" style="height:60rpx;width:60rpx"></image>
+ </view>
+</view>
+<bk-btn btn="{{btn}}" btnStyle="width:70%; position:absolute;left:25%;bottom:30rpx" bind:btnClick="lastBtnClick"></bk-btn>

@@ -1,4 +1,4 @@
-// pages/mineClass/mineClass/mineClass.js
+// pages/homework/statistics/statistics.js
 Page({
 
   /**
@@ -13,31 +13,14 @@ Page({
       slot: false,
       src:'../../assets/image/fback.png'
     },
-    name:"测试",
-    _name:"测试班级",
-    inform:{
-      stu:2,
-      homework:0,
-      timetable:2,
-      attendance:"12.5%",
-      consume:8,
-      sign:20
-    }
-  },
-  studentClick(){
-    wx.navigateTo({
-      url: '../student/student',
-    })
-  },
-  homeworkClick(){
-    wx.navigateTo({
-      url: '../../homework/homework/homework',
-    })
-  },
-  timetableClick(){
-    wx.navigateTo({
-      url: '../../timetable/timetable/timetable',
-    })
+    class:"测试班级",
+    time:"2020-04-27 周三",
+    num:[],
+    infor:[
+      {src:"../../../assets/image/crm-1.png",name:'薇薇',nub:38},
+      {src:"../../../assets/image/crm-2.png",name:'冰冰',nub:18}
+    ],
+    btn:["删除作业"]
   },
 
   /**

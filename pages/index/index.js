@@ -77,7 +77,9 @@ Page({
     }else if(num == 1){
 
     }else if(num == 2){
-
+      wx.navigateTo({
+        url: '../timetable/timetable/timetable',
+      })
     }else if(num == 3){
 
     }else if(num == 4){

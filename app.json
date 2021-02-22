@@ -62,7 +62,11 @@
     "pages/mineClass/pay/pay",
     "pages/mineClass/classPay/classPay",
     "pages/homework/homework/homework",
-    "pages/homework/mineClass/mineClass"
+    "pages/homework/mineClass/mineClass",
+    "pages/homework/putCourse/putCourse",
+    "pages/homework/assign/assign",
+    "pages/homework/statistics/statistics",
+    "pages/timetable/timetable/timetable"
   ],
   "tabBar": {
     "selectedColor": "#60ADE1",

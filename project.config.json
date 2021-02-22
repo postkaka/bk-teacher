@@ -54,8 +54,8 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/homework/homework/homework",
-          "pathName": "pages/homework/homework/homework",
+          "name": "pages/timetable/timetable/timetable",
+          "pathName": "pages/timetable/timetable/timetable",
           "query": "",
           "scene": null
         }

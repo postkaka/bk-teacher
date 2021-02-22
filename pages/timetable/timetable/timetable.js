@@ -1,4 +1,4 @@
-// pages/mineClass/mineClass/mineClass.js
+// pages/timetable/timetable/timetable.js
 Page({
 
   /**
@@ -6,40 +6,47 @@ Page({
    */
   data: {
     header:{
-      title: '我的班级',
+      title: '课程表',
       fontColor: "#333333",
       headerbg: '#FFFFFF',
       hiddenBlock: false,
       slot: false,
       src:'../../assets/image/fback.png'
     },
-    name:"测试",
-    _name:"测试班级",
-    inform:{
-      stu:2,
-      homework:0,
-      timetable:2,
-      attendance:"12.5%",
-      consume:8,
-      sign:20
+    type:0,
+    class:[
+      {time:"07:05~10:05",type:'待上课',class:'文曲星2班',name:'李大王',teacher:'教师1号',nub:0},
+      {time:"20:09~21:39",type:'待上课',class:'能力风暴大粒',name:'李大王',teacher:'教师1号',nub:1},
+    ]
+  },
+  nowSelect(e){
+    this.setData({
+        date: e.detail
+    })
+    let now =(new Date(this.data.nowdate)).getTime();
+    let date =(new Date(this.data.date)).getTime();
+    if(date < now){
+        console.log("这是昨天")
+        this.setData({
+            lastday: 1
+        })
+    }else{
+        this.setData({
+            lastday:0
+        })
     }
   },
-  studentClick(){
-    wx.navigateTo({
-      url: '../student/student',
-    })
+  toggleType(){
+    if(this.data.type == 0){
+        this.setData({
+            type: 1
+        })
+    }else{
+        this.setData({
+            type: 0
+        })
+    }
   },
-  homeworkClick(){
-    wx.navigateTo({
-      url: '../../homework/homework/homework',
-    })
-  },
-  timetableClick(){
-    wx.navigateTo({
-      url: '../../timetable/timetable/timetable',
-    })
-  },
-
   /**
    * 生命周期函数--监听页面加载
    */

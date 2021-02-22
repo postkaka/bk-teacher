@@ -36,6 +36,11 @@ Page({
       url: '../mineClass/mineClass',
     })
   },
+  btnClick(){
+    wx.navigateTo({
+      url: '../putCourse/putCourse',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

@@ -24,7 +24,7 @@
       <image src="../../../assets/image/c2.png" style="width:24rpx;height:32rpx;margin-right:19rpx"></image>
     </view>
   </bk-lines>
-  <bk-lines name="本周课表" text="{{inform.timetable}}次">
+  <bk-lines name="本周课表" text="{{inform.timetable}}次" bindtap="timetableClick">
     <view slot="header">
       <image src="../../../assets/image/c3.png" style="width:24rpx;height:32rpx;margin-right:19rpx"></image>
     </view>

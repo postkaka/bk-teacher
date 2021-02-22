@@ -1,0 +1,33 @@
+<!--pages/homework/putCourse/putCourse.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<!-- 班级 -->
+<view class="box">
+  <bk-lines name="班级" text="{{class}}" backDisplay="none"></bk-lines>
+  <bk-lines name="对应课堂:" text="{{time}}" borderBottom=""></bk-lines>
+</view>
+<!-- 列表 -->
+<view class="box">
+  <bk-lines name="学员列表({{sundry.length}}人)" backDisplay="none"></bk-lines>
+    <checkbox-group bindchange="radioChange"> 
+      <label class="flex-a align-a justify-d label {{index+1 == sundry.length?'':'line'}}" wx:for="{{sundry}}" wx:key="*this" data-index="{{item}}">
+        <view class="flex-a align-a">
+          <checkbox class="align-a checkbox" value="{{item.name}}" checked="{{item.checked}}"></checkbox>
+          <view class="flex-a align-a">
+            <view class="align-a">
+              <image src="{{item.src}}" style="height:80rpx;width:80rpx"></image>
+            </view>
+            <view class="name align-a">{{item.name}}</view>
+            <view class="_type align-b align-a">{{item.type}}</view>
+          </view>
+        </view>
+        <view class="align-a nub">已布置{{item.nub}}次作业</view>
+      </label>
+     
+    </checkbox-group>
+</view>
+
+<!-- 操作 -->
+<view class="flex-a last align-a ">
+  <checkbox value='全选' bindtap='checkAll'>全选</checkbox> 
+</view>
+<bk-btn btn="{{btn}}" btnStyle="width:80%; position:absolute;left:16%;bottom:30rpx" bind:btnClick="lastBtnClick"></bk-btn>

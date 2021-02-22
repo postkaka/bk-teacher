@@ -1,0 +1,27 @@
+<!--components/wx-calendar/wx-calendar.wxml-->
+<view class="calendar">
+    <view class="calendar-head">
+        <view >
+            <image src="../../assets/image/fback.png" style="height:32rpx;width:32rpx" class="calendar-head-image"></image>
+        </view>
+        <view class="calendar-head-view">{{showtime}}</view>
+        <view>
+            <image src="../../assets/image/fback.png" style="height:32rpx;width:32rpx;transform:rotate(180deg);" class="calendar-head-image"></image>
+        </view>
+    </view>
+    <view class="calendar-line"></view>
+    <view class="calendar-week">
+        <block wx:for="{{week}}" wx:key="index">
+            <view>{{item}}</view>
+        </block>
+    </view>
+    <view class>
+        <view class="calendar-month-week" wx:for="{{weekData}}" wx:for-index="weekIndex" wx:for-item="weekItem" wx:key="{{weekIndex}}">
+      <view catchtap="clickDay" data-day="{{item}}" class="cm-week-day" wx:for="{{weekItem}}" wx:key="{{index}}">
+        <view wx:if="{{clickYear == showYear && clickMonth == showMonth && clickDay == item}}" hidden="{{item < 0}}" class="cm-week-day-circle">{{item}}</view>
+        <text wx:else class="{{nowYear == showYear && nowMonth == showMonth && nowDay == item ? 'today' : ''}}" hidden="{{item < 0}}">{{item}}</text>
+      </view>
+    </view>
+    </view>
+    <view></view>
+</view>

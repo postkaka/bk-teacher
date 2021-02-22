@@ -1,0 +1,50 @@
+<!--pages/homework/statistics/statistics.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<!-- 作业 -->
+<view class="box">
+  <bk-line-class lineText="新作业" lineBox="必做" lineSrc=''></bk-line-class>
+  <view class="_box">
+    <view>班级名称:{{class}}</view>
+    <view class="flex-a justify-d">
+      <view>上课时间:{{time}}</view>
+      <view class="flex-a align-a">
+        <view class="align-a blue">展开详情</view>
+        <view class="align-b">
+          <image src="../../../assets/image/back.png" style="height:28rpx;width:28rpx;" ></image>
+        </view>
+      </view>
+    </view>
+    <view class="top">自我进行评价可以有舞蹈</view>
+    <view class="imaget">
+      <image src="../../../assets/image/t2.png" style='height: 120rpx;width: 120rpx'></image>
+      <image src="../../../assets/image/t1.png" style='height: 120rpx;width: 120rpx' class="imaget2"></image>
+    </view>
+    <view class="vioce align-a">
+      <view class="align-a">
+        <image src="../../../assets/image/t3.png" style="height:22rpx;width:22rpx"></image>
+      </view>
+      <view  class="align-a">4s</view>
+    </view>
+  </view>
+</view>
+<!-- 提交人员 -->
+<view class="box">
+  <bk-lines name="已提交({{num.length}}人)" backDisplay="none" lineFw="bold"></bk-lines>
+  <view class="text align-b">暂无学员提交作业</view>
+</view>
+<!-- 未提交 -->
+<view class="box">
+  <bk-lines name="未提交({{infor.length}}人)" backDisplay="none" lineFw="bold"></bk-lines>
+  <view class="box-1 flex-a justify-b">
+  <block  wx:for="{{infor}}" wx:key="*this" data-index="{{index}}">
+   <view class="infor" >
+    <view >
+      <image src="{{item.src}}" style="height:80rpx;width:80rpx" bindtap="srcClick" data-index="{{index}}"></image>
+    </view>
+    <view class="name">{{item.name}}</view>
+    <view>{{item.nub}}课时</view>
+   </view>
+  </block>
+</view>
+</view>
+<bk-btn btn="{{btn}}" bind:btnClick="lastBtnClick"></bk-btn>

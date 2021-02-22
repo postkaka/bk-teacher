@@ -1,0 +1,53 @@
+/* pages/homework/statistics/statistics.wxss */
+.box{
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  margin: 16rpx;
+  border-radius: 30rpx;
+}
+._box {
+  padding: 32rpx;
+  font-size: 28rpx;
+}
+.blue {
+  color: #539BCB;
+}
+.top {
+  margin-top: 32rpx;
+}
+.imaget {
+  margin-top: 16rpx;
+  margin-bottom: 16rpx;
+}
+.imaget2 {
+  margin-left: 16rpx;
+}
+.vioce {  
+  width: 120rpx;
+  height: 38rpx;
+  background: #60ADE1;
+  border-radius: 19px;
+  display: flex;
+  font-size: 24rpx;
+  color: #FFFFFF;
+}
+.text {
+  height: 225rpx;
+  font-size: 28rpx;
+  color: #999999;
+}
+.box-1 {
+  margin: 16rpx;
+  height: 240rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 30rpx;
+  font-size: 28rpx;
+  text-align: center;
+}
+.infor {
+  padding: 32rpx;
+}
+.name {
+  margin: 8rpx 0 8rpx 0;
+}

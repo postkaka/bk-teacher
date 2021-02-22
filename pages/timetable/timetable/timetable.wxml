@@ -1,0 +1,38 @@
+<!--pages/timetable/timetable/timetable.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<!-- 日历 -->
+<view class="top {{type == 0?'newbg':'bgs'}}">
+ <nbk-calendar bind:toggleType="toggleType" bind:nowSelect = "nowSelect" bind:nowdata="nowdata"></nbk-calendar>
+</view>
+<!-- 课程 -->
+<view class="box">
+  <bk-lines nameSymbol="1对1排课" symbol="font-size:34rpx;font-weight: bold;color: #60ADE1;" backDisplay="none">
+    <view slot="header" class="align-b">
+      <image src="../../../assets/image/book.png" style="height:28rpx;width:32rpx;margin-right:8rpx"></image>
+    </view>
+    <view slot="line-text" class="flex-a align-a">
+      <view class="align-a">
+        <image src="../../../assets/image/del.png" style="height:40rpx;width:40rpx;margin-right:8rpx"></image>
+      </view>
+      <view class="text align-a">批量删除</view>
+    </view>
+  </bk-lines>
+  <block wx:for="{{class}}" wx:key="*this">
+    <bk-lines name="{{item.time}}" text="{{item.type}}"></bk-lines>
+    <view class="wx-class">
+      <view>{{item.class}}·{{item.name}}</view>
+      <view class="teacher">教:{{item.teacher}}</view>
+      <view>待上课:{{item.nub}}人</view>
+    </view>
+    <view class="flex-a icon align-a {{index+1 == class.length?'':'line'}}" data-index="{{index}}">
+      <view class="align-b">
+        <image src="../../../assets/image/page.png" style="height:32rpx;width:32rpx;"></image>
+      </view>
+      <view style="margin-left:8rpx">编辑大纲</view>
+      <view class="align-b">
+        <image src="../../../assets/image/compile.png" style="height:32rpx;width:32rpx;margin-left:8rpx"></image>
+      </view>
+      <view>编辑</view>
+    </view>
+  </block>
+</view>

@@ -1,4 +1,4 @@
-// pages/mineClass/mineClass/mineClass.js
+// pages/homework/assign/assign.js
 Page({
 
   /**
@@ -13,30 +13,13 @@ Page({
       slot: false,
       src:'../../assets/image/fback.png'
     },
-    name:"测试",
-    _name:"测试班级",
-    inform:{
-      stu:2,
-      homework:0,
-      timetable:2,
-      attendance:"12.5%",
-      consume:8,
-      sign:20
-    }
+    class:"测试班级",
+    time:'2020-04-27 周一 08:05~09:05',
+    btn:["提交"]
   },
-  studentClick(){
+  lastBtnClick(){
     wx.navigateTo({
-      url: '../student/student',
-    })
-  },
-  homeworkClick(){
-    wx.navigateTo({
-      url: '../../homework/homework/homework',
-    })
-  },
-  timetableClick(){
-    wx.navigateTo({
-      url: '../../timetable/timetable/timetable',
+      url: '../statistics/statistics',
     })
   },
 
@@ -44,7 +27,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    if(options.add){
+      let add = JSON.parse(options.add)
+      this.setData({
+        add
+      })
+    }
   },
 
   /**
