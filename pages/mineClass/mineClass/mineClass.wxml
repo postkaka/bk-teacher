@@ -39,7 +39,7 @@
       <image src="../../../assets/image/c5.png" style="width:24rpx;height:32rpx;margin-right:19rpx"></image>
     </view>
   </bk-lines>
-  <bk-lines name="学员签到" text="{{inform.sign}}人" borderBottom="">
+  <bk-lines name="学员签到" text="{{inform.sign}}人" borderBottom="" bindtap="signInClick">
     <view slot="header">
       <image src="../../../assets/image/c6.png" style="width:24rpx;height:32rpx;margin-right:19rpx"></image>
     </view>

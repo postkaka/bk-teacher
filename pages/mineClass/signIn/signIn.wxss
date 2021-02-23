@@ -1,0 +1,23 @@
+/* pages/mineClass/signIn/signIn.wxss */
+.box {
+  background: #FFFFFF;
+  box-shadow: 0px 3rpx 40rpx rgba(153, 153, 153, 0.16);
+  border-radius: 0px 0px 30rpx 30rpx;
+}
+._box {
+  margin-left: 16rpx;
+  font-size: 28rpx;
+  color: #333333;
+}
+.box-item {
+  margin-top: 8rpx;
+}
+/* 学生 */
+.stu {
+  flex-wrap: wrap;
+}
+.stus {
+  padding: 24rpx 0 24rpx 32rpx;
+  height: 100rpx;
+  width: 100rpx;
+}

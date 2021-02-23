@@ -1,0 +1,29 @@
+<!--pages/mineClass/signIn/signIn.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<!-- 头部 -->
+<view class="box">
+  <bk-lines borderBottom="" backDisplay="none" text="上课时间:{{class.time}}">
+    <view slot="header" class="flex-a align-a">
+      <view class="align-a">
+        <image src="{{class.src}}" style="height:80rpx ; width:80rpx"></image>
+      </view>
+      <view  class="align-a _box">
+        <view>教学老师:{{class.name}}</view>
+        <view class="box-item">学员人数:{{class.stu}}人</view>
+      </view>
+    </view>
+  </bk-lines>
+</view>
+<!-- 学员 -->
+<view class="xxx flex-a stu">
+  <block wx:for="{{student}}" wx:key="*this">
+    <view class="stus" >
+      <bk-line-picker backDisplay="none" borderBottom=""  data-index="{{index}}"
+      listData_02="{{type}}" picker_02_data="{{_type}}" bind:picker='_picker'>
+        <view slot="pic">
+          <image src="{{item.src}}" style="height:90rpx;width:90rpx"></image>
+        </view>
+      </bk-line-picker>
+    </view>
+  </block>
+</view>

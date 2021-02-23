@@ -62,6 +62,7 @@
     "pages/mineClass/pay/pay",
     "pages/mineClass/classPay/classPay",
     "pages/mineClass/attendance/attendance",
+    "pages/mineClass/signIn/signIn",
     "pages/homework/homework/homework",
     "pages/homework/mineClass/mineClass",
     "pages/homework/putCourse/putCourse",
