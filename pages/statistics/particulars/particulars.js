@@ -1,4 +1,4 @@
-// pages/mineClass/mineClass/mineClass.js
+// pages/statistics/particulars/particulars.js
 Page({
 
   /**
@@ -6,49 +6,40 @@ Page({
    */
   data: {
     header:{
-      title: '我的班级',
-      fontColor: "#333333",
-      headerbg: '#FFFFFF',
+      title: '课消详情',
+      fontColor: "#FFFFFF",
+      headerbg: '#60ADE1',
       hiddenBlock: false,
       slot: false,
       src:'../../assets/image/fback.png'
     },
-    name:"测试",
-    _name:"测试班级",
-    inform:{
-      stu:2,
-      homework:0,
-      timetable:2,
-      attendance:"12.5%",
-      consume:8,
-      sign:20
-    }
+    particulars:[
+      {name:"上课次数",nub:"2"},
+      {name:"上课时长",nub:"6h"},
+      {name:"实消/应消",nub:"231/10"},
+      {name:"消耗赠送课时",nub:"0"}
+    ],
+    tab:['班级课消','学员课消'],
+    classifyList:[
+      {list:["班级类型","全部","一对一","班组课"],nums:0},
+      {list:["班级名称","全部","文曲星1班(已删除2020-11-21"],nums:0}
+    ],
+    class:[
+      {className:"文曲星1班",type:"班组课",delete:'已删除2020-11-21 16:54:54',a:2,b:10,c:10}
+    ],
+    id:0,
+    stu:[
+      {name:'毛毛',phone:'15840127342',check:'暂无',a:221,b:0},
+      {name:'试验报名学员',phone:'13211111111',check:'出勤2次',a:10,b:10},
+    ]
   },
-  studentClick(){
-    wx.navigateTo({
-      url: '../student/student',
+  itemClick(e){
+    let id = e.detail
+    this.setData({
+      id: id
     })
   },
-  homeworkClick(){
-    wx.navigateTo({
-      url: '../../homework/homework/homework',
-    })
-  },
-  timetableClick(){
-    wx.navigateTo({
-      url: '../../timetable/timetable/timetable',
-    })
-  },
-  attendanceClick(){
-    wx.navigateTo({
-      url: '../attendance/attendance',
-    })
-  },
-  dataStatisticsClick(){
-    wx.navigateTo({
-      url: '../../statistics/classConsumption/classConsumption',
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */

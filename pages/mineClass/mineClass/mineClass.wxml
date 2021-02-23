@@ -34,7 +34,7 @@
       <image src="../../../assets/image/c4.png" style="width:24rpx;height:32rpx;margin-right:19rpx"></image>
     </view>
   </bk-lines>
-  <bk-lines name="消耗课时" text="{{inform.consume}}课时">
+  <bk-lines name="消耗课时" text="{{inform.consume}}课时" bindtap="dataStatisticsClick">
     <view slot="header">
       <image src="../../../assets/image/c5.png" style="width:24rpx;height:32rpx;margin-right:19rpx"></image>
     </view>

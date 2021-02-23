@@ -1,0 +1,45 @@
+<!--pages/statistics/particulars/particulars.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<!-- 详情 -->
+<view class="particulars flex-a justify-d">
+  <block wx:for="{{particulars}}" wx:key="*this">
+    <view >
+      <view>{{item.name}}</view>
+      <view class="text">{{item.nub}}</view>
+    </view>
+  </block>
+</view>
+<!-- tab -->
+<view class="tab">
+  <bk-tab tab="{{tab}}" class="_tab" bind:itemClick="itemClick"></bk-tab>
+  <view class="{{id == 1?'search top':'none'}}">
+    <bk-search-box search="请输入学员姓名或联系方式"></bk-search-box>
+  </view>
+</view>
+<view class="{{id == 0?'':'none'}}">
+  <!-- 检索 -->
+  <bk-searching classifyList="{{classifyList}}" justify="margin-left:32rpx"></bk-searching>
+  <!-- 内容 -->
+  <view class="xxx">
+    <block wx:for="{{class}}" wx:key="*this">
+      <bk-line-class borderBottom="" lineText="{{item.className}}" lineBox="{{item.type}}" lineSrc=''></bk-line-class>
+      <view class="_text">
+        <view>({{item.delete}})</view>
+        <view class="dark margin">上课次数:{{item.a}}次</view>
+        <view class="dark">实消/应消课时:{{item.b}}/{{item.c}}</view>
+      </view>
+    </block>
+  </view>
+</view>
+<view class="{{id==1?'':'none'}}">
+  <view class="xxx _box">
+    <block wx:for="{{stu}}" wx:key="*this">
+      <view class="box {{index+1 ==stu.length ?'':'line'}}" data-index="{{index}}">
+        <view>{{item.name}} {{item.phone}}</view>
+        <view class="dark _margin">考勤情况:{{item.check}}次</view>
+        <view class="dark margin">实消课时:{{item.a}}课时</view>
+        <view class="dark">应消课时:{{item.b}}课时</view>
+      </view>
+    </block>
+  </view>
+</view>

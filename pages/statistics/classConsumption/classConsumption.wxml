@@ -1,0 +1,48 @@
+<!--pages/statistics/classConsumption/classConsumption.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<!-- 搜索框 -->
+<view class="search">
+  <bk-search-box search="请输入教师/助教姓名"></bk-search-box>
+</view>
+<view class="flex-a">
+  <view class="flex-a align-a time">
+    <view class="align-a">{{year}}-{{month}}</view>
+    <view class="align-a src flex-a" bindtap="showClick">
+      <image src="../../../assets/image/back.png" style="height:30rpx;width:30rpx" class="align-a"></image>
+    </view>
+  </view>
+  <bk-searching classifyList="{{classifyList}}" justify="margin-left:32rpx"></bk-searching>
+</view>
+<!-- 教师 -->
+<view class="xxx">
+  <block  wx:for="{{teacher}}" wx:key="*this">
+    <bk-line-class lineText="{{item.name}}" lineBox="{{item.type}}" borderBottom=''
+    lineTextTh="查看详情" alignText="color: #999999;" bindtap="particularsClick"
+    ></bk-line-class>
+    <view class="_line"></view>
+    <view class="_text">实消/应消课时:{{item.a}}/{{item.b}}课时</view>
+    <view class="{{index+1 == teacher.length?'':'lines'}}"  data-index="{{index}}"></view>
+  </block>
+</view>
+
+
+<!-- 蒙层 -->
+<view class="{{show == 0?'none':'_bgs'}}"></view>
+<view class="{{show == 0?'none':'bottom-bg'}}">
+  <view class="flex-a justify-d fback">
+    <view>
+      <image src="../../../assets/image/fback.png" style="height:30rpx;width:30rpx" class="align-a" bindtap="subtractClick"></image>
+    </view>
+    <view class="year">{{nub}}年</view>
+    <view>
+      <image src="../../../assets/image/fback.png" style="height:30rpx;width:30rpx;transform:rotate(180deg);" class="align-a" bindtap="addClick"></image>
+    </view>
+  </view>
+  <view class="line"></view>
+  <view class="flex-a months">
+    <block  wx:for="{{months}}" wx:key="*this">
+      <view class="box align-b" bindtap="monthsClick" data-index="{{index}}">{{item.name}}</view>
+    </block>
+  </view>
+  <bk-btn btn="{{btn}}" bind:btnClick="btnClick"></bk-btn>
+</view>

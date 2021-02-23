@@ -1,0 +1,71 @@
+/* pages/statistics/classConsumption/classConsumption.wxss */
+.src {
+  margin-left: 8rpx;
+}
+.time {
+  font-size: 28rpx;
+  margin-left:32rpx;
+  color: #333333;
+}
+/* 蒙层 */
+._bgs {
+  height: 100%;
+	width: 100%;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 2;
+	top: 27%;
+	left: 0;
+}
+.bottom-bg {
+  height: 627rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 2rpx 16rpx rgba(153, 155, 168, 0.25);
+  border-radius: 40rpx 40rpx 0px 0px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+}
+.fback {
+  padding: 75rpx 50rpx 0  50rpx;
+}
+.year {
+  font-size: 34rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+}
+.line {
+  border-bottom: 2rpx solid #DDDDDD;
+  margin: 16rpx 50rpx 0 50rpx;
+}
+.months {
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20rpx 0 20rpx 0;
+}
+.box {
+  width: 120rpx;
+  height: 48rpx;
+  background: #60ADE1;
+  border-radius: 24rpx;
+  margin: 30rpx 28rpx 30rpx 28rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+/*  */
+._line{
+  margin: -20rpx 32rpx 0 32rpx;
+  border-bottom: 2rpx solid #DDDDDD;
+}
+._text {
+  padding: 28rpx 32rpx 28rpx 32rpx ;
+  font-size: 24rpx;
+  color: #999999;
+}
+.lines {
+  border-bottom: 1rpx solid #DDDDDD;
+}

@@ -18,6 +18,10 @@ Component({
     show:{
       type:Number,
       value:0
+    },
+    justify:{
+      type:String,
+      value:"justify-content: space-around"
     }
   },
 

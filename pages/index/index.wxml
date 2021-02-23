@@ -47,7 +47,7 @@
     <view class="flex-a justify-a bottom">
       <block  wx:for="{{dataStatistics}}" wx:key="*this">
         <view class="box-item">
-          <view class="flex-a justify-b ">
+          <view class="flex-a justify-b" bindtap="dataStatisticsClick" data-index="{{index}}">
             <image src="{{item.icon}}" style="height:70rpx;width:70rpx"></image>
           </view>
           <view class="box-text">{{item.text}}</view>

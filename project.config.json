@@ -54,8 +54,8 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/mineClass/attendance/attendance",
-          "pathName": "pages/mineClass/attendance/attendance",
+          "name": "pages/statistics/particulars/particulars",
+          "pathName": "pages/statistics/particulars/particulars",
           "query": "",
           "scene": null
         }

@@ -1,6 +1,6 @@
 <!--components/bk-searching/bk-searching.wxml-->
 <!-- 分类信息 -->
-<view class="flex-a align-a justify-c classify">
+<view class="flex-a align-a  classify" style="{{justify}}">
  <block wx:for="{{classifyList.length}}" wx:key="*this" >
   <view class="flex-a align-a">
     <view class="align-a">{{classifyList[item].list[classifyList[item].nums]}}</view>

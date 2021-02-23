@@ -1,0 +1,56 @@
+/* pages/statistics/particulars/particulars.wxss */
+/* 详情 */
+.particulars {
+  padding: 50rpx 32rpx 90rpx 32rpx;
+  background: #60ADE1;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+.text {
+  text-align: center;
+  margin-top: 8rpx;
+}
+/* tab */
+.tab {
+  margin: -40rpx 0 30rpx 0;
+  height: 96rpx;
+  background: #FFFFFF;
+  opacity: 1;
+  border-radius: 50rpx 50rpx 0px 0px;
+}
+._tab{
+  margin: 30rpx;
+}
+/* 课程 */
+._text{
+  margin-top: -28rpx;
+  padding: 0 32rpx 32rpx 32rpx;
+  font-size: 28rpx;
+  color: #333333;
+} 
+.dark {
+  font-size: 24rpx;
+  color: #999999;
+}
+.margin {
+  margin: 16rpx 0 16rpx 0;
+}
+/* 学员消耗 */
+.top {
+  margin-top: -60rpx;
+}
+.box {
+  padding: 32rpx 32rpx 32rpx 32rpx;
+  font-size: 28rpx;
+  color: #333333;
+}
+._box {
+  margin-top: 200rpx;
+}
+._margin {
+  margin: 16rpx 0 0 0;
+}
+.line {
+  border-bottom: 1rpx solid #DDDDDD;
+} 

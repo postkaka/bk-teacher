@@ -96,7 +96,14 @@ Page({
       })
     }
   },
-
+  dataStatisticsClick(e){
+  let num = e.currentTarget.dataset.index
+  if(num == 0){
+    wx.navigateTo({
+      url: '../statistics/classConsumption/classConsumption',
+    })
+  }
+  },
   /**
    * 生命周期函数--监听页面加载
    */

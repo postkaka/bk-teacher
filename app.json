@@ -70,7 +70,9 @@
     "pages/timetable/timetable/timetable",
     "pages/timetable/courseDetails/courseDetails",
     "pages/timetable/modification/modification",
-    "pages/timetable/compile/compile"
+    "pages/timetable/compile/compile",
+    "pages/statistics/classConsumption/classConsumption",
+    "pages/statistics/particulars/particulars"
   ],
   "tabBar": {
     "selectedColor": "#60ADE1",
