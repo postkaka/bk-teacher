@@ -1,0 +1,30 @@
+/* pages/check/check/check.wxss */
+/* 信息 */
+.class-type {
+  font-size: 28rpx;
+  color: #60ADE1;
+  margin-left: 15rpx;
+}
+/* 提示信息 */
+.infor {
+  padding: 16rpx 32rpx 16rpx 32rpx;
+  font-size: 28rpx;
+  color: #999999;
+  font-weight: 400;
+}
+.space {
+  text-align: left;
+  text-indent:3em;
+}
+/* 课程 */
+.time {
+  margin-top: 8rpx;
+}
+.class-text {
+  padding: 32rpx 0 32rpx 0;
+  font-size: 28rpx;
+  color: #333333;
+}
+.line {
+  border-bottom: 1rpx solid #DDDDDD;
+}

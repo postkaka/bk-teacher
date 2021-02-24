@@ -1,0 +1,37 @@
+<!--pages/check/particulars/particulars.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<!-- 信息 -->
+<view class="infor">
+  <bk-lines backDisplay="none" borderBottom="">
+    <view slot="header" class="infor-item">
+      <view class="infor-class">{{infor.class}}·{{infor.name}}</view>
+      <view>教:{{infor.teacher}}</view>
+    </view>
+  </bk-lines>
+</view>
+<!-- 外壳 -->
+<view class="_infor">
+ <view class="xxx _xxx">
+  <bk-lines name="请假人:"  backDisplay="none" text="{{infor.name}}"></bk-lines>
+  <bk-lines name="是否补课:"  backDisplay="none" text="{{infor.type}}"></bk-lines>
+  <bk-lines name="扣除补课:"  backDisplay="none"  borderBottom text="{{infor.stu}}">
+    <view slot="line-text" bindtap="delClick">
+      <image src="../../../assets/image/del.png" style="height:25rpx;width:26rpx"></image>
+    </view>
+  </bk-lines>
+ </view>
+ <view class="xxx _xx">
+   <!-- 备注 -->
+  <bk-lines name="沟通内容:"  backDisplay="none" borderBottom=""></bk-lines>
+    <view class="remark-text">
+      <textarea  maxlength='1000' placeholder="请输入备注……" class="text-area"
+      placeholder-style="font-size: 28rpx;font-family: PingFang SC;" bindinput="getValueLength"></textarea>
+    </view>
+    <view class="last-text">{{currentWordNumber|0}}/200</view>
+ </view>
+</view>
+
+<!-- btn -->
+<view class="btn">
+  <bk-btn btn="{{btn}}" bind:btnClick="_btnClick"></bk-btn>
+</view>

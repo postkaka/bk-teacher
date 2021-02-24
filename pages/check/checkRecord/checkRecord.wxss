@@ -1,0 +1,44 @@
+/* pages/check/checkRecord/checkRecord.wxss */
+/* 信息 */
+.infor {
+  background: #60ADE1;
+  padding:32rpx 0 70rpx 0 ;
+}
+.infor-item {
+  font-size: 28rpx;
+  color: #FFFFFF;
+}
+.infor-class {
+  margin: 8rpx 0 8rpx 0;
+}
+/* tab */
+.tab {
+  margin: -40rpx 0 30rpx 0;
+  height: 96rpx;
+  background: #FFFFFF;
+  opacity: 1;
+  border-radius: 50rpx 50rpx 0px 0px;
+}
+._tab{
+  margin: 30rpx;
+}
+/* 展开 */
+.type {
+  padding: 32rpx 0 32rpx 0; 
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #F89470;
+}
+.padding{
+  padding: 18rpx 0 0 0;
+}
+/* 大纲 */
+._xxx{
+  margin-top: 50rpx;
+  font-size: 28rpx;
+  color: #333333;
+}
+.small {
+  font-size: 20rpx;
+  color: #333333;
+}

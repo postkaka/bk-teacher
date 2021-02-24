@@ -1,0 +1,31 @@
+<!--pages/check/check/check.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<!-- 课程信息 -->
+<view class="xxx">
+  <bk-lines name="{{now.time}} {{now.week}}" borderBottom="" backDisplay="none">
+    <view slot="line-text" class="flex-a">
+      <view>
+        <image src="../../../assets/image/book.png" style="height:32rpx;width:32rpx"></image>
+      </view>
+      <view class="class-type">1对1排课</view>
+    </view>
+  </bk-lines>
+</view>
+<!-- 提示信息 -->
+<view class="infor">
+  <view>今日考勤{{time}}课次</view>
+  <view>请注意:课前1小时可进行考勤，教师&助教课后72小时<view class="space">将停止考勤</view></view>
+  <view>昨日的课次可以在【课程表】中考勤</view>
+</view>
+<!-- 班级 -->
+<view class="xxx">
+  <block wx:for="{{class}}" wx:key="*this" data-index="{{index}}">
+    <bk-lines backDisplay="none">
+      <view slot="header">
+        <view>{{item.name}}</view>
+        <view class="time">{{item.time}}</view>
+      </view>
+    </bk-lines>
+    <view class="align-b class-text {{index+1 == class.length?'':'line'}}" bindtap="recordClick">未到考勤时间，点击查看课次详情</view>
+  </block>
+</view>

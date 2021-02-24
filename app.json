@@ -73,7 +73,10 @@
     "pages/timetable/modification/modification",
     "pages/timetable/compile/compile",
     "pages/statistics/classConsumption/classConsumption",
-    "pages/statistics/particulars/particulars"
+    "pages/statistics/particulars/particulars",
+    "pages/check/check/check",
+    "pages/check/checkRecord/checkRecord",
+    "pages/check/particulars/particulars"
   ],
   "tabBar": {
     "selectedColor": "#60ADE1",

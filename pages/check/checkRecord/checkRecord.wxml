@@ -1,0 +1,63 @@
+<!--pages/check/checkRecord/checkRecord.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<!-- 信息 -->
+<view class="infor">
+  <bk-lines backDisplay="none" borderBottom="">
+    <view slot="header" class="infor-item">
+      <view>{{infor.timeA}} {{infor.week}} {{infor.timeB}}</view>
+      <view class="infor-class">{{infor.class}}·{{infor.name}}</view>
+      <view>教:{{infor.teacher}}</view>
+    </view>
+    <view slot="line-text" class="infor-item flex-a">
+      <view>
+        <image src="../../../assets/image/compile-1.png" style="height:24rpx;width:24rpx;margin-right:8rpx"></image>
+      </view>
+      <view>编辑</view>
+    </view>
+  </bk-lines>
+</view>
+<!-- tab -->
+<view class="tab">
+  <bk-tab tab="{{tab}}" class="_tab" bind:itemClick="itemClick"></bk-tab>
+</view>
+<view class="{{id == 0?'':'none'}}">
+<!-- 展开 -->
+  <bk-lines borderBottom="" name="待上课学员({{student.length}}人)" text="展开" bindtap="showClick"></bk-lines>
+  <view class="{{show == 1?'':'none'}}">
+    <block wx:for="{{student}}" wx:key="*this">
+      <view class="xxx padding">
+        <bk-lines name="{{item.name}}({{item.phone}})" backDisplay="none">
+          <view slot="header">
+            <image src="{{item.src}}" style="height:78rpx;width:78rpx;margin-right:8rpx"></image>
+          </view>
+        </bk-lines>
+        <view class="type align-b" bindtap="particularsClick">{{item.type}}</view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<view class="{{id == 1?'':'none'}}">
+  <view class="xxx _xxx">
+    <bk-lines name="本次课名: {{class.name}}" backDisplay="none"></bk-lines>
+    <bk-lines backDisplay="none">
+      <view slot="header">
+        <view>教学目标</view>
+        <view class="small">{{class.target}}</view> 
+      </view>
+    </bk-lines>
+    <bk-lines backDisplay="none" borderBottom="">
+      <view slot="header">
+        <view>主要内容</view>
+        <view class="small">{{class.content}}</view> 
+      </view>
+    </bk-lines>
+  </view>
+
+<!-- btn -->
+  <view class="btn">
+    <bk-btn btn="{{btn}}" bind:btnClick="_btnClick"></bk-btn>
+  </view>
+</view>
+
+

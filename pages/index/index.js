@@ -81,7 +81,9 @@ Page({
         url: '../timetable/timetable/timetable',
       })
     }else if(num == 3){
-
+        wx.navigateTo({
+          url: '../check/check/check',
+        })
     }else if(num == 4){
 
     }else if(num == 5){
