@@ -1,4 +1,4 @@
-// pages/check/particulars/particulars.js
+// pages/assist/assistItem/assistItem.js
 Page({
 
   /**
@@ -6,58 +6,38 @@ Page({
    */
   data: {
     header:{
-      title: '考勤记录',
-      fontColor: "#FFFFFF",
-      headerbg: '#60ADE1',
+      title: '通知',
+      fontColor: "#333333",
+      headerbg: '#FFFFFF',
       hiddenBlock: false,
       slot: false,
       src:'../../assets/image/fback.png'
     },
-    infor:{
-      class:"能力风暴大粒",
-      name:"李大王",
-      teacher:'教师1号',
-      type:'否',
-      stu:2
-    },
-    btn:["取消","确认"]
+    tab:["最新","已完成"],
+    infor:[
+      {name:'122',time:"2020-03-18",times:"2020-03-17 12:00",infor:'1212122222222222222222222222222222222',teacher:"校长",maker:'嗷嗷'},
+      {name:'采购教具',time:"2020-03-18",times:"2020-03-17 12:00",infor:'采购教具',teacher:"教师1号",maker:'教务、任生、楼管'}
+    ],
+    infors:[
+      {name:'122',time:"2020-03-18",times:"2020-03-17 12:00",infor:'1212122222222222222222222222222222222',teacher:"校长",maker:'嗷嗷'},
+      {name:'采购教具',time:"2020-03-18",times:"2020-03-17 12:00",infor:'采购教具',teacher:"教师1号",maker:'教务、任生、楼管'}
+    ],
+    currentIndex:0,
   },
-  delClick(){
+  itemClick(e){
     this.setData({
-      ["infor.stu"]: ''
+      currentIndex: e.detail
     })
   },
-  getValueLength: function (e) {
-    let value = e.detail.value
-    let len = parseInt(value.length)
-    this.setData({
-      remark: value
-    })
-    //最少字数限制
-    if (len <= this.data.min)
-      this.setData({
-        minWord: "至少填写10个字哦～"
-      })
-    else if (len > this.data.min)
-      this.setData({
-        minWord: " "
-      })
-    //最多字数限制
-    if (len > 200) return;
-    this.setData({
-      currentWordNumber: len //当前字数 
-    })
-  },
-  _btnClick(){
-    wx.navigateTo({
-      url: '../checkRecord/checkRecord',
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options.id)
+    this.setData({
+      currentIndex:options.id
+    })
   },
 
   /**

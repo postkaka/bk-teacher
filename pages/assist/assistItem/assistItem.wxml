@@ -1,0 +1,29 @@
+<!--pages/assist/assistItem/assistItem.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<view class="tabs">
+  <bk-tab tab="{{tab}}" bind:itemClick="itemClick" currentIndex="{{currentIndex}}"></bk-tab>
+</view>
+<!-- 最新内容 -->
+<block  wx:for="{{infor}}" wx:key="*this">
+  <view class="xxx _xxx {{currentIndex == 0 ?'':'none'}}">
+    <view class="flex-a justify-d"> 
+      <view class="blod">{{item.name}}</view>
+      <view class="tint">{{item.time}}</view>
+    </view>
+    <view class="tint margin">{{item.times}}</view>
+    <view class="blod bottom">{{item.infor}}</view>
+    <view class="last">创作者: {{item.teacher}}  协作者: {{item.maker}}</view>
+  </view>
+</block>
+<!-- 已完成内容 -->
+<block  wx:for="{{infors}}" wx:key="*this">
+  <view class="xxx _xxx {{currentIndex == 1 ?'':'none'}}">
+    <view class="flex-a justify-d"> 
+      <view class="blod">{{item.name}}</view>
+      <view class="tint">{{item.time}}</view>
+    </view>
+    <view class="tint margin">{{item.times}}</view>
+    <view class="blod _bottom">{{item.infor}}</view>
+    <view class="last">创作者: {{item.teacher}}  协作者: {{item.maker}}</view>
+  </view>
+</block>

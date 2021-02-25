@@ -54,8 +54,8 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/check/particulars/particulars",
-          "pathName": "pages/check/particulars/particulars",
+          "name": "pages/assist/assist/assist",
+          "pathName": "pages/assist/assist/assist",
           "query": "",
           "scene": null
         }

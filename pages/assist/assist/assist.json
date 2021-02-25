@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "bk-header":"../../../components/wx-header/header"
+  },
+  "navigationStyle": "custom"
+}

@@ -22,6 +22,7 @@
 </view>
 <view class="{{id == 0?'':'none'}}">
 <!-- 展开 -->
+<!-- 待上课学员 -->
   <bk-lines borderBottom="" name="待上课学员({{student.length}}人)" text="展开" bindtap="showClick"></bk-lines>
   <view class="{{show == 1?'':'none'}}">
     <block wx:for="{{student}}" wx:key="*this">
@@ -37,7 +38,7 @@
   </view>
 </view>
 
-<view class="{{id == 1?'':'none'}}">
+<view class="{{id == 1&&compile == 0?'':'none'}}">
   <view class="xxx _xxx">
     <bk-lines name="本次课名: {{class.name}}" backDisplay="none"></bk-lines>
     <bk-lines backDisplay="none">
@@ -53,11 +54,41 @@
       </view>
     </bk-lines>
   </view>
-
+  <view class="xxx align-b src">点击查看图片</view>
 <!-- btn -->
   <view class="btn">
     <bk-btn btn="{{btn}}" bind:btnClick="_btnClick"></bk-btn>
   </view>
 </view>
 
+<!-- 编辑 -->
+<view class="{{compile == 1?'':'none'}}">
+  <view class="xxx _xxx">
+    <bk-lines name="本次课名: {{class.name}}" backDisplay="none">
+      <view slot="line-text" bindtap="delClick">
+        <image src="../../../assets/image/del.png" style="height:25rpx;width:26rpx"></image>
+      </view>
+    </bk-lines>
+    <bk-lines backDisplay="none">
+      <view slot="header">
+        <view>教学目标</view>
+        <view class="small">{{class.target}}</view> 
+      </view>
+    </bk-lines>
+    <!-- 备注 -->
+    <bk-lines name="主要内容:"  backDisplay="none" borderBottom=""></bk-lines>
+      <view class="remark-text">
+        <textarea  maxlength='1000' placeholder="请输入沟通内容" class="text-area"
+        placeholder-style="font-size: 28rpx;font-family: PingFang SC;" bindinput="getValueLength"></textarea>
+      </view>
+    <view class="last-text">{{currentWordNumber|0}}/1000</view>
+    <view class="last">支持jpg、png格式，最多9张</view>
+    <view class="last-camera align-b" bindtap='chooseImageTap'>+</view>
+  </view>
+ 
+<!-- btn -->
+  <view class="btn">
+    <bk-btn btn="{{_btn}}" bind:btnClick="btnClick"></bk-btn>
+  </view>
+</view>
 

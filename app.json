@@ -76,7 +76,9 @@
     "pages/statistics/particulars/particulars",
     "pages/check/check/check",
     "pages/check/checkRecord/checkRecord",
-    "pages/check/particulars/particulars"
+    "pages/check/particulars/particulars",
+    "pages/assist/assist/assist",
+    "pages/assist/assistItem/assistItem"
   ],
   "tabBar": {
     "selectedColor": "#60ADE1",

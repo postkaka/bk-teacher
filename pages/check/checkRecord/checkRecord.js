@@ -32,7 +32,9 @@ Page({
       target:'1212',
       content:'1212'
     },
-    btn:["编辑"]
+    btn:["编辑"],
+    compile:0,
+    _btn:["取消","确定"]
   },
   itemClick(e){
     let id = e.detail
@@ -54,6 +56,51 @@ Page({
   particularsClick(){
     wx.navigateTo({
       url: '../particulars/particulars',
+    })
+  },
+  _btnClick(){
+    this.setData({
+      compile:1
+    })
+  },
+  btnClick(){
+    this.setData({
+      compile:0
+    })
+  },
+  delClick(){
+    this.setData({
+      ["class.name"]: ''
+    })
+  },
+  getValueLength: function (e) {
+    let value = e.detail.value
+    let len = parseInt(value.length)
+    this.setData({
+      remark: value
+    })
+    //最少字数限制
+    if (len <= this.data.min)
+      this.setData({
+        minWord: "至少填写10个字哦～"
+      })
+    else if (len > this.data.min)
+      this.setData({
+        minWord: " "
+      })
+    //最多字数限制
+    if (len > 1000) return;
+    this.setData({
+      currentWordNumber: len //当前字数 
+    })
+  },
+  chooseImageTap(){
+    wx.chooseImage({
+      sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+      sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+      success:function(res){
+        console.log(res)
+      }
     })
   },
   /**

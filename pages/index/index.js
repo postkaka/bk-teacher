@@ -65,6 +65,10 @@ Page({
       wx.navigateTo({
         url: '../warehouse/warehouse/warehouse',
       })
+    }else {
+      wx.navigateTo({
+        url: '../assist/assist/assist',
+      })
     }
 
   },

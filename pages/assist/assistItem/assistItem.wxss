@@ -1,0 +1,27 @@
+/* pages/assist/assistItem/assistItem.wxss */
+._xxx {
+  padding: 32rpx 32rpx 32rpx 32rpx;
+  font-size: 28rpx;
+  color: #333333;
+}
+.blod {
+  font-weight: bold;
+}
+.tint {
+  font-size: 24rpx;
+  color: #999999;
+}
+.margin {
+  margin: 8rpx 0 16rpx 0;
+}
+.bottom {
+  margin: 0 0 32rpx 0;
+}
+._bottom {
+  margin: 0 0 32rpx 0;
+  color: #999999;
+}
+.last {
+  text-align: right;
+  font-size: 24rpx;
+}

@@ -1,4 +1,4 @@
-// pages/check/particulars/particulars.js
+// pages/assist/assist/assist.js
 Page({
 
   /**
@@ -6,53 +6,39 @@ Page({
    */
   data: {
     header:{
-      title: '考勤记录',
-      fontColor: "#FFFFFF",
-      headerbg: '#60ADE1',
+      title: '待办事项',
+      fontColor: "#333333",
+      headerbg: '#FFFFFF',
       hiddenBlock: false,
       slot: false,
       src:'../../assets/image/fback.png'
     },
-    infor:{
-      class:"能力风暴大粒",
-      name:"李大王",
-      teacher:'教师1号',
-      type:'否',
-      stu:2
-    },
-    btn:["取消","确认"]
+    tab:[
+      {type:"我发布的",nub:123},
+      {type:"需要协作",nub:123},
+      {type:"其他协作",nub:123}
+    ],
+    currentIndex: 0,
+    news:[
+      {news:"333333333333",time:"2020-05-14 16:37"}
+    ]
   },
-  delClick(){
+  tabClick(e){
     this.setData({
-      ["infor.stu"]: ''
+      currentIndex: e.currentTarget.dataset.index
     })
   },
-  getValueLength: function (e) {
-    let value = e.detail.value
-    let len = parseInt(value.length)
-    this.setData({
-      remark: value
-    })
-    //最少字数限制
-    if (len <= this.data.min)
-      this.setData({
-        minWord: "至少填写10个字哦～"
-      })
-    else if (len > this.data.min)
-      this.setData({
-        minWord: " "
-      })
-    //最多字数限制
-    if (len > 200) return;
-    this.setData({
-      currentWordNumber: len //当前字数 
-    })
-  },
-  _btnClick(){
+  studentClick(){
     wx.navigateTo({
-      url: '../checkRecord/checkRecord',
+      url: '../assistItem/assistItem?id=0',
     })
   },
+  offworkClick(){
+    wx.navigateTo({
+      url: '../assistItem/assistItem?id=1',
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
