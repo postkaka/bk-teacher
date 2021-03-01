@@ -1,0 +1,57 @@
+<!--pages/remark/remark/remark.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<!-- tabs -->
+<view class="tabs">
+    <bk-tab tab="{{tab}}"></bk-tab>
+</view>
+<!-- class -->
+<view class="{{show ==0?'xxx':'none'}}">
+    <bk-lines name="教师" borderBottom text="{{class.name}}·{{class.teacher}}" bindtap="commentClick">
+        <view slot="header">
+            <image src="../../../assets/image/m9.png" style="height:40rpx;width:40rpx;margin-right:8rpx" class="align-b"></image>
+        </view>
+    </bk-lines>
+</view>
+<!-- 班级信息 -->
+<view class="{{id == 2&&show ==0 ?'xxx':'none'}}">
+    <block wx:for="{{remark}}" wx:key="*this">
+        <view class="remark {{index+1 == remark.length?'':'line'}}" data-index="{{index}}">
+            <view>班级:{{item.className}}</view>
+            <view class="time flex-a ">
+                <view>上课时间:{{item.time}}</view> 
+                <view class="_box align-b" bindtap="remarkClick" data-index="{{index}}">点评</view>
+            </view>
+            <view>班级人数:{{item.classNub}}人 出勤学员:{{item.attendance}}人</view>
+        </view>
+    </block>
+</view>
+<!-- 编辑信息 -->
+<view class="{{show == 1?'':'none'}}">
+    <view class="xxx show">
+        <view>班级:{{newRemark.className}}</view>
+        <view class="_time">上课时间:{{newRemark.time}}</view>
+    </view>
+    <!-- 出勤人员 -->
+    <view class="xxx">
+        <view class="flex-a justify-d title">
+            <view>出勤学员</view>
+            <view>选中人数:{{}}</view>
+            <view class="flex-a align-a">
+                <view class="align-a">{{newRemark.attendance}}人</view>
+                <view class="align-b">
+                    <image src="../../../assets/image/back.png" style="height:28rpx;width:28rpx"></image>
+                </view>
+            </view>
+        </view>
+        <view class="students">
+            <block wx:for="{{students}}" wx:key="*this">
+                <view >
+                    <view>
+                        <image src="{{item.src}}" style="height:78rpx;width:78rpx"></image>
+                    </view>
+                    <view>{{item.name}}</view>
+                </view>
+            </block>
+        </view>
+    </view>
+</view>

@@ -89,9 +89,13 @@ Page({
           url: '../check/check/check',
         })
     }else if(num == 4){
-
+        wx.navigateTo({
+          url: '../student/management/management',
+        })
     }else if(num == 5){
-
+        wx.navigateTo({
+          url: '../remark/remark/remark',
+        })
     }else if(num == 6){
       wx.navigateTo({
         url: '../mineClass/mineClass/mineClass',

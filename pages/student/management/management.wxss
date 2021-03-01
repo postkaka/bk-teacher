@@ -1,0 +1,127 @@
+/* pages/student/management/management.wxss */
+.top-text {
+    font-size: 28rpx;
+    color: #333333;
+    margin-left:16rpx;
+}
+/* tab */
+.tab {
+    background: #FFFFFF;
+}
+.tab-src {
+    margin:8rpx 0 22rpx 0;
+}
+.tab-title {
+    margin-bottom: 32rpx;
+    font-size: 28rpx;
+    color: #333333;
+}
+/* 提示信息 */
+.back {
+    color: #333333;
+}
+/* 选中样式 */
+checkbox .wx-checkbox-input {
+	width: 34rpx;
+	height: 34rpx;
+	border-radius: 50%;
+}
+/*checkbox选中后样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background: #FFFFFF;
+  border-color:#60ADE1;
+}
+/*checkbox选中后图标样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  width: 20rpx;
+  height: 20rpx;  
+  line-height: 20rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #fff;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  content: '';
+  border-radius: 50%;
+  background-color: #60ADE1;
+}
+/* 学生列表 */
+.label {
+    padding: 32rpx;
+    font-size: 28rpx;
+}
+._name {
+    margin-left: 17rpx;
+}
+.name {
+    font-weight: bold;
+    color: #333333;
+}
+.nameBottom {
+    margin-top: 8rpx;
+}
+.teacher {
+    font-size: 20rpx;
+    color: #333333;
+    margin-left: 8rpx;
+}
+.src {  
+   justify-content: flex-end;
+}
+.other {
+    margin-left: 8rpx;
+}
+.line {
+    border-bottom: 1rpx solid #DDDDDD;
+}
+/* 操作 */
+.last {
+    margin: 0 16rpx 0 16rpx;
+    font-weight: bold;
+  }
+  /* 分配 */
+.btns {
+    position: absolute;
+    left: 0;
+    bottom:-15rpx;
+    width: 100%;
+}
+
+.btnss {
+    flex: 1;
+    height: 5vh;
+    background: #FFFFFF;
+    border: 1rpx solid #60ADE1;
+    box-shadow: 0px 10rpx 20rpx rgba(153, 153, 153, 0.16);
+    border-radius: 30rpx;
+    margin-bottom: 2vh;
+    font-size: 34rpx;
+    color: #60ADE1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 18rpx;
+    margin-top:23rpx ;
+    width: 150rpx;
+  }
+  .else-btns {
+    background: linear-gradient(180deg, #96CBEB 0%, #60ADE1 100%);
+    color: #FFFFFF;
+    width: 190rpx;
+    margin-top:40rpx ;
+  }
+  /* 蒙层 */
+  .bg-top {
+    top: 15vh;
+  }
+  .bg-image {
+    margin: 111rpx 0 43rpx 0;
+  }
+  .bg-text-1 {
+    text-align: center;
+    font-size: 34rpx;
+    font-weight: bold;
+    color: #333333;
+  }

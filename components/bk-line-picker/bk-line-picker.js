@@ -46,6 +46,10 @@ Component({
     picker_02_data:{
       type:Array,
       value:[]
+    },
+    isShow_02:{
+      type:Boolean,
+      value:false
     }
   },
 
@@ -53,7 +57,6 @@ Component({
    * 组件的初始数据
    */
   data: {
-    isShow_02: false,
   },
 
   /**

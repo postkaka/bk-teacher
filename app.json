@@ -14,6 +14,7 @@
     "pages/student/integral/integral",
     "pages/student/integral-transformation/integral-transformation",
     "pages/student/record/record",
+    "pages/student/management/management",
     "pages/recruit/recruitStudent/recruitStudent",
     "pages/recruit/classPackage/classPackage",
     "pages/recruit/courseInformation/courseInformation",
@@ -78,7 +79,9 @@
     "pages/check/checkRecord/checkRecord",
     "pages/check/particulars/particulars",
     "pages/assist/assist/assist",
-    "pages/assist/assistItem/assistItem"
+    "pages/assist/assistItem/assistItem",
+    "pages/remark/remark/remark",
+    "pages/remark/comment/comment"
   ],
   "tabBar": {
     "selectedColor": "#60ADE1",

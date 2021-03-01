@@ -7,12 +7,12 @@
 }
 .btns {
   flex: 1;
-  height: 80rpx;
+  height: 5vh;
   background: #FFFFFF;
   border: 1rpx solid #60ADE1;
   box-shadow: 0px 10rpx 20rpx rgba(153, 153, 153, 0.16);
   border-radius: 30rpx;
-  margin-bottom: 35rpx;
+  margin-bottom: 2vh;
   font-size: 34rpx;
   color: #60ADE1;
   display: flex;

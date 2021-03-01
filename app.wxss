@@ -12,6 +12,9 @@ page {
 .flex-b {
   flex: 1;
 }
+.flex-c {
+  flex: 4;
+}
 /* 横向对齐 */
 .justify-b {
   justify-content: center;

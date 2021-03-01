@@ -1,0 +1,122 @@
+<!--pages/student/management/management.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<!-- 搜索框 -->
+<view class="search flex-a">
+  <view class="flex-c">
+    <bk-search-box search="请输入学员姓名或手机号" ></bk-search-box>
+  </view>
+  <view class="flex-b flex-a align-a">
+      <view class='align-a'>
+          <!-- 占位图 -->
+          <image src="../../../assets/image/management-1.png" style="width:30rpx;height:30rpx"></image>
+      </view>
+      <view class="align-a top-text">按学管</view>
+  </view>
+</view>
+<!-- tab -->
+<view class="tab flex-a justify-c">
+    <block wx:for="{{tab}}" wx:key="*this" >
+        <view bindtap="changeClick" data-index="{{index}}">
+            <view class="align-b tab-src">
+                <image src="{{item.srcClick}}" style="height:38rpx;width:38rpx" wx:if="{{imgindex==index}}"></image>
+                <image src="{{item.src}}" style="height:38rpx;width:38rpx" wx:elif="{{imgindex!=index}}"></image>
+            </view>
+            <view class="tab-title">{{item.title}}</view>
+        </view>
+    </block>
+</view>
+<!-- 提示信息 -->
+<view class="hint">共有<span class="back">9</span>人 当前显示<span class="back">9</span>人</view>
+<!-- 分配学员信息 -->
+<view class="{{show == 0?'xxx':'none'}}">
+      <view class="flex-a align-a justify-d label {{index+1 == sundry.length?'':'line'}}" wx:for="{{sundry}}" wx:key="*this" data-index="{{item}}">
+        <view class="flex-a align-a">
+          <view class="flex-a align-a">
+            <view class="align-a">
+              <image src="{{item.src}}" style="height:78rpx;width:78rpx"></image>
+            </view>
+            <view class="align-a _name">
+                <view class="name align-a">{{item.name}}</view>
+                <view class="flex-a align-a nameBottom">
+                    <view class="align-a"  wx:if="{{item._src}}">
+                        <image src="{{item._src}}" style="height:22rpx;width:19rpx"></image>
+                    </view>
+                    <view class="align-a teacher">{{item.teacher}}</view>
+                </view>
+            </view>
+          </view>
+        </view>
+        <view class="align-a">
+            <view>{{item.classTime}}课时 +{{item.other}}课时</view>
+            <view class="flex-a align-a src" >
+               <view class="align-a" wx:if="{{item.otherSrc}}">
+                   <image src="{{item.otherSrc}}" style="height:22rpx;width:22rpx"></image>
+               </view>
+               <view class="align-a other"  wx:if="{{item.othersSrc}}">
+                   <image src="{{item.othersSrc}}" style="height:22rpx;width:22rpx"></image>
+               </view>
+            </view>
+        </view>
+    </view>
+</view>
+<!--  -->
+<view class="{{show == 1?'none':'btns'}}">
+    <bk-btn btn="{{btns}}" bind:btnClick="btnClick"></bk-btn>
+</view>
+<!-- 分配学员信息 -->
+<view class="{{show == 1?'xxx':'none'}}">
+    <checkbox-group bindchange="radioChange"> 
+      <label class="flex-a align-a justify-d label {{index+1 == sundry.length?'':'line'}}" wx:for="{{sundry}}" wx:key="*this" data-index="{{item}}">
+        <view class="flex-a align-a">
+          <checkbox class="align-a checkbox" value="{{item.name}}" checked="{{item.checked}}"></checkbox>
+          <view class="flex-a align-a">
+            <view class="align-a">
+              <image src="{{item.src}}" style="height:78rpx;width:78rpx"></image>
+            </view>
+            <view class="align-a _name">
+                <view class="name align-a">{{item.name}}</view>
+                <view class="flex-a align-a nameBottom">
+                    <view class="align-a"  wx:if="{{item._src}}">
+                        <image src="{{item._src}}" style="height:22rpx;width:19rpx"></image>
+                    </view>
+                    <view class="align-a teacher">{{item.teacher}}</view>
+                </view>
+            </view>
+          </view>
+        </view>
+        <view class="align-a">
+            <view>{{item.classTime}}课时 +{{item.other}}课时</view>
+            <view class="flex-a align-a src" >
+               <view class="align-a" wx:if="{{item.otherSrc}}">
+                   <image src="{{item.otherSrc}}" style="height:22rpx;width:22rpx"></image>
+               </view>
+               <view class="align-a other"  wx:if="{{item.othersSrc}}">
+                   <image src="{{item.othersSrc}}" style="height:22rpx;width:22rpx"></image>
+               </view>
+            </view>
+        </view>
+      </label>
+     </checkbox-group>
+</view>
+<view class="{{show == 0?'none':'btns flex-a justify-d'}}">
+    <!-- 操作 -->
+    <view class="flex-a last align-a ">
+    <checkbox value='全选' bindtap='checkAll'>全选 已选{{batchIds.length}}人</checkbox> 
+    </view>
+    <view class="btnss align-a" bindtap="cancelClick">取消</view>
+    <bk-line-picker borderBottom backDisplay="none" isShow_02="{{isShow}}" listData_02="{{counselors}}" picker_02_data="{{_counselors}}" 
+    bind:picker='_picker'>
+        <view slot="pic" class="btnss else-btns">选择学管</view>
+    </bk-line-picker>
+</view>
+<!-- 蒙层 -->
+<view class="bg bg-top" style='display:{{display}} '></view>
+<view class="bg-item" style="display:{{display}}">
+  <view class="flex-a justify-b bg-image">
+    <image src="../../../assets/image/bg.png" style="height:160rpx;width:160rpx"></image>
+  </view>
+  <view class='bg-text-1'>确认将这{{batchIds.length}}位学员分配给{{_counselors}}吗</view>
+  <view class="btn">
+    <bk-btn btn="{{btns}}" bind:btnClick="tureClick"></bk-btn>
+  </view>
+</view>

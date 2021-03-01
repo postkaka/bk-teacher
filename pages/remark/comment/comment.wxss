@@ -1,0 +1,5 @@
+/* pages/remark/comment/comment.wxss */
+.text {
+    font-size: 24rpx;
+    color: #999999;
+}
