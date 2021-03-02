@@ -50,6 +50,14 @@ Component({
     isShow_02:{
       type:Boolean,
       value:false
+    },
+    titleText:{
+      type:String,
+      value:""
+    },
+    titleStyle:{
+      type:String,
+      value:""
     }
   },
 

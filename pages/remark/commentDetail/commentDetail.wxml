@@ -1,0 +1,51 @@
+<!--pages/remark/commentDetail/commentDetail.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<!-- 头部 -->
+<view class="xxx header flex-a align-a">
+    <view class='align-a'>
+        <image src="{{inform.src}}" style="height:78rpx;width:78rpx"></image>
+    </view>
+    <view class="inform-title align-a">
+        <view class="className">{{inform.className}}</view>
+        <view class="studentName">学员：{{inform.studentName}}</view>
+        <view>上课时间：{{inform.time}}</view>
+    </view>
+</view>
+<!--课堂点评-->
+<view class="text">课堂点评</view>
+<view class="xxx">
+    <view class="title flex-a justify-d">
+        <view>{{title.title}}</view>
+        <view class="flex-a aligin-a">
+            <view>
+               <block wx:for="{{title.nub}}" wx:key="*this">
+                <image src="../../../assets/image/sar.png" style="height:40rpx;width:40rpx"></image>
+               </block>
+            </view>
+            <view>{{title.text}}</view>
+        </view>
+    </view>
+</view>
+<!-- 评价内容 -->
+<view class="xxx comment">
+    <view>{{comment.name}}:</view>
+    <view class="comment-text">{{comment.text}}</view>
+    <view>{{comment.time}}</view>
+</view>
+<!-- btn -->
+<view class="btn">
+    <bk-btn btn="{{btn}}" bind:btnClick="btnClick"></bk-btn>
+</view>
+
+<!-- 蒙层 -->
+<view class="bg bg-top" style='display:{{display}} '></view>
+<view class="bg-item" style="display:{{display}}">
+  <view class="flex-a justify-b bg-image">
+    <image src="../../../assets/image/bg.png" style="height:160rpx;width:160rpx"></image>
+  </view>
+  <view class='bg-text-1'>点评撤回后学员将不能查看</view>
+  <view class='bg-text-1 text-2'>该点评是否确认撤回</view>
+  <view class="btn">
+    <bk-btn btn="{{btns}}" bind:btnClick="tureClick"></bk-btn>
+  </view>
+</view>

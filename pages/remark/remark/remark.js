@@ -24,8 +24,14 @@ Page({
         ],
         show:0,
         students:[
-            {src:"../../../assets/image/crm-1.png",name:"试验报名学员一"}
-        ]
+            {src:"../../../assets/image/crm-1.png",name:"试验报名学员一",round:0}
+        ],
+        round:0,
+        chooseStudents:[],
+        inform:{
+            className:"文曲星1班",time:"2020-05-14 周四 11:15~14:15",classNub:1,attendance:1
+        },
+        currentIndex:0
     },
     commentClick(){
         wx.navigateTo({
@@ -40,14 +46,64 @@ Page({
            show:1
        })
     },
+    roundClick(e){
+        let nub = e.currentTarget.dataset.index
+        let round = "students["+nub+"].round"
+        let rounds = this.data.students[nub].round
+        console.log(rounds)
+        if(rounds == 0){
+            this.setData({
+               [round]:1,
+               chooseStudents:this.data.students[nub]
+            })
+            console.log(this.data.students)
+            
+        }else {
+            this.setData({
+                [round]:0
+            })
+        }
+    },
+    roundAllClick(){
+        let round = this.data.round
+        if(round == 0){
+            for (let i = 0; i < this.data.students.length; i++) {
+                  this.setData({
+                    ["students["+ i +"].round"]:1,
+                    round: 1,
+                    chooseStudents:this.data.students
+                  })
+                }
+        }else {
+            for (let i = 0; i < this.data.students.length; i++) {
+                this.setData({
+                  ["students["+ i +"].round"]:0,
+                  round: 0,
+                  chooseStudents:[]
+                })
+              }
+        }
+    },
+    editCommentClick(){
+        wx.navigateTo({
+          url: '../editComment/editComment',
+        })
+    },
+    itemClick(e){
+        this.setData({
+            currentIndex: e.detail
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        if(options.id){
+        if(options.id||options.currentIndex){
             let id = options.id
+            let currentIndex = options.currentIndex
             this.setData({
-                id
+                id,
+                currentIndex
             })
         }
     },

@@ -39,3 +39,77 @@
 .students {
     padding: 32rpx;
 }
+.students-src {
+    text-align: center;
+}
+.students-name {
+    font-size: 28rpx;
+    color: #333333;
+    margin: 8rpx 16rpx 0 0;
+}
+/* 圆 */
+.round {
+    width: 28rpx;
+    height: 28rpx;
+    background: #FFFFFF;
+    border: 2rpx solid #60ADE1;
+    border-radius: 50%;
+    position: relative;
+    bottom: 80rpx;
+    left: 120rpx;
+}
+._round {
+    width: 20rpx;
+    height: 20rpx;  
+    border-radius: 50%;
+    background: #60ADE1;
+    border: 2rpx solid #60ADE1;
+}
+/* 图文点评 */
+.rounds {
+    width: 28rpx;
+    height: 28rpx;
+    background: #FFFFFF;
+    border: 2rpx solid #60ADE1;
+    border-radius: 50%;
+}
+.last {
+    position: absolute;
+    bottom: 32rpx;
+    padding: 0 32rpx 0 32rpx;
+    width: 90%;
+}
+.choose {
+    margin-left: 16rpx;
+    font-size: 28rpx;
+    font-weight: bold;
+    color: #333333;
+}
+.last-box {
+    width: 350rpx;
+    height: 80rpx;
+    background: #FFFFFF;
+    border: 1rpx solid #60ADE1;
+    border-radius: 40rpx;   
+    font-size: 34rpx;
+    color: #60ADE1;
+}
+._choose {
+    margin-left: 16rpx;
+    font-size: 28rpx;
+    color: #999999;
+}
+.__round {
+    width: 28rpx;
+    height: 28rpx;
+    background: #FFFFFF;
+    border: 2rpx solid #60ADE1;
+    border-radius: 50%;
+}
+.__rounds {
+    width: 20rpx;
+    height: 20rpx;  
+    border-radius: 50%;
+    background: #60ADE1;
+    border: 2rpx solid #60ADE1;
+}

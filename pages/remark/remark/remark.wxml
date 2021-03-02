@@ -2,7 +2,7 @@
 <bk-header header="{{header}}"></bk-header>
 <!-- tabs -->
 <view class="tabs">
-    <bk-tab tab="{{tab}}"></bk-tab>
+    <bk-tab tab="{{tab}}" currentIndex='{{currentIndex}}' bind:itemClick="itemClick"></bk-tab>
 </view>
 <!-- class -->
 <view class="{{show ==0?'xxx':'none'}}">
@@ -11,6 +11,17 @@
             <image src="../../../assets/image/m9.png" style="height:40rpx;width:40rpx;margin-right:8rpx" class="align-b"></image>
         </view>
     </bk-lines>
+</view>
+<!-- 当tab currentIndex等于1时 -->
+<view class="{{currentIndex == 1&&show == 0?'xxx':'none'}}">
+    <view class="remark line" >
+        <view>班级:{{inform.className}}</view>
+        <view class="time flex-a ">
+        <view>上课时间:{{inform.time}}</view> 
+        </view>
+        <view>班级人数:{{inform.classNub}}人 出勤学员:{{inform.attendance}}人</view>
+    </view>
+    <bk-lines name="查看详情" borderBottom></bk-lines>
 </view>
 <!-- 班级信息 -->
 <view class="{{id == 2&&show ==0 ?'xxx':'none'}}">
@@ -26,7 +37,7 @@
     </block>
 </view>
 <!-- 编辑信息 -->
-<view class="{{show == 1?'':'none'}}">
+<view class="{{show == 1&&currentIndex == 0?'':'none'}}">
     <view class="xxx show">
         <view>班级:{{newRemark.className}}</view>
         <view class="_time">上课时间:{{newRemark.time}}</view>
@@ -35,7 +46,7 @@
     <view class="xxx">
         <view class="flex-a justify-d title">
             <view>出勤学员</view>
-            <view>选中人数:{{}}</view>
+            <view>选中人数:{{chooseStudents.length}}</view>
             <view class="flex-a align-a">
                 <view class="align-a">{{newRemark.attendance}}人</view>
                 <view class="align-b">
@@ -43,15 +54,66 @@
                 </view>
             </view>
         </view>
-        <view class="students">
+        <view class="students flex-a">
             <block wx:for="{{students}}" wx:key="*this">
-                <view >
+                <view class="students-src">
                     <view>
                         <image src="{{item.src}}" style="height:78rpx;width:78rpx"></image>
                     </view>
-                    <view>{{item.name}}</view>
+                    <view class="students-name">{{item.name}}</view>
+                    <view class="round align-b" bindtap="roundClick" data-index="{{index}}">
+                        <view class="{{item.round == 0?'':'_round'}}"></view>
+                    </view>
                 </view>
             </block>
         </view>
+    </view>
+    <!-- 图文点评 -->
+    <view class="flex-a justify-d align-a last">
+        <view class="flex-a  align-a">
+            <view class="rounds align-b align-a" bindtap="roundAllClick" data-index="{{index}}">
+                <view class="{{round == 0?'':'_round'}}"></view>
+            </view>
+            <view class="choose">全选</view>
+        </view>
+        <view class="last-box align-b" bindtap="editCommentClick">图文点评</view>
+    </view>
+</view>
+<!-- 当tab currentIndex等于1时 -->
+<view class="{{currentIndex == 1&&show ==1?'':'none'}}">
+    <view class="xxx show">
+        <view>班级:{{newRemark.className}}</view>
+        <view class="_time">上课时间:{{newRemark.time}}</view>
+    </view>
+    <!-- 出勤人员 -->
+    <view class="xxx">
+        <view class="flex-a justify-d title">
+            <view>选中人数:{{chooseStudents.length}}人</view>
+        </view>
+        <view>
+            <block wx:for="{{students}}" wx:key="*this">
+                <bk-lines text="图文点评" borderBottom  name="{{item.name}}">
+                    <view slot="header" class="flex-a align-a">
+                    <view class="__round align-a align-b" bindtap="roundClick" >
+                        <view class="{{item.round == 0?'':'__rounds'}}"></view>
+                    </view>
+                      <view style="margin:0 16rpx 0 16rpx">
+                        <image src="{{item.src}}" style="height:78rpx;width:78rpx;"></image>
+                      </view>
+                    </view>
+                </bk-lines>
+            </block>
+        </view>
+    </view>
+    <!-- 图文点评 -->
+    <view class="flex-a justify-d align-a last">
+        <view class="flex-a  align-a">
+            <view class="rounds align-b align-a" bindtap="roundAllClick" data-index="{{index}}">
+                <view class="{{round == 0?'':'_round'}}"></view>
+            </view>
+            <view class="choose">全选</view>
+            <view class="_choose">已选{{chooseStudents.length}}条点评</view>
+        </view>
+        <view class="last-box align-b" bindtap="editCommentClick">撤回点评</view>
     </view>
 </view>

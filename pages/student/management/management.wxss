@@ -113,9 +113,6 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
     margin-top:40rpx ;
   }
   /* 蒙层 */
-  .bg-top {
-    top: 15vh;
-  }
   .bg-image {
     margin: 111rpx 0 43rpx 0;
   }

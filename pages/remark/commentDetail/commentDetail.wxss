@@ -1,0 +1,47 @@
+/* pages/remark/commentDetail/commentDetail.wxss */
+/* 头部 */
+.header {
+    padding: 32rpx;
+}
+.inform-title {
+    margin-left: 17rpx;
+    font-size: 20rpx;
+    color: #333333;
+}
+.className {
+    font-size: 28rpx;
+}
+.studentName {
+    margin: 8rpx 0 8rpx 0;
+}
+/* 课堂评价 */
+.text {
+    margin: 16rpx 32rpx 16rpx 32rpx;
+}
+.title {
+    padding: 32rpx;
+    font-size: 28rpx;
+    color: #333333;
+}
+/* 课堂内容 */
+.comment {
+    padding: 32rpx;
+    font-size: 28rpx;
+    height: 600rpx;
+}
+.comment-text {
+    margin: 8rpx 0 8rpx 0;
+}
+  /* 蒙层 */
+  .bg-image {
+    margin: 111rpx 0 43rpx 0;
+  }
+  .bg-text-1 {
+    text-align: center;
+    font-size: 34rpx;
+    font-weight: bold;
+    color: #333333;
+  }
+  .text-2 {
+      text-align: center;
+  }

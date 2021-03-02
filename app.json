@@ -81,7 +81,9 @@
     "pages/assist/assist/assist",
     "pages/assist/assistItem/assistItem",
     "pages/remark/remark/remark",
-    "pages/remark/comment/comment"
+    "pages/remark/comment/comment",
+    "pages/remark/editComment/editComment",
+    "pages/remark/commentDetail/commentDetail"
   ],
   "tabBar": {
     "selectedColor": "#60ADE1",
