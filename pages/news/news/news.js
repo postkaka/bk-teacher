@@ -18,10 +18,23 @@ Page({
     btn:["预览","发送"]
   },
   picker(e){
-    console.log(e.detail)
+    console.log(e)
+    let menber = this.data.member
+    let _menber = e.detail
+    for(let i =0;i<menber[0].length;i++){
+      if(_menber == menber[0][i]){
+        console.log(i);
+        let index = i;
+        break;
+      }
+    }
+    if(index == 1){
+      
+    }
     this.setData({
       _member: e.detail
     })
+    
   },
   getValueLength: function (e) {
     let value = e.detail.value
@@ -58,9 +71,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.navigateTo({
-      url: 'news/news',
-    })
   },
 
   /**
@@ -74,9 +84,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    wx.navigateTo({
-      url: 'news/news',
-    })
+
   },
 
   /**

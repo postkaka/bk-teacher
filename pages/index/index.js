@@ -104,6 +104,10 @@ Page({
       wx.navigateTo({
         url: '../homework/homework/homework',
       })
+    }else {
+      wx.navigateTo({
+        url: '../reserve/reserve/reserve',
+      })
     }
   },
   dataStatisticsClick(e){

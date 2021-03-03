@@ -1,0 +1,23 @@
+<view class='calendar'>
+
+	<view class="title">
+		<image class="leftIcon" src="../../../assets/image/fback.png" bindtap='lastMonth'></image>
+		<view class="titleText">{{title}}</view>
+		<image class="leftIcon" src="../../../assets/image/fback.png" bindtap='nextMonth' style="transform: rotate(180deg)"></image>
+	</view>
+
+
+
+	<!-- ============平铺展示============  -->
+	<!--遍历星期-->
+	<view class='calendar-week'>
+		<view wx:for='{{weekText}}' class='item' wx:key='item'>{{item}}</view>
+	</view>
+
+	<view class='calendar-container'>
+		<!--当月格子-->
+		<view class='grid {{item.week==""?"gray":""}}' wx:for='{{thisMonthDays}}' wx:key='Windx'>
+			<view class="wrap {{ select[0] === year+'-'+item.monthFormat+'-'+item.dateFormat||select[1] === year+'-'+item.monthFormat+'-'+item.dateFormat ? 'select' :''}}" bindtap='{{item.week==""?"":"select"}}' data-date='{{item.date}}'>{{item.date}}</view>
+		</view>
+	</view>
+</view>

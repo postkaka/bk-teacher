@@ -1,0 +1,24 @@
+<!--pages/news/news.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<!-- 发送对象 -->
+<view class="xxx">
+    <bk-line-picker name="发送对象:"  listData_02="{{member}}" picker_02_data="{{_member}}" 
+    bind:picker='picker' borderBottom nameSymbol="*" symbol="color: #F89470;">
+    </bk-line-picker>
+</view>
+<!-- 标题 -->
+<view class="xxx">
+    <bk-lines name="标题:"  backDisplay="none" inputDisplay="" pla="请输入标题" inputWidth="200"></bk-lines>
+    <bk-lines name="消息内容:"  backDisplay="none" borderBottom=""></bk-lines>
+    <view class="remark-text">
+        <textarea  maxlength='5000' placeholder="请输入本次消息内容……" class="text-area"
+        placeholder-style="font-size: 28rpx;font-family: PingFang SC;" bindinput="getValueLength"></textarea>
+    </view>
+    <view class="last-text">{{currentWordNumber|0}}/5000</view>
+    <view class="last">支持jpg、png格式，最多9张</view>
+    <view class="last-camera align-b" bindtap='chooseImageTap'>+</view>
+</view>
+<!-- btn -->
+<view class="btn">
+    <bk-btn btn="{{btn}}"></bk-btn>
+</view>

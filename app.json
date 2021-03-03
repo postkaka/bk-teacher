@@ -83,7 +83,9 @@
     "pages/remark/remark/remark",
     "pages/remark/comment/comment",
     "pages/remark/editComment/editComment",
-    "pages/remark/commentDetail/commentDetail"
+    "pages/remark/commentDetail/commentDetail",
+    "pages/reserve/reserve/reserve",
+    "pages/news/news/news"
   ],
   "tabBar": {
     "selectedColor": "#60ADE1",

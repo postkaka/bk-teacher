@@ -58,6 +58,14 @@ Component({
     titleStyle:{
       type:String,
       value:""
+    },
+    symbol:{
+      type:String,
+      value:""
+    },
+    nameSymbol:{
+      type:String,
+      value:""
     }
   },
 

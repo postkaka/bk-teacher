@@ -1,0 +1,24 @@
+<!--pages/reserve/reserve/reserve.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<!-- 搜索 -->
+<view class="search">
+  <bk-search-box search="请输入学员姓名或手机号"></bk-search-box>
+</view>
+<!-- 检索 -->
+<bk-searching classifyList="{{classifyList}}" justify="padding-left:32rpx" bind:itemClick="itemClick" bind:showClick="showClick" show="{{id}}">
+    <view slot="{{show == 0?'switch':''}}" class="choose" bindtap="chooseClick">选择日期区间</view>
+</bk-searching>
+<!-- 数据 -->
+<view class="align-b infor">
+    <image src="../../../assets/image/none.png" style="height:204rpx;width:307rpx"></image>
+</view>
+<view class='hint'>暂无数据记录</view>
+<!-- 蒙层 -->
+<view class="bg" style='display:{{display}} '></view>
+<view class="bg-item" style='display:{{display}}'>
+    <view class="things"></view>
+    <bk-calendar bind:nowSelect="nowSelect"></bk-calendar>
+    <view class="btn">
+        <bk-btn btn="{{btn}}" bind:btnClick="btnClick"></bk-btn>
+    </view>
+</view>

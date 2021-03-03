@@ -1,0 +1,17 @@
+/* pages/reserve/reserve/reserve.wxss */
+.infor {
+    padding-top: 200rpx;
+}
+/* 选择时间区间 */
+.choose {
+    margin: 0rpx 32rpx 0 32rpx;
+    padding: 32rpx 0 32rpx 0;
+    font-size: 28rpx;
+    color: #539BCB;
+    border-top: 1rpx solid #DDDDDD;
+}
+/* 时间蒙层 */
+.things {
+    height: 50rpx;
+    width: 100%;
+}
