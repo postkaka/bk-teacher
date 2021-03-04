@@ -1,0 +1,82 @@
+/* pages/news/gradeChoose/gradeChoose.wxss */
+/* pages/news/classChoosse/classChoosse.wxss */
+.hit {
+    margin: 16rpx 32rpx 16rpx 32rpx;
+    font-size: 24rpx;
+    color: #F89470;
+}
+/* 课程 */
+.reminder {
+    font-size: 20rpx;
+    padding: 32rpx;
+    color: #333333;
+    border-bottom: 1px solid #DDDDDD;
+} 
+/* 选中样式 */
+checkbox .wx-checkbox-input {
+	width: 34rpx;
+	height: 34rpx;
+	border-radius: 50%;
+}
+/*checkbox选中后样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background: #FFFFFF;
+  border-color:#60ADE1;
+}
+/*checkbox选中后图标样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  width: 20rpx;
+  height: 20rpx;  
+  line-height: 20rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #fff;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  content: '';
+  border-radius: 50%;
+  background-color: #60ADE1;
+}
+.label {
+  padding: 32rpx;
+}
+.checkbox {
+  margin-right: 16rpx;
+}
+.name {
+  font-size: 28rpx;
+  margin-left: 16rpx;
+}
+._type {
+    font-size: 28rpx;
+    color: #333333;
+}
+.type {
+  font-size: 20rpx;
+  color: #333333;
+  margin-top: 8rpx;
+}
+.line {
+  border-bottom: 1rpx solid #DDDDDD;
+}
+.lines {
+    padding: 32rpx;
+}
+.nub {
+  font-size: 28rpx;
+  display: flex;
+  justify-content: right;
+}
+/* 操作 */
+.last {
+  margin: -40rpx 16rpx 36rpx 16rpx;
+  position: absolute;
+  bottom: -30rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.last-title {
+    font-size: 28rpx;
+    color: #F89470;
+}

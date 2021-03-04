@@ -63,8 +63,8 @@
         "miniprogram": {
             "list": [
                 {
-                    "name": "pages/news/news/news",
-                    "pathName": "pages/news/news/news",
+                    "name": "pages/news/mineNews/mineNews",
+                    "pathName": "pages/news/mineNews/mineNews",
                     "query": "",
                     "scene": null
                 }

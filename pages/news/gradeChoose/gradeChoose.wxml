@@ -1,0 +1,24 @@
+<bk-header header="{{header}}"></bk-header>
+<!-- 提示语 -->
+<view class="hit">请选择班级，选好后将为这些班级下学员发送通知</view>
+<!-- 课程 -->
+<view class="xxx">
+    <view class="align-b reminder">共有{{class.length}}班级，已显示{{batchIds.length}}个班级</view>
+    <view class="line lines">
+        <checkbox value='全选' bindtap='checkAll'>全选</checkbox> 
+    </view>
+    <checkbox-group bindchange="radioChange"> 
+      <label class="flex-a align-a justify-d label {{index+1 == class.length?'':'line'}}" wx:for="{{class}}" wx:key="*this" data-index="{{item}}">
+        <view class="flex-a align-a">
+            <checkbox class="align-a checkbox" value="{{item.name}}" checked="{{item.checked}}"></checkbox>
+            <view class="_type align-b align-a">{{item.name}}</view>
+        </view>
+      </label>
+    </checkbox-group>
+</view>
+<!-- 操作 -->
+<view class="flex-a last align-a ">
+ 已选:<span class="last-title">  {{batchIds.length}}个班级</span>
+</view>
+<bk-btn btn="{{btn}}" btnStyle="width:70%; position:absolute;left:26%;bottom:-40rpx" bind:btnClick="lastBtnClick"></bk-btn>
+

@@ -85,7 +85,11 @@
     "pages/remark/editComment/editComment",
     "pages/remark/commentDetail/commentDetail",
     "pages/reserve/reserve/reserve",
-    "pages/news/news/news"
+    "pages/news/news/news",
+    "pages/news/classChoosse/classChoosse",
+    "pages/news/gradeChoose/gradeChoose",
+    "pages/news/studentChoose/studentChoose",
+    "pages/news/mineNews/mineNews"
   ],
   "tabBar": {
     "selectedColor": "#60ADE1",

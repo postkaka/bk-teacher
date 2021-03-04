@@ -1,0 +1,13 @@
+<!--pages/news/mineNews/mineNews.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<view class="header-bg">
+    <view class="hints">{{time}}</view>
+    <view class="xxx xxx-bg">
+        <view class="text">{{text}}</view>
+        <view class="_text">{{_text}}</view>
+        <view class="btns">
+            <bk-btn btn="{{_btn}}" bind:btnClick="_btnClick" ></bk-btn>
+        </view>
+    </view>
+    <view class="bottom"></view>
+</view>

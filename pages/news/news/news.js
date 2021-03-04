@@ -15,7 +15,9 @@ Page({
     },
     member:[["全校学员","按课程学员","按班级学员","手动选择学员"]],
     _member:["全校学员"],
-    btn:["预览","发送"]
+    btn:["预览","发送"],
+    display:"none",
+    _btn:["取消","确定"]
   },
   picker(e){
     console.log(e)
@@ -25,11 +27,24 @@ Page({
       if(_menber == menber[0][i]){
         console.log(i);
         let index = i;
+        this.setData({
+          index
+        })
         break;
       }
     }
-    if(index == 1){
-      
+    if(this.data.index == 1){
+      wx.navigateTo({
+        url: '../classChoosse/classChoosse',
+      })
+    }else if(this.data.index == 2){
+      wx.navigateTo({
+        url: '../gradeChoose/gradeChoose',
+      })
+    }else if(this.data.index == 3){
+      wx.navigateTo({
+        url: '../studentChoose/studentChoose',
+      })
     }
     this.setData({
       _member: e.detail
@@ -66,11 +81,48 @@ Page({
       }
     })
   },
-
+  btnClick(e){
+    if(e.detail == 0){
+      wx.navigateTo({
+        url: '../mineNews/mineNews',
+      })
+    }else {
+      this.setData({
+        display:""
+      })
+    }
+  },
+  _btnClick(){
+    this.setData({
+      display:"none"
+    })
+  }, 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+  if(options.add){
+    let add =JSON.parse(options.add)
+    if(add.id ==1 ){
+      let news = [this.data.member[0][1]]
+      this.setData({
+        _member:news,
+        add: add
+      })
+    }else if(add.id ==2 ){
+      let news = [this.data.member[0][2]]
+      this.setData({
+        _member:news,
+        add: add
+      })
+    }else {
+      let news = [this.data.member[0][3]]
+      this.setData({
+        _member:news,
+        add: add
+      })
+    }
+  }
   },
 
   /**

@@ -1,0 +1,39 @@
+/* pages/news/mineNews/mineNews.wxss */
+page {
+    overflow: hidden;
+}
+.header-bg {
+    background: #60ADE1;
+    height: 100vh;
+    width: 100vw;
+}
+.hints {
+    color: #FFFFFF;
+    font-size: 24rpx;
+    text-align: center;
+    padding-top: 70rpx;
+}
+.xxx-bg {
+    height: 78vh;
+}
+.text {
+    padding: 32rpx 0 0 34rpx;
+    font-size: 34rpx;
+    font-weight: bold;
+    color: #333333;
+}
+._text {
+    padding: 9rpx 0 0 34rpx;
+    font-size: 28rpx;
+    color: #333333;
+}
+.bottom {
+    height: 32rpx;
+    width: 100%;
+}
+.btns {
+    position: fixed;
+    left: 0;
+    bottom: 70rpx;
+    width: 98%;
+}

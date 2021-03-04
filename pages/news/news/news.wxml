@@ -3,8 +3,17 @@
 <!-- 发送对象 -->
 <view class="xxx">
     <bk-line-picker name="发送对象:"  listData_02="{{member}}" picker_02_data="{{_member}}" 
-    bind:picker='picker' borderBottom nameSymbol="*" symbol="color: #F89470;">
+    bind:picker='picker'  nameSymbol="*" symbol="color: #F89470;" borderBottom='{{add.id?"1px solid #DDDDDD":""}}'>
     </bk-line-picker>
+    <view wx:if="{{add.id == 1}}">
+        <bk-lines name="选择课程:" borderBottom nameSymbol="*" symbol="color: #F89470;" text="已选{{add.length}}门"></bk-lines>
+    </view>
+    <view wx:if="{{add.id == 2}}">
+        <bk-lines name="选择班级:" borderBottom nameSymbol="*" symbol="color: #F89470;" text="已选{{add.length}}个"></bk-lines>
+    </view>
+    <view wx:if="{{add.id == 3}}">
+        <bk-lines name="选择学员:" borderBottom nameSymbol="*" symbol="color: #F89470;" text="已选{{add.length}}个"></bk-lines>
+    </view>
 </view>
 <!-- 标题 -->
 <view class="xxx">
@@ -20,5 +29,22 @@
 </view>
 <!-- btn -->
 <view class="btn">
-    <bk-btn btn="{{btn}}"></bk-btn>
+    <bk-btn btn="{{btn}}" bind:btnClick="btnClick"></bk-btn>
+</view>
+<!-- 蒙层 -->
+<view class="bg bg-top" style='display:{{display}} '></view>
+<view class="bg-item" style="display:{{display}}">
+  <view class="flex-a justify-b bg-image">
+    <image src="../../../assets/image/bg.png" style="height:160rpx;width:160rpx"></image>
+  </view>
+  <view class='bg-text-1'>提示</view>
+  <view class='bg-text-2'>
+    已发出的消息，后面不可修改或撤销
+  </view>
+  <view class='bg-text-3'>
+    请您再次确认无误后，发送消息
+  </view>
+  <view class="btn">
+    <bk-btn btn="{{_btn}}" bind:btnClick="_btnClick"></bk-btn>
+</view>
 </view>
