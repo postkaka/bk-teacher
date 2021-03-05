@@ -1,0 +1,53 @@
+/* pages/code/code/code.wxss */
+page {
+    overflow: hidden;
+}
+.header-bg {
+    background: #60ADE1;
+    height: 100vh;
+    width: 100vw;
+}
+._xxx {
+    height: 70vh;
+    background: #FFFFFF;
+    margin: 16rpx;
+    border-radius: 30rpx;
+}
+.hints {
+    padding-top: 70rpx;
+}
+/* 半圆 */
+.cir {
+    margin-top: -40rpx;
+}
+.cricle {
+    height: 50rpx;
+    width: 50rpx;
+    border-radius: 50rpx;
+    background: #60ADE1;
+}
+.line {
+    width: 508rpx;
+    height: 1rpx;
+    background: #FFFFFF;
+    border: 1rpx solid #DDDDDD;
+}
+._xxxs {
+    padding: 0 32rpx 32rpx 32rpx;
+    height: 10vh;
+    box-shadow:0;
+    background: #FFFFFF;
+    margin: -26rpx 16rpx 16rpx 16rpx;
+    border-radius: 30rpx;
+}
+.box {
+    height: 74rpx;
+    width: 68vw;
+    background: #FFFFFF;
+    border: 2rpx solid #60ADE1;
+    border-radius: 30rpx;
+    position: absolute;
+    bottom: 60rpx;
+    font-size: 34rpx;
+    color: #60ADE1;
+}

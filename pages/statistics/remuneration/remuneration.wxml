@@ -1,0 +1,7 @@
+<!--pages/statistics/remuneration/remuneration.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<view class="tabs">
+    <bk-tab tab='{{tab}}'></bk-tab>
+</view>
+<!-- 统计时间范围 -->
+<view class="hint">统计时间范围: {{time}}</view>

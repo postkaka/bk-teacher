@@ -89,7 +89,9 @@
     "pages/news/classChoosse/classChoosse",
     "pages/news/gradeChoose/gradeChoose",
     "pages/news/studentChoose/studentChoose",
-    "pages/news/mineNews/mineNews"
+    "pages/news/mineNews/mineNews",
+    "pages/code/code/code",
+    "pages/statistics/remuneration/remuneration"
   ],
   "tabBar": {
     "selectedColor": "#60ADE1",

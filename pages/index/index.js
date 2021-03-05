@@ -79,7 +79,9 @@ Page({
         url: '../recruit/enrollmentManagement/enrollmentManagement',
       })
     }else if(num == 1){
-
+        wx.navigateTo({
+          url: '../code/code/code',
+        })
     }else if(num == 2){
       wx.navigateTo({
         url: '../timetable/timetable/timetable',
@@ -115,6 +117,10 @@ Page({
   if(num == 0){
     wx.navigateTo({
       url: '../statistics/classConsumption/classConsumption',
+    })
+  }else if(num == 1){
+    wx.navigateTo({
+      url: '../statistics/remuneration/remuneration',
     })
   }
   },

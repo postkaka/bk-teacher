@@ -1,0 +1,15 @@
+<!--pages/code/code/code.wxml-->
+<bk-header header="{{header}}"></bk-header>
+<view class="header-bg">
+    <view class="hints"></view>
+    <view class="_xxx"></view>
+    <!-- 半圆 -->
+    <view class="flex-a justify-d cir align-a">
+        <view class="cricle align-a"></view>
+        <view class="line align-a"></view>
+        <view class="cricle align-a"></view>
+    </view>
+    <view class=" _xxxs flex-a justify-b">
+        <view class="box align-b">扫码招生</view>
+    </view>
+</view>

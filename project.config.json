@@ -63,8 +63,8 @@
         "miniprogram": {
             "list": [
                 {
-                    "name": "pages/news/mineNews/mineNews",
-                    "pathName": "pages/news/mineNews/mineNews",
+                    "name": "pages/statistics/remuneration/remuneration",
+                    "pathName": "pages/statistics/remuneration/remuneration",
                     "query": "",
                     "scene": null
                 }
