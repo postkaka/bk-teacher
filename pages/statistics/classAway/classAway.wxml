@@ -1,0 +1,5 @@
+<!--pages/statistics/classAway/classAway.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<view class='particulars'>
+    <bk-searching classifyList="{{classifyList}}" justify="justify-content:space-around;color: #FFFFFF;"></bk-searching>
+</view>

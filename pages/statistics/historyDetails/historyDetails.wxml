@@ -1,0 +1,25 @@
+<!--pages/statistics/historyDetails/historyDetails.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<!-- 详情 -->
+<view class="particulars">
+    <view class="time">统计时间范围: {{time}}</view>
+    <bk-lines borderBottom  backDisplay="none" nameSymbol="获得薪酬" symbol="color: #FFFFFF;" text="￥{{nub}}" textColor="#FFFFFF"></bk-lines>
+</view>
+<!--  -->
+<view class="tab">
+    <view class="_xxx"></view>
+    <view class="xxx">
+        <bk-lines name="教师" lineFw="bold"  backDisplay="none" text="￥{{nub}}" lineFws="bold"></bk-lines>
+        <block wx:for="{{class}}" wx:key="*this" data-index="{{index}}">
+            <bk-lines borderBottom  backDisplay="none"  text="￥{{nub}}">
+                <view slot="text">
+                    <view>{{item.class}}</view>
+                    <view class="text">规则：(按上课小时数计算，固定比例)</view>
+                </view>
+            </bk-lines>
+            <view class='lines'></view>
+            <view class="time">累积上课时长: {{item.time}}小时</view>
+            <view class='{{index+1 == class.length?"":"liness"}}'></view>
+        </block>
+    </view>
+</view>

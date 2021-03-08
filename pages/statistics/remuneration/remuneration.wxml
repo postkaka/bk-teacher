@@ -1,7 +1,53 @@
 <!--pages/statistics/remuneration/remuneration.wxml-->
 <bk-header header='{{header}}'></bk-header>
 <view class="tabs">
-    <bk-tab tab='{{tab}}'></bk-tab>
+    <bk-tab tab='{{tab}}' bind:itemClick="itemClick"></bk-tab>
 </view>
-<!-- 统计时间范围 -->
+<view class="{{id == 0?'':'none'}}">
+    <!-- 统计时间范围 -->
 <view class="hint">统计时间范围: {{time}}</view>
+<!-- 累计课酬 -->
+<view class="blue-box">
+    <view class="box-text flex-a justify-c align-a">
+        <block wx:for="{{boxText}}" wx:key="*this" data-index="{{index}}">
+            <view class='align-a'>
+                <view>{{item.title}}</view>
+                <view class="nub">{{item.nub}}</view>
+            </view>
+            <view class="{{index+1 == boxText.length?'none':'boxLine align-a'}}"></view>
+        </block>
+    </view>
+    <view class="flex-a justify-b last-text">及时准确的完成考勤，是课酬准确的关键哦</view>
+</view>
+<!-- 教师 -->
+<bk-lines name="教师" borderBottom="" backDisplay="none" text="￥{{nub}}" textColor="#F89470"></bk-lines>
+<!-- 课程 -->
+<view class="xxx">
+    <block wx:for="{{class}}" wx:key="*this" data-index="{{index}}">
+        <view class="class-item">
+            <view>{{item.class}}</view>
+            <view class="class-text">规则：(按上课小时数计算，固定比例)</view>
+            <view>全部课程</view>
+            <view class="lines"></view>
+        </view>
+        <view class="class-last">
+            <bk-lines backDisplay='none' name="累积上课时长: {{item.time}}小时" text="￥{{item.nub}}" textColor="#F89470" 
+            borderBottom="{{index+1 == class.length?'none':'1rpx solid #DDDDDD'}}"
+            ></bk-lines>
+        </view>
+    </block>
+</view>
+</view>
+
+<view class="{{id == 1?'':'none'}}">
+    <bk-searching classifyList="{{classifyList}}" justify="margin-left:32rpx"></bk-searching>
+    <view class="xxx">
+        <block wx:for="{{history}}" wx:key="*this" data-index="{{index}}">
+            <bk-lines name="{{item.times}}" text="￥{{item.nub}}" textColor="#F89470" bindtap="historyClick"
+            borderBottom=""></bk-lines>
+            <view class="time">生成时间:{{item.time}}</view>
+            <view class='name'>操作人:{{item.name}}</view>
+            <view class='{{index+1 == history.length?"lin":"liness"}}'></view>
+        </block>
+    </view>
+</view>

@@ -1,5 +1,5 @@
 <!--components/bk-lines/bk-lines.wxml-->
-<view class="line" style="border-bottom:{{borderBottom}};hieght:{{lineHight}}">
+<view class="line" style="border-bottom:{{borderBottom}};height:{{lineHight}}">
   <view class="lines">
     <view class="line-img">
       <slot name="header"></slot>

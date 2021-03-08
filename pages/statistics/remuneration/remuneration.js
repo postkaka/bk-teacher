@@ -14,9 +14,34 @@ Page({
             slot: false,
             src:'../../assets/image/fback.png'
           },
-        tab:["当月课酬","历史课酬"]
+        tab:["当月课酬","历史课酬"],
+        boxText:[
+            {title:"累计课酬(元)",nub:8},
+            {title:"昨日新增课酬(元)",nub:0},
+        ],
+        nub:0,
+        class:[
+            {class:"班组课",time:0,nub:0},
+            {class:"1对1",time:0,nub:8}
+        ],
+        id:0,
+        classifyList:[{list:["全部"],nums:0}],
+        history:[
+            {times:"2020-04~2020-05",nub:100,time:"2020-05-13 14:03",name:"任生"},
+            {times:"2020-04~2020-05",nub:0,time:"2020-05-13 14:03",name:"校长"}
+        ]
     },
-
+    itemClick(e){
+        let id = e.detail
+        this.setData({
+            id: id
+        })
+    },
+    historyClick(){
+        wx.navigateTo({
+          url: '../historyDetails/historyDetails',
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */

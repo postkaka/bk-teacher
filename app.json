@@ -91,7 +91,9 @@
     "pages/news/studentChoose/studentChoose",
     "pages/news/mineNews/mineNews",
     "pages/code/code/code",
-    "pages/statistics/remuneration/remuneration"
+    "pages/statistics/remuneration/remuneration",
+    "pages/statistics/historyDetails/historyDetails",
+    "pages/statistics/classAway/classAway"
   ],
   "tabBar": {
     "selectedColor": "#60ADE1",

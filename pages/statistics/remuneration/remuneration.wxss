@@ -1,1 +1,63 @@
 /* pages/statistics/remuneration/remuneration.wxss */
+.blue-box {
+    margin: 16rpx;
+    background: linear-gradient(180deg, #96CBEB 0%, #60ADE1 100%);
+    box-shadow: 0px 10rpx 40rpx rgba(153, 153, 153, 0.16);
+    border-radius: 30rpx;
+    height: 225rpx;
+}
+.box-text {
+    padding: 32rpx;
+    font-size: 28rpx;
+    color: #FFFFFF;
+}
+.nub {
+    text-align: center;
+    margin-top: 8rpx;
+}
+.boxLine {
+    width: 2rpx;
+    height: 76rpx;
+    background: #FFFFFF;
+    border: 1rpx solid #FFFFFF;
+    margin-top: 28rpx;
+}
+.last-text {
+    font-size: 24rpx;
+    color: #FFFFFF;
+}
+.class-item {
+    padding: 32rpx;
+    font-size: 28rpx;
+}
+.lines {
+    border-bottom: 1rpx solid #DDDDDD;
+    padding-top: 16rpx;
+}
+.class-text {
+    font-size: 20rpx;
+    color: #999999;
+    margin: 8rpx 0 16rpx 0;
+}
+.class-last {
+    margin-top: -50rpx;
+}
+.time {
+    margin: -28rpx 32rpx 8rpx 32rpx;
+    font-size: 24rpx;
+    color: #999999;
+}
+.name {
+    font-size: 24rpx;
+    color: #999999;
+    margin: 0rpx 32rpx 42rpx 32rpx;
+}
+.liness {
+    background: #FFFFFF;
+    border: 1rpx solid #DDDDDD;
+    height: 1rpx;
+}
+.lin {
+    background: #FFFFFF;
+    height: 1rpx;
+}

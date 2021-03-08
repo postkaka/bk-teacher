@@ -122,6 +122,10 @@ Page({
     wx.navigateTo({
       url: '../statistics/remuneration/remuneration',
     })
+  }else if (num == 2){
+    wx.navigateTo({
+      url: '../statistics/classAway/classAway',
+    })
   }
   },
   /**

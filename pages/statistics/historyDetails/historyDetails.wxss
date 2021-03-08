@@ -1,0 +1,40 @@
+/* pages/statistics/historyDetails/historyDetails.wxss */
+.particulars {
+    padding: 50rpx 0rpx 90rpx 0rpx;
+    background: #60ADE1;
+    font-size: 28rpx;
+    color: #FFFFFF;
+  }
+.time {
+    padding: 0 32rpx 0 32rpx;
+}
+/*  */
+.tab {
+    margin: -40rpx 0 30rpx 0;
+    height: 96rpx;
+    background: #F5F5F5;
+    opacity: 1;
+    border-radius: 50rpx 50rpx 0px 0px;
+  }
+._xxx {
+   height: 10rpx;
+   width: 100%;
+}
+.text {
+  font-size: 20rpx;
+  color: #999999;
+  margin-top: 8rpx;
+}
+.lines {
+  margin:32rpx;
+  background: #FFFFFF;
+  border: 1rpx solid #DDDDDD;
+}
+.time {
+  padding: 0 32rpx 32rpx 32rpx;
+  font-size: 28rpx;
+}
+.liness {
+  background: #FFFFFF;
+  border: 1rpx solid #DDDDDD;
+}

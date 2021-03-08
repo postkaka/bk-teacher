@@ -1,8 +1,6 @@
 {
   "usingComponents": {
     "bk-header":"../../../components/wx-header/header",
-    "bk-tab":"../../../components/bk-tab/bk-tab",
-    "bk-lines":"../../../components/bk-lines/bk-lines",
     "bk-searching":"../../../components/bk-searching/bk-searching"
   },
   "navigationStyle": "custom"

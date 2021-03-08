@@ -63,8 +63,8 @@
         "miniprogram": {
             "list": [
                 {
-                    "name": "pages/statistics/remuneration/remuneration",
-                    "pathName": "pages/statistics/remuneration/remuneration",
+                    "name": "pages/statistics/classAway/classAway",
+                    "pathName": "pages/statistics/classAway/classAway",
                     "query": "",
                     "scene": null
                 }

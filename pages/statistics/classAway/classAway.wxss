@@ -1,0 +1,7 @@
+/* pages/statistics/classAway/classAway.wxss */
+.particulars {
+    padding: 50rpx 0rpx 90rpx 0rpx;
+    background: #60ADE1;
+    font-size: 28rpx;
+    color: #FFFFFF;
+  }
