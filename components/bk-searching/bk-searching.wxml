@@ -3,9 +3,9 @@
 <view class="flex-a align-a  classify" style="{{justify}}">
  <block wx:for="{{classifyList.length}}" wx:key="*this" >
   <view class="flex-a align-a">
-    <view class="align-a">{{classifyList[item].list[classifyList[item].nums]}}</view>
+    <view class="align-a" style="{{classStyle}}">{{classifyList[item].list[classifyList[item].nums]}}</view>
     <view class="align-a src flex-a" bindtap="showClick"  data-index="{{index}}">
-      <image src="../../assets/image/back.png" style="height:30rpx;width:30rpx" class="align-a"></image>
+      <image src="{{src}}" style="height:30rpx;width:30rpx" class="align-a"></image>
     </view>
   </view>
  </block>

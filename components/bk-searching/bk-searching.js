@@ -22,6 +22,14 @@ Component({
     justify:{
       type:String,
       value:"justify-content: space-around"
+    },
+    src:{
+      type:String,
+      value:"../../assets/image/back.png"
+    },
+    classStyle:{
+      type:String,
+      value:""
     }
   },
 
