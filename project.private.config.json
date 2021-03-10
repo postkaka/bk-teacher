@@ -1,0 +1,23 @@
+{
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "pages/statistics/salesAnalysis/salesAnalysis",
+                    "pathName": "pages/statistics/salesAnalysis/salesAnalysis",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

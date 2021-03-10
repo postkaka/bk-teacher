@@ -93,7 +93,8 @@
     "pages/code/code/code",
     "pages/statistics/remuneration/remuneration",
     "pages/statistics/historyDetails/historyDetails",
-    "pages/statistics/classAway/classAway"
+    "pages/statistics/classAway/classAway",
+    "pages/statistics/salesAnalysis/salesAnalysis"
   ],
   "tabBar": {
     "selectedColor": "#60ADE1",

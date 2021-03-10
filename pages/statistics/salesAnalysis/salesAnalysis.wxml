@@ -1,0 +1,177 @@
+<!--pages/statistics/salesAnalysis/salesAnalysis.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<!-- tab -->
+<bk-tab tab='{{tab}}' padding="0" bind:itemClick="itemClick"></bk-tab>
+<view class="{{xx == 0?'':'none'}}">
+    <bk-searching classifyList="{{classifyList}}" justify="padding-left:32rpx" bind:itemClick="itemClick" bind:showClick="showClick" show="{{id}}">
+        <view slot="{{show == 0?'switch':''}}" class="choose" bindtap="chooseClick">选择日期区间</view>
+    </bk-searching>
+    <view class="xxx">
+        <bk-lines borderBottom backDisplay="none" name="统计图示" text="单位: 人"></bk-lines>
+        <view class="lines"></view>
+        <view class="container">
+        <block wx:for="{{item}}" wx:key="*this" data-index="{{index}}">
+            <view class="flex-a item">
+                <view class="flex-b type">{{item.type}}</view>
+                <view class="flex-a justify-d flex-s align-a">
+                    <view class='box align-a' style="width:{{item.stus}}rpx"></view>
+                    <view class="align-a">{{item.stu}}</view>
+                </view>
+            </view>
+        </block>
+        </view>
+    </view>
+</view>
+<!-- 报名统计 -->
+<view wx:if="{{xx == 1}}">
+    <bk-searching classifyList="{{_classifyList}}" justify="padding-left:32rpx" bind:itemSClick="itemSClick" bind:showClick="showClick" show="{{id}}">
+        <view slot="{{show == 0?'switch':''}}" class="choose" bindtap="chooseClick">选择日期区间</view>
+    </bk-searching>
+    <view class="{{now == 0?'xxx _xx':'none'}}">
+        <view class="box-item">
+            <view class="box-item_1">0</view>
+            <view class="box-item_2">报名总人次</view>
+        </view>
+        <view class="flex-a justify-c">
+            <block wx:for="{{_item}}" wx:key="*this" data-index="{{index}}">
+                <view class="box-items">
+                    <view class="nub">{{item.nub}}</view>
+                    <view class="_type">{{item.type}}</view>
+                </view>
+            </block>
+        </view>
+    </view>
+    <view class="xxx" wx:if="{{now == 0}}">
+        <bk-lines borderBottom backDisplay="none" name="统计图示" text="单位: 人次"></bk-lines>
+        <view class="lines"></view>
+        <view class="_container">
+            <bk-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></bk-canvas>
+        </view>
+    </view> 
+    <view class="{{now == 1?'':'none'}}">
+        <block wx:for="{{__item}}" wx:key="*this" data-index="{{index}}">
+           <view class="{{index == 0?'xxx _xx _xs':'xxx'}}">
+                <bk-lines name="{{item.name}}" borderBottom backDisplay="none" text="￥"></bk-lines>
+                <view class="flex-a justify-c">
+                    <view class="_boxs">
+                        <view class="nub">{{item.a}}</view>
+                        <view class="_type">{{item._a}}</view>
+                    </view>
+                    <view class="_boxs">
+                        <view class="nub">{{item.b}}</view>
+                        <view class="_type">{{item._b}}</view>
+                    </view>
+                </view>
+           </view>
+        </block>
+    </view>
+    <view class="xxx" wx:if="{{now == 1}}">
+        <bk-lines borderBottom backDisplay="none" name="统计图示" text="单位: 元"></bk-lines>
+        <view class="lines"></view>
+        <view class="dry">注:深色为实收金额，浅色为尾款金额</view>
+        <view class="_container">
+            <bk-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></bk-canvas>
+        </view>
+    </view> 
+</view>
+<!-- 尾款统计 -->
+<view wx:if="{{xx == 2}}">
+    <view class="xxx _xx">
+        <view class="_xx-item">累计数据概览(截止至今日)</view>
+        <view class="flex-a justify-c ">
+            <view class="_boxs">
+                <view class="nub _xs">{{itemss.a}}</view>
+                <view class="_type _xs">{{itemss._a}}</view>
+                <view class="_types _xs">{{itemss.__a}}</view>
+            </view>
+            <view class="_boxs">
+                <view class="nub _xs">{{itemss.b}}</view>
+                <view class="_type _xs">{{itemss._b}}</view>
+                <view class="_types _xs">{{itemss.__b}}</view>
+            </view>
+            <view class="_boxs">
+                <view class="nub _xs">{{itemss.c}}</view>
+                <view class="_type _xs">{{itemss._c}}</view>
+                <view class="_types _xs">{{itemss.__c}}</view>
+            </view>
+        </view>
+    </view>
+    <bk-searching classifyList="{{_classifyLists}}" justify="padding-left:32rpx"  bind:showClick="showClick" show="{{id}}">
+        <view slot="{{show == 0?'switch':''}}" class="choose" bindtap="chooseClick">选择日期区间</view>
+    </bk-searching>
+    <view class='xxx'>
+        <view class="flex-a justify-c">
+            <block wx:for="{{xxxItems}}" wx:key="*this" data-index="{{index}}">
+                <view class="xxx-items">
+                    <view class="nub">{{item.nub}}</view>
+                    <view class="_type">{{item.name}}</view>
+                </view>
+            </block>   
+        </view>
+    </view>
+    <view class="xxx">
+        <bk-lines borderBottom backDisplay="none" name="统计图示" text="单位: 元"></bk-lines>
+        <view class="lines"></view>
+        <view class="dry">注:深色为实收金额，浅色为尾款金额</view>
+        <view class="_container">
+            <bk-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></bk-canvas>
+        </view>
+    </view> 
+</view>
+<!-- 钱包统计 -->
+<view wx:if="{{xx == 3}}">
+    <view class="xxx _xx">
+        <view class="_xx-item">累计数据概览(截止至今日)</view>
+        <view class="flex-a justify-c ">
+            <view class="_boxs">
+                <view class="nub _xs">{{items.a}}</view>
+                <view class="_type _xs">{{items._a}}</view>
+            </view>
+            <view class="_boxs">
+                <view class="nub _xs">{{items.b}}</view>
+                <view class="_type _xs">{{items._b}}</view>
+            </view>
+        </view>
+        <view class="flex-a justify-c ">
+            <view class="_boxs">
+                <view class="nub _xs">{{items.c}}</view>
+                <view class="_type _xs">{{items._c}}</view>
+            </view>
+            <view class="_boxs">
+                <view class="nub _xs">{{items.d}}</view>
+                <view class="_type _xs">{{items._d}}</view>
+            </view>
+        </view>
+    </view>
+    <bk-searching classifyList="{{_classifyLists}}" justify="padding-left:32rpx"  bind:showClick="showClick" show="{{id}}">
+        <view slot="{{show == 0?'switch':''}}" class="choose" bindtap="chooseClick">选择日期区间</view>
+    </bk-searching>
+    <view class="xxx">
+        <view class="xxx-item">充值数据概览</view>
+       <view class="flex-a justify-c _c9">
+        <block wx:for="{{xxxItem}}" wx:key="*this" data-index="{{index}}"> 
+            <view class="c9 flex-a justify-c align-a">
+                <view class="align-a">
+                    <view class="c9-1">{{item.nub}}</view>
+                    <view class="c9-2">{{item.name}}</view>
+                </view>
+                <view class="align-a">
+                    <image src="{{item.src}}" style="height:88rpx;width:88rpx"></image>
+                </view>
+            </view>
+        </block>
+       </view>
+    </view>
+</view>
+<!-- 蒙层 -->
+<view class="bg" style='display:{{display}} '></view>
+<view class="bg-item" style='display:{{display}}'>
+    <view class="things"></view>
+    <bk-calendar bind:nowSelect="nowSelect"></bk-calendar>
+    <view class="btn">
+        <bk-btn btn="{{btn}}" bind:btnClick="btnClick"></bk-btn>
+    </view>
+</view>
+
+
+

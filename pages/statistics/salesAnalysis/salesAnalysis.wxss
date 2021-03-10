@@ -1,0 +1,119 @@
+/* pages/statistics/salesAnalysis/salesAnalysis.wxss */
+/* 选择时间区间 */
+.choose {
+    margin: 0rpx 32rpx 0 32rpx;
+    padding: 32rpx 0 32rpx 0;
+    font-size: 28rpx;
+    color: #539BCB;
+    border-top: 1rpx solid #DDDDDD;
+}
+.lines {
+    height: 1rpx;
+    background: #FFFFFF;
+    border-bottom: 1rpx solid #DDDDDD;
+    margin: -10rpx 32rpx 0 32rpx;
+}
+.container {
+    padding: 32rpx;
+    font-size: 28rpx;
+    color: #333333;
+    height: 65vh;
+}
+.item {
+    margin-bottom: 32rpx;
+}
+.type {
+    text-align: end;
+}
+.box {
+    margin-left: 16rpx;
+    height: 30rpx;
+    background: #60ADE1;
+    border-radius: 10rpx;
+}
+/* 时间蒙层 */
+.things {
+    height: 50rpx;
+    width: 100%;
+}
+/* 报名统计 */
+._xx {
+    background: linear-gradient(180deg, #96CBEB 0%, #60ADE1 100%);
+}
+.box-item {
+    font-size: 28rpx;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 32rpx;
+}
+.box-item_1 {
+    font-size: 50rpx;
+}
+.box-item_2 {
+    margin-top: 16rpx;
+    font-size: 34rpx;
+}
+.box-items {
+    font-size: 28rpx;
+    color: #FFFFFF;
+    text-align: center;
+}
+._boxs {
+    text-align: center;
+    color: #333333;
+}
+.nub {
+    font-size: 40rpx;
+    margin-bottom: 8rpx;
+}
+._type {
+    padding-bottom: 32rpx;
+}
+._types {
+    margin: -32rpx 0 32rpx 0;
+}
+._container {
+    height: 45vh;
+    width: 100%;
+    z-index: -1;
+}
+.dry {
+    margin: 17rpx 60rpx 32rpx 32rpx;
+    font-size: 23rpx;
+    color: #999999;
+}
+._xs {
+    color:#FFFFFF;
+}
+/* 尾款统计 */
+.xxx-items {
+    margin-top: 32rpx;
+    text-align: center;
+}
+/* 钱包统计 */
+._xx-item {
+    padding: 32rpx;
+    text-align: center;
+    color:#FFFFFF;
+    font-size: 28rpx;
+}
+.xxx-item {
+    padding: 32rpx;
+    font-size: 28rpx;
+}
+.c9 {
+    width: 320rpx;
+    height: 168rpx;
+    background: #EEEEEE;
+    border-radius: 30rpx;
+}
+._c9 {
+    padding-bottom: 30rpx;
+}
+.c9-1 {
+    font-size: 35rpx;
+    margin-bottom: 16rpx;
+}
+.c9-2 {
+    font-size: 24rpx;
+}

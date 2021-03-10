@@ -54,11 +54,13 @@ Component({
     },
     itemClick(e){
       console.log(e)
+      let nus = e.currentTarget.dataset.index
+      this.triggerEvent("itemSClick",nus)
       let num = this.data.num
       let nums = "classifyList[" + num + "].nums"
       this.setData({
         show: 0,
-        [nums]: e.currentTarget.dataset.index
+        [nums]: nus
       })
     }
   }

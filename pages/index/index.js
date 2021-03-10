@@ -126,6 +126,10 @@ Page({
     wx.navigateTo({
       url: '../statistics/classAway/classAway',
     })
+  }else if(num == 3){
+    wx.navigateTo({
+      url: '../statistics/salesAnalysis/salesAnalysis',
+    })
   }
   },
   /**

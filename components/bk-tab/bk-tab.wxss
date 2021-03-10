@@ -1,7 +1,5 @@
 /* components/bk-tab/bk-tab.wxss */
 .tab {
-  padding-left: 155rpx;
-  padding-right: 155rpx;
   background: #FFFFFF;
   height: 5vh;
   display: flex;
@@ -28,5 +26,4 @@
   margin-top: 16rpx;
   background: #60ADE1;
   border-radius: 4rpx;
-  
 }

@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "bk-header":"../../../components/wx-header/header",
+    "bk-tab":"../../../components/bk-tab/bk-tab",
+    "bk-lines":"../../../components/bk-lines/bk-lines",
+    "bk-searching":"../../../components/bk-searching/bk-searching",
+    "bk-calendar":"../../../components/calendar/calendar/calendar",
+    "bk-btn":"../../../components/bk-btn/bk-btn",
+    "bk-canvas":"../../../components/ec-canvas/ec-canvas"
+  },
+  "navigationStyle": "custom"
+}

@@ -11,6 +11,10 @@ Component({
     currentIndex:{
       type:Number,
       value:0
+    },
+    padding:{
+      type:String,
+      value:"0 155rpx 0 155rpx"
     }
   },
 

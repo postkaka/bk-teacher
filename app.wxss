@@ -15,6 +15,9 @@ page {
 .flex-c {
   flex: 4;
 }
+.flex-s {
+  flex:2;
+}
 /* 横向对齐 */
 .justify-b {
   justify-content: center;
