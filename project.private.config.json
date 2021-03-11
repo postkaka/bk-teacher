@@ -1,4 +1,5 @@
 {
+    "setting": {},
     "condition": {
         "plugin": {
             "list": []
@@ -12,8 +13,8 @@
         "miniprogram": {
             "list": [
                 {
-                    "name": "pages/statistics/salesAnalysis/salesAnalysis",
-                    "pathName": "pages/statistics/salesAnalysis/salesAnalysis",
+                    "name": "pages/statistics/studentsAnalysis/studentsAnalysis",
+                    "pathName": "pages/statistics/studentsAnalysis/studentsAnalysis",
                     "query": "",
                     "scene": null
                 }

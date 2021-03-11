@@ -130,6 +130,10 @@ Page({
     wx.navigateTo({
       url: '../statistics/salesAnalysis/salesAnalysis',
     })
+  }else {
+    wx.navigateTo({
+      url: '../statistics/studentsAnalysis/studentsAnalysis',
+    })
   }
   },
   /**

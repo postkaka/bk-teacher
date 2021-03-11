@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/workbench/workbench",
     "pages/mine/mine",
+    "pages/mine/mine/mine",
     "pages/news/news",
     "pages/landing/landing",
     "pages/inform/inform",
@@ -94,7 +95,8 @@
     "pages/statistics/remuneration/remuneration",
     "pages/statistics/historyDetails/historyDetails",
     "pages/statistics/classAway/classAway",
-    "pages/statistics/salesAnalysis/salesAnalysis"
+    "pages/statistics/salesAnalysis/salesAnalysis",
+    "pages/statistics/studentsAnalysis/studentsAnalysis"
   ],
   "tabBar": {
     "selectedColor": "#60ADE1",

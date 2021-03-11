@@ -1,0 +1,59 @@
+<!--pages/statistics/studentsAnalysis/studentsAnalysis.wxml-->
+<bk-header header='{{header}}'></bk-header>
+<view class='particulars'>
+    <bk-searching classifyList="{{classifyList}}" justify="justify-content:space-around;" src="../../assets/image/back_1.png"
+    classStyle="color: #FFFFFF;"
+    ></bk-searching>
+    <view class="box-text flex-a justify-c align-a">
+        <block wx:for="{{boxText}}" wx:key="*this" data-index="{{index}}">
+            <view class='align-a'>
+                <view class="title">{{item.nub}}</view>
+                <view class="nub">{{item.title}}</view>
+            </view>
+            <view class="{{index+1 == boxText.length?'none':'boxLine align-a'}}"></view>
+        </block>
+    </view>
+    <view class="box-text-1">当前学员课程分布</view>
+    <view class='flex-a justify-d last'>
+        <view class="flex-a">
+            <view class="time">班组课</view>
+            <view class="last-line"></view>
+            <view class="dry">1对1</view>
+        </view>
+        <view>单位(人)</view>
+    </view>
+    <view class="container">
+        <bk-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></bk-canvas>
+    </view>
+    <view class="tab">
+        <view class="_tab">
+            <bk-searching classifyList="{{_classifyList}}" justify></bk-searching>
+        </view>
+        <view class="xxx">
+            <view class="flex-a  one">
+                <view class="flex-b">班极</view>
+                <view class="flex-a flex-s justify-d">
+                    <block wx:for="{{time}}" wx:key='*this' data-index="index">
+                        <view class="flex-b center">{{item}}</view>
+                    </block>
+                </view>
+            </view>
+            <view class="flex-a  _one">
+                <view class="flex-b">测试1</view>
+                <view class="flex-a flex-s justify-d">
+                    <block wx:for="{{classTime}}" wx:key='*this' data-index="index">
+                        <view class="flex-b center">{{item}}</view>
+                    </block>
+                </view>
+            </view>
+            <view class="flex-a  __one">
+                <view class="flex-b">测试班级</view>
+                <view class="flex-a flex-s justify-d">
+                    <block wx:for="{{addTime}}" wx:key='*this' data-index="index">
+                        <view  class="flex-b center">{{item}}</view>
+                    </block>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
