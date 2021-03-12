@@ -66,6 +66,14 @@ Component({
     nameSymbol:{
       type:String,
       value:""
+    },
+    display:{
+      type:String,
+      value:"none"
+    },
+    displays:{
+      type:String,
+      value:""
     }
   },
 

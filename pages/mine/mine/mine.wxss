@@ -1,1 +1,62 @@
 /* pages/mine/mine/mine.wxss */
+page {
+    overflow: hidden;
+}
+.header {
+    text-align: center;
+    padding-top: 76rpx;
+    font-size: 34rpx;
+    color: #FFFFFF;
+    position: relative; 
+    width: 100%; 
+    height: 100px; 
+}
+.header-item {
+    padding-bottom: 16rpx;
+}
+.header:after { 
+    width: 140%; 
+    height: 200px; 
+    position: absolute; 
+    left: -20%; 
+    top: 0; 
+    z-index: -1; 
+    content: ''; 
+    border-radius: 0 0 50% 50%; 
+    background: #60ADE1; 
+}
+.infrom {
+    padding: 200rpx 50rpx 81rpx 50rpx;
+}
+/* 支付调整 */
+.bgs {
+    top: 280rpx;
+  }
+  .bg-title {
+    padding: 32rpx;
+    font-size: 34rpx;
+    font-weight: bold;
+    border-bottom: 2rpx solid #DDDDDD;
+    text-align: center;
+  }
+  .bg-change {
+    height: 72rpx;
+    background: #FFFFFF;
+    border: 1rpx solid #999999;
+    border-radius: 42rpx;
+    margin: 160rpx 50rpx 32rpx 50rpx;
+  }
+  ._bg-change {
+    height: 72rpx;
+    background: #FFFFFF;
+    border: 1rpx solid #999999;
+    border-radius: 42rpx;
+    margin: 0rpx 50rpx 0 50rpx;
+  }
+  .bg-input {
+    width: 100%;
+    padding: 32rpx;
+  }
+  ._bgs {
+    margin-right: 32rpx;
+  }

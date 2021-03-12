@@ -20,6 +20,7 @@ Page({
       type:"线下课程"
     },
     pay:24,
+    display:'none',
     time:"2020-05-16",
     show:false,
     btn:["取消修改","确认修改"],
@@ -37,7 +38,7 @@ Page({
   },
   payChange(){
     this.setData({
-      show: true
+      display: ""
     })
   },
   paymentClick(){
@@ -56,11 +57,11 @@ Page({
     if(e.detail == 1){
       this.setData({
         pay: this.data.pays,
-        show: false
+        display:'none'
       })
     }else {
       this.setData({
-        show:false
+        display:'none'
       })
     }
   },

@@ -5,9 +5,37 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        header:{
+            title: '个人信息',
+            fontColor: "#ffffff",
+            headerbg: '#60ADE1',
+            hiddenBlock: false,
+            slot: false,
+            src:'../../assets/image/fback.png'
+          },
+          infrom:{
+            src:'../../../assets/image/crm-1.png',name:"任生",iphone:"18510794401",account:"18510794401",school:"班客新赛道（铁西校区）"
+        },
+        counselors:[["班客新赛道（铁西校区）","无"]],
+        _counselors:["班客新赛道（铁西校区）"],
+        display:"none",
+        btn:["取消","确认"]
     },
-
+    _picker(e){
+        this.setData({
+          _counselors: e.detail
+        })
+      },
+    payChange(){
+        this.setData({
+          display: ""
+        })
+      },
+    btnClick(){
+      this.setData({
+        display:"none"
+      })
+    },
     /**
      * 生命周期函数--监听页面加载
      */

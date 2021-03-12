@@ -1,2 +1,27 @@
 <!--pages/mine/mine/mine.wxml-->
-<text>pages/mine/mine/mine.wxml</text>
+<bk-header header="{{header}}"></bk-header>
+<view class='header'>
+    <view class="header-item">
+        <image src="{{infrom.src}}" style="height:140rpx;width:140rpx"></image>
+    </view>
+    <view>{{infrom.name}}</view>
+</view>
+<view class="infrom">
+    <bk-lines backDisplay="none" name="手机: {{infrom.iphone}}"></bk-lines>
+    <bk-lines backDisplay="none" name="账号: {{infrom.account}}"></bk-lines>
+    <bk-lines backDisplay="none" name="密码: **********" text="修改" textColor="#999999" bindtap="payChange"></bk-lines>
+    <bk-line-picker name="校区:"  displays="none" listData_02="{{counselors}}" picker_02_data="{{_counselors}}" display
+    bind:picker='_picker'></bk-line-picker>
+</view>
+<!-- 蒙层 -->
+<view style="display:{{display}}" class="bg"></view>
+<view style="display:{{display}}" class='bg-item'>
+  <view class="bg-title">修改实付金额</view>
+  <view class="bg-change flex-a align-a">
+    <input class="bg-input align-a" password value="{{pay}}" bindinput="bindKeyInput" placeholder="请输入原密码"  />
+  </view>
+  <view class="_bg-change flex-a align-a">
+    <input class="bg-input align-a" password value="{{pay}}" bindinput="bindKeyInput" placeholder="请输入新密码" />
+  </view>
+  <view class="btn"><bk-btn btn="{{btn}}" bind:btnClick="btnClick"></bk-btn></view>
+</view>

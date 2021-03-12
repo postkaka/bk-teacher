@@ -1,10 +1,12 @@
 <!--components/bk-line-picker/bk-line-picker.wxml-->
 <view class="line" style="border-bottom:{{borderBottom}}">
   <view class='line-name' style="font-weight:{{lineFw}}">
-	   <span style="{{symbol}}">{{nameSymbol}}</span>{{name}}</view>
+	   <span style="{{symbol}}">{{nameSymbol}}</span>{{name}}
+	   <span style="display:{{display}}">{{picker_02_data}}</span>
+	</view>
   <view class="line-img">
 		<slot name="pic" bindtap="showPicker_02"></slot>
-		<view class="line-img-text" style="color:{{textColor}}" >{{picker_02_data}}</view>
+		<view class="line-img-text" style="color:{{textColor}};display:{{displays}}" >{{picker_02_data}}</view>
     <picker
 	isShowPicker="{{isShow_02}}"
 	bindsure="sureCallBack_02"

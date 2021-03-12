@@ -13,8 +13,8 @@
         "miniprogram": {
             "list": [
                 {
-                    "name": "pages/statistics/studentsAnalysis/studentsAnalysis",
-                    "pathName": "pages/statistics/studentsAnalysis/studentsAnalysis",
+                    "name": "pages/mine/mine/mine",
+                    "pathName": "pages/mine/mine/mine",
                     "query": "",
                     "scene": null
                 }

@@ -50,13 +50,13 @@
   background: #FFFFFF;
   border: 1rpx solid #999999;
   border-radius: 42rpx;
-  margin: 160rpx 50rpx 0 50rpx;
+  margin: 100rpx 50rpx 0 50rpx;
 }
 .bg-input {
   width: 100%;
   padding: 32rpx;
 }
-._bg {
+._bgs {
   margin-right: 32rpx;
 }
 /* 业绩 */

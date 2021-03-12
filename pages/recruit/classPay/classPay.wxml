@@ -16,19 +16,19 @@
   <bk-lines name="应付金额" backDisplay="none" text="￥{{pay}}"></bk-lines>
   <bk-lines name="实付金额" backDisplay="none" text="￥{{pay}}">
     <view slot="pic" bindtap="payChange">
-      <image src="../../../assets/image/compile .png" style="height:38rpx;width:38rpx"></image>
+      <image src="../../../assets/image/compile.png" style="height:38rpx;width:38rpx"></image>
     </view>
   </bk-lines>
   <bk-lines name="支付方式" text="{{payment.title}}" textColor="{{payment.color}}" bindtap="paymentClick"></bk-lines>
   <bk-lines name="报名时间" borderBottom="" text="{{time}}"></bk-lines>
 </view>
 <!-- 付款金额调整 -->
-<view class="{{show == true?'bg bgs':'none'}}"></view>
-<view class="{{show == true?'bg-item ':'none'}}">
+<view style="display:{{display}}" class="bg"></view>
+<view style="display:{{display}}" class='bg-item'>
   <view class="bg-title">修改实付金额</view>
   <view class="bg-change flex-a align-a">
     <input class="bg-input align-a" type="digit" value="{{pay}}" bindinput="bindKeyInput" />
-    <view class="align-a _bg">元</view>
+    <view class="align-a _bgs">元</view>
   </view>
   <view class="btn"><bk-btn btn="{{btn}}" bind:btnClick="btnClick"></bk-btn></view>
 </view>
